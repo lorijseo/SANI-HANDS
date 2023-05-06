@@ -1,0 +1,20 @@
+body{
+    margin:2%;
+}
+
+.card-deck{
+    display:flex;
+    justify-content: space-around;
+    margin: 10%;
+
+}
+
+.card-border{
+    margin: 2%;
+}
+
+.card-img-top{
+    width:362px;
+    height: 180px;
+
+}
