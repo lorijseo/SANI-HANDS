@@ -19,8 +19,9 @@ body{
 
 }
 
-.centered{
+.mainMsg{
     position:absolute;
     top: 50%;
-    left: 50%;
+    left: 20%;
+    font-size: 2em;
 }
