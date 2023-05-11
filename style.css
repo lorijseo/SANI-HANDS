@@ -25,3 +25,121 @@ body{
     left: 20%;
     font-size: 2em;
 }
+
+h2{
+    margin:5%;
+}
+.displayExplore{
+    display: flex;
+    justify-content: space-evenly;
+    margin:5%;
+    border: 2px dotted red;
+    
+    
+}
+.exploreCard{
+    display:flex;
+    flex-direction: column;
+    margin:3%;
+    border: 2px dotted red;
+    align-items: center;
+
+
+}
+.exploreTitle{
+    font-weight: 500;
+}
+
+.displayExplore img{
+    max-width:100%;
+    max-height: 500px;
+    object-fit: contain;
+    
+}
+
+.displayCards{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+
+/* Info.html card display */
+.ingredientCard{
+    margin: 5%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 380px;
+    border: 5px solid green;
+
+}
+.effectCard{
+    margin: 5%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 380px;
+    border: 5px solid red;
+
+}
+.productCard{
+    margin: 5%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 380px;
+    border: 5px solid blue;
+
+}
+
+.nullifyCard{
+    margin: 5%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 380px;
+    border: 5px solid grey;
+
+}
+
+
+
+.cardContent{
+    margin-left:5%;
+    margin-right:5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display:flex;
+    flex-direction: column;
+
+}
+
+
+#cardName{
+    text-align: right;
+}
+
+.ingredientDescr{
+    background-color: white;
+    border: 3px solid green;
+}
+
+.effectDescr{
+    background-color: white;
+    border: 3px solid red;
+}
+
+.productDescr{
+    background-color: white;
+    border: 3px solid blue;
+}
+
+.nullifyDescr{
+    background-color: white;
+    border: 3px solid grey;
+}
+
+
+
