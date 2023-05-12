@@ -2,6 +2,13 @@ body{
     margin:2%;
 }
 
+/* .navbar-brand{
+    color: #717d94;
+}
+.nav-link{
+    color:#717d94;
+} */
+
 .card-deck{
     display:flex;
     justify-content: space-around;
@@ -33,7 +40,9 @@ h2{
     display: flex;
     justify-content: space-evenly;
     margin:5%;
-    border: 2px dotted red;
+    /* border: 2px dotted red; */
+    background-color: #cfdbd5;
+
     
     
 }
@@ -41,13 +50,19 @@ h2{
     display:flex;
     flex-direction: column;
     margin:3%;
-    border: 2px dotted red;
+    /* border: 2px dotted red; */
     align-items: center;
+    background-color: #ffcd46;
+    border-radius: 3%;
 
 
 }
 .exploreTitle{
     font-weight: 500;
+
+}
+.exploreDescr{
+    margin:5%;
 }
 
 .displayExplore img{
@@ -124,6 +139,7 @@ h2{
 .ingredientDescr{
     background-color: white;
     border: 3px solid green;
+    font-size: 1em;
 }
 
 .effectDescr{
@@ -143,3 +159,18 @@ h2{
 
 
 
+/* display info */
+.ingredientInfo{
+    display:flex;
+    align-items: center;
+    background-color: #ffcd46;
+
+}
+
+#plus{
+    font-size: 5em;
+}
+
+#equal{
+    font-size: 5em;
+}

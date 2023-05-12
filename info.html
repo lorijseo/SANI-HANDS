@@ -8,10 +8,10 @@
     <script src="https://kit.fontawesome.com/db024aa634.js" crossorigin="anonymous"></script>
     <!-- boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Info</title>
 </head>
 <body>
-    <h1>INFO PAGE</h1>
     <nav class="navbar navbar-expand-sm sticky-top rounded border border-warning">
         <a href="index.html" class="navbar-brand">
           <i class="fa-solid fa-flask" style="color: #ffcd46;"></i>Poison
@@ -38,6 +38,152 @@
           </ul>
         </div>
     </nav>
+
+    <h1>INFO PAGE</h1>
+    <p>There are four different types of cards: ingredients, poison, cleaning product, and Ineffective card</p>
+
+    <h2>Ingredient Cards</h2>
+    <section class="ingredientInfo" id="info1">
+      
+      <div class="ingredientCard" id="vinegar">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Vinegar </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr">Acid</p>
+          <div class="ingredientDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="plus">+</p>
+
+      <div class="ingredientCard" id="hydrogenPeroxide">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>hydrogen Peroxide </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr">Antiseptic</p>
+          <div class="ingredientDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with vinegar</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="equal">=</p>
+
+      <div class="effectCard" id="peraceticAcid">
+        <div class="cardContent">
+          <p class="effectDescr" id="cardName"><i class="fa-solid fa-biohazard" style="color: #cc350f;"></i>Peracetic Acid</p>
+          <img src="mask.jpg" alt="">
+          <p class="effectDescr">Acid</p>
+          <div class="effectDescr">
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Effects: Highly corrosive and unstable. Burning of eyes and skin</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section class="ingredientInfo" id="info2">
+      
+      <div class="ingredientCard" id="vinegar">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Vinegar </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr">Acid</p>
+          <div class="ingredientDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="plus">+</p>
+
+      <div class="ingredientCard" id="bleach">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Bleach </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr">Corrosive</p>
+          <div class="ingredientDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with only water</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with most cleaning products</p>
+          </div>
+        </div>
+      </div>
+
+      <p id="equal">=</p>
+
+      <div class="effectCard" id="chlorinegas">
+        <div class="cardContent">
+          <p class="effectDescr" id="cardName"><i class="fa-solid fa-biohazard" style="color: #cc350f;"></i>Chlorine Gas </p>
+          <img src="mask.jpg" alt="">
+          <p class="effectDescr">Poison</p>
+          <div class="effectDescr">
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Effects:Irritating and corrosive to the eyes and skin. </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
+    <section class="displayCards">
+
+      <div class="ingredientCard" id="vinegar">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Vinegar </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr">Acid</p>
+          <div class="ingredientDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="effectCard" id="chlorinegas">
+        <div class="cardContent">
+          <p class="effectDescr" id="cardName"><i class="fa-solid fa-biohazard" style="color: #cc350f;"></i>Chlorine Gas </p>
+          <img src="mask.jpg" alt="">
+          <p class="effectDescr">Poison</p>
+          <div class="effectDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="productCard" id="lysol">
+        <div class="cardContent">
+          <p class="productDescr" id="cardName"><i class="fa-solid fa-spray-can-sparkles" style="color: #2f72e4;"></i>Lysol </p>
+          <img src="mask.jpg" alt="">
+          <p class="productDescr">Cleaning Product</p>
+          <div class="productDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="nullifyCard" id="nullify">
+        <div class="cardContent">
+          <p class="nullifyDescr" id="cardName"><i class="fa-solid fa-poo" style="color: #717d94;"></i>Nullify </p>
+          <img src="mask.jpg" alt="">
+          <p class="nullifyDescr">Ineffective</p>
+          <div class="nullifyDescr">
+            <p>Ingredients combined are not compatible, but they are also not harmful.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </section>
+
+    
       <!-- bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
