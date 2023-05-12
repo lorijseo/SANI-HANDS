@@ -16,41 +16,65 @@
 
 <body>
 
-  <nav class="navbar navbar-expand-sm sticky-top">
+  <nav class="navbar navbar-expand-xl sticky-top">
     <a href="index.html" class="navbar-brand">
       <i class="fa-solid fa-flask" style="color: #ffcd46"></i>Poison
     </a>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-lg mt-3" style="color: #ffcd46"></i></span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl mt-3" style="color: #ffcd46"></i></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item mx-3 p-2">
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item badge badge-pill">
           <a class="nav-link " href="index.html">Home</a>
         </li>
-        <li class="nav-item mx-3 p-2">
+        <li class="nav-item badge badge-pill">
           <a class="nav-link" href="info.html">Info</a>
         </li>
-        <li class="nav-item mx-3 p-2">
+        <li class="nav-item badge badge-pill">
           <a class="nav-link" href="quiz.html">Quiz</a>
         </li>
-        <li class="nav-item mx-3 p-2">
+        <li class="nav-item badge badge-pill">
           <a class="nav-link" href="about.html">About</a>
         </li>
       </ul>
     </div>
   </nav>
 
-  <section class="container">
-    <img src="spray.jpg" alt="" style="width: 100%; height: 800px;">
+  <section class="main">
+    <img src="spray.jpg" alt="">
     <div class="mainMsg">
-      <h1>Welcome to Poison website!!</h1>
+      <h1>Welcome to Poison</h1>
       <p>Home poisoning is up to 20% according to CDC</p>
     </div>
   </section>
+
+  <section class="carousel">
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="mask.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="product.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="spray.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
 
   <h2>Explore </h2>
   <section class="displayExplore">

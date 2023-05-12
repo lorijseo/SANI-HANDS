@@ -1,23 +1,47 @@
 body{
-    margin:2%;
+    margin:0% 2% 2% 2%;
 }
 
-/* .navbar-brand{
-    color: #717d94;
-} */
+/* navbar */
+
+nav{
+    background-color: white;
+}
+
+.navbar{
+    padding:0;
+}
+
+.navbar-brand{
+    font-size:5em;
+}
 
 .nav-item{
     background-color:#ffcd46;
-    opacity:0.9;
-    border-radius: 50%;
-
-    
+    font-size: 2em;
+    margin-top: 4%;
+    margin-left: 5%;
 }
+
+#navbarNav{
+    justify-content: flex-end;
+    margin-right: 6%;
+}
+
 a{
     color:black;
 }
 
-.card-deck{
+/* navbar collapse toggler icon */
+.navbar-toggler-icon{
+    font-size: 2em;
+}
+
+.navbar-toggler{
+    margin-top: 3%;
+}
+
+/* .card-deck{
     display:flex;
     justify-content: space-around;
     margin: 10%;
@@ -32,39 +56,72 @@ a{
     width:362px;
     height: 180px;
 
+} */
+
+/* ************************HOME PAGE************************** */
+
+/* **********MAIN********** */
+.mainMsg h1{
+    font-size: 5.5em;
 }
 
+.mainMsg p{
+    margin:2%;
+    font-size: 2em;
+    text-align: center;
+
+}
 .mainMsg{
     position:absolute;
-    top: 50%;
-    left: 20%;
-    font-size: 2em;
+    top: 40%;
+    left: 10%;
+}
+
+.main img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    width:90%;
+    height:800px;
+    object-fit: cover;
+}
+
+/* **********CAROUSEL********** */
+.carousel{
+    margin:10%;
 }
 
 h2{
     margin:5%;
 }
+
+/* **********EXPLORE CARDS********** */
 .displayExplore{
     display: flex;
     justify-content: space-evenly;
     margin:5%;
     /* border: 2px dotted red; */
-    background-color: #cfdbd5;
-
-    
-    
+    /* background-color: #cfdbd5; */
 }
+
+
 .exploreCard{
     display:flex;
     flex-direction: column;
     margin:3%;
     /* border: 2px dotted red; */
     align-items: center;
-    background-color: #ffcd46;
+    background-color: #f6d76d;
+    /* background-color: #f9f0b5; */
     border-radius: 3%;
 
-
 }
+
+.exploreCard:hover{
+    background-color: #ffcd46;
+    cursor:pointer;
+}
+
 .exploreTitle{
     font-weight: 500;
 
@@ -87,48 +144,28 @@ h2{
 
 }
 
+/* ************************INFO PAGE************************** */
 
-/* Info.html card display */
-.ingredientCard{
-    margin: 5%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 280px;
-    height: 380px;
-    border: 5px solid green;
-
-}
-.effectCard{
-    margin: 5%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 280px;
-    height: 380px;
-    border: 5px solid red;
-
-}
-.productCard{
-    margin: 5%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 280px;
-    height: 380px;
-    border: 5px solid blue;
-
+.pageIntro h1{
+    margin-top: 2%;
+    font-size: 6em;
+    text-align: center;
 }
 
-.nullifyCard{
-    margin: 5%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 280px;
-    height: 380px;
-    border: 5px solid grey;
-
+.pageIntro h2{
+    margin: 2%;
 }
 
+.pageIntro div{
+    font-size: 2em;
+    text-align: center;
+    margin: 5% 15% 0 15%;
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+}
 
-
+/* **********CARD DISPLAY********** */
 .cardContent{
     margin-left:5%;
     margin-right:5%;
@@ -139,15 +176,102 @@ h2{
 
 }
 
-
 #cardName{
-    text-align: right;
+    text-align: center;
 }
+
+#cardType{
+    text-align: center;
+}
+
+#cardDescr{
+    line-height: 1;
+    font-size: 0.9em;
+    height:98px;
+}
+
+/* **********CARD FORMAT DISPLAY********** */
+
+.ingredientInfo h2{
+    text-align: center;
+    font-size: 3em;
+    color:#ffcd46;
+}
+.displayCards{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #ffcd46; */
+    border: 2px solid  #ffcd46;
+    border-radius: 10px;
+    /* padding: 7px 20px; */
+    margin:4%;
+
+}
+
+#plus{
+    font-size: 5em;
+}
+
+#equal{
+    font-size: 5em;
+}
+
+.cardsInfo{
+    font-size: 1.2em;
+    margin: 1% 10%;
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+}
+
+
+
+/* **********CARD TEMPLATE OF DIFFERENT TYPES********** */
+.ingredientCard{
+    margin: 3%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 400px;
+    border: 5px solid green;
+
+}
+.effectCard{
+    margin: 3%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 400px;
+    border: 5px solid red;
+
+}
+.productCard{
+    margin: 3%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 400px;
+    border: 5px solid blue;
+
+}
+
+.nullifyCard{
+    margin: 3%;
+    background-color: #cfdbd5;
+    border-radius: 3%;
+    width: 280px;
+    height: 400px;
+    border: 5px solid grey;
+
+}
+
 
 .ingredientDescr{
     background-color: white;
     border: 3px solid green;
-    font-size: 1em;
+
+
 }
 
 .effectDescr{
@@ -167,47 +291,61 @@ h2{
 
 
 
-/* display info */
-.ingredientInfo{
-    display:flex;
-    align-items: center;
-    background-color: #ffcd46;
+/* ************************ABOUT PAGE************************** */
 
-}
-
-#plus{
+.about h1{
     font-size: 5em;
+    text-align: center;
+    margin:3%;
 }
-
-#equal{
-    font-size: 5em;
-}
-
-/* about.html */
-
-.about{
+.aboutDisplay{
+    margin:5%;
     display:flex;
     flex-wrap: wrap;
 }
 
-.ourStory{
-
-    width:40%;
-    margin:3%;
+.aboutDisplay img{
+    width: 50%;
+    height:600px;
+    object-fit: cover;
 }
 
+.ourStory{
+    width:40%;
+    margin:3%;
+    font-size: 1.5em;
+}
+
+.ourStory h2{
+    font-size: 3em;
+    margin:0
+}
+
+/* **********CONTACT********** */
+.contactUs h3{
+    font-size: 3em;
+    text-align: center;
+    margin:3%;
+}
 .displayContact{
     display:flex;
-    flex-direction: row;
-    border: 1px solid #ffcd46;
+    /* border: 1px solid #ffcd46; */
     justify-content: space-evenly;
     align-items: center;
     background-color: #ffcd46 ;
+    border-radius: 10px;
+    padding: 7px 20px;
+    margin:0 10%;
+}
 
+.displayContact p{
+    font-size: 1.5;
+    text-align: center;
+    font-weight: 700;
 
 }
 
 .displayContact a{
-
     font-size: 5em;
+
 }
