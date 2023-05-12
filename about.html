@@ -8,41 +8,54 @@
     <script src="https://kit.fontawesome.com/db024aa634.js" crossorigin="anonymous"></script>
     <!-- boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>About</title>
 </head>
 <body>
+
+  <nav class="navbar navbar-expand-sm sticky-top">
+    <a href="index.html" class="navbar-brand">
+      <i class="fa-solid fa-flask" style="color: #ffcd46"></i>Poison
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-lg mt-3" style="color: #ffcd46"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item mx-3 p-2">
+          <a class="nav-link " href="index.html">Home</a>
+        </li>
+        <li class="nav-item mx-3 p-2">
+          <a class="nav-link" href="info.html">Info</a>
+        </li>
+        <li class="nav-item mx-3 p-2">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item mx-3 p-2">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
     <h1>ABOUT PAGE</h1>
-    <nav class="navbar navbar-expand-sm sticky-top rounded border border-warning">
-        <a href="index.html" class="navbar-brand">
-          <i class="fa-solid fa-flask" style="color: #ffcd46;"></i>Poison
-        </a>
-  
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-lg mt-3" style="color: #ffcd46;"></i></span>
-        </button>
-  
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="info.html">Info</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="quiz.html">Quiz</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-          </ul>
-        </div>
-    </nav>
-    <section>
-      <h2>Contact Us</h2>
-      <p><i class="fa-brands fa-github"></i></p>
-      <p><i class="fa-brands fa-linkedin"></i></p>
-      <p><i class="fa-solid fa-envelope"></i></p>
+    <section class="about">
+      <img src="brickwall.jpg" alt="" style="width: 50%; height: auto">
+      <div class="ourStory">
+        <h2>Our Story:</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit temporibus officia rem! Non nulla delectus dolores dolore, error quae pariatur quas blanditiis consequuntur dolorem numquam a ullam voluptate ut assumenda? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore, dicta dolorum quia officiis inventore reiciendis incidunt! Voluptas quae adipisci, nobis eaque quaerat maiores molestias. Optio harum error ipsa sapiente earum?Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum est sunt officiis voluptatibus, facilis voluptatem ullam? Ratione laboriosam molestiae mollitia aperiam, numquam rem nemo maxime explicabo, nesciunt, cupiditate ad recusandae!</p>
+      </div>
+
+    </section>
+    <section class="contactUs">
+      <h3>Contact Us</h3>
+      <div class="displayContact">
+        <a href="#"><i class="fa-brands fa-github" style="color: white;"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin " style="color: white;"></i></a>
+        <a href="#"><i class="fa-solid fa-envelope " style="color: white;"></i></a>
+      </div>
     </section>
 
 
