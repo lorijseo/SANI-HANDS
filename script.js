@@ -27,9 +27,9 @@ quizBtn.addEventListener("click", function(e){
     questionCard1.querySelector("#cardDescr").style.display = "block";
     questionCard2.querySelector("#cardDescr").style.display = "block";
 
-    document.querySelector(".cardsInfo").style.display = 'block';
+    document.querySelector(".cardsInfo").style.display = 'flex';
     document.querySelector("#answer").style.display = 'flex';
-    document.querySelector(".cardsInfo").innerHTML = ` <div>${isCorrect}! </div> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at laboriosam atque aut repudiandae consequatur, vitae neque error aperiam, eius ut iure? Unde ex quam suscipit, ut doloribus necessitatibus voluptatem?</p>
+    document.querySelector(".cardsInfo").innerHTML = ` <div class="displayCorrect">${isCorrect}! </div> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at laboriosam atque aut repudiandae consequatur, vitae neque error aperiam, eius ut iure? Unde ex quam suscipit, ut doloribus necessitatibus voluptatem?</p>
     `
 
 })

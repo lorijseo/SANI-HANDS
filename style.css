@@ -204,7 +204,7 @@ h2{
     /* background-color: #ffcd46; */
     border: 2px solid  #ffcd46;
     border-radius: 10px;
-    /* padding: 7px 20px; */
+    padding: 7px 20px;
     margin:4%;
 
 }
@@ -314,9 +314,10 @@ form{
 
 }
 
-.quiz p{
+.quiz h3{
     font-size: 2em;
-    padding: 5px 15px;
+    padding: 2% 2%;
+    text-align: center;
 }
 .choices{
     font-size: 1.5em;
@@ -346,8 +347,14 @@ form{
 
 .cardsInfo{
     display:none;
+    align-items: center;
+    margin:2%;
 }
 
+.displayCorrect{
+    font-size: 3em;
+    margin-right: 5%;
+}
 
 
 /* ************************ABOUT PAGE************************** */
