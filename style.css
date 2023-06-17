@@ -271,7 +271,6 @@ h2{
     background-color: white;
     border: 3px solid green;
 
-
 }
 
 .effectDescr{
@@ -287,6 +286,66 @@ h2{
 .nullifyDescr{
     background-color: white;
     border: 3px solid grey;
+}
+
+/* ************************QUIZ PAGE************************** */
+
+/* #cardDescr{
+    display:none;
+}
+
+.effectCard .cardContent{
+    display:none;
+} */
+
+/* .quiz{
+    display:flex;
+} */
+
+form{
+    margin: 3%;
+}
+
+
+.quizQuestion{
+    display:flex;
+    justify-content: center;
+    margin-left: 10% 0;
+
+}
+
+.quiz p{
+    font-size: 2em;
+    padding: 5px 15px;
+}
+.choices{
+    font-size: 1.5em;
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+}
+.choices #choice1space{
+    margin-right: 50px;
+}
+
+.quizBtn button{
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    margin-left: 15%;
+    /* margin-left: 40%; */
+    border: none;
+    font-weight: 600;
+    font-size: 2em;
+}
+
+.quizBtn button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.cardsInfo{
+    display:none;
 }
 
 

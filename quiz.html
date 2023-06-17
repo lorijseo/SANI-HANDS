@@ -8,40 +8,163 @@
     <script src="https://kit.fontawesome.com/db024aa634.js" crossorigin="anonymous"></script>
     <!-- boostrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Quiz</title>
 </head>
 <body>
-    <h1>QUIZ PAGE</h1>
-    <nav class="navbar navbar-expand-xl sticky-top">
-      <a href="index.html" class="navbar-brand">
-        <i class="fa-solid fa-flask" style="color: #ffcd46"></i>Poison
-      </a>
-  
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-        <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl mt-3" style="color: #ffcd46"></i></span>
-      </button>
-  
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav ">
-          <li class="nav-item badge badge-pill">
-            <a class="nav-link " href="index.html">Home</a>
-          </li>
-          <li class="nav-item badge badge-pill">
-            <a class="nav-link" href="info.html">Info</a>
-          </li>
-          <li class="nav-item badge badge-pill">
-            <a class="nav-link" href="quiz.html">Quiz</a>
-          </li>
-          <li class="nav-item badge badge-pill">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-        </ul>
+  <nav class="navbar navbar-expand-xl sticky-top">
+    <a href="index.html" class="navbar-brand">
+      <i class="fa-solid fa-flask" style="color: #ffcd46"></i>Poison
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl mt-3" style="color: #ffcd46"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link " href="index.html">Home</a>
+        </li>
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="info.html">Info</a>
+        </li>
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="pageIntro">
+    <h1>Quiz PAGE</h1>
+    <div>
+      <h2>Test what you learned about clean products compatibility!</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellendus dignissimos, accusamus recusandae illum sit voluptates vitae quas corporis, modi cum nostrum eligendi consequatur autem ratione saepe soluta. Ex, incidunt.</p>
+    </div>
+  </section>
+
+  <section class="ingredientInfo" >
+    <h2>What happens when we mix chemicals?</h2>
+
+    <div class="displayCards" id="info1">
+      <div class="ingredientCard" id="vinegar">
+        <div class="cardContent" id="question1">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>  Vinegar </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr" id="cardType">Acid</p>
+          <div class="ingredientDescr" id="cardDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>  Good with dish soapGood with dish soapGood with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Bad with hydrogen peroxideBad with hydrogen peroxide</p>
+          </div>
+        </div>
       </div>
-    </nav>
+  
+      <p id="plus">+</p>
+  
+      <div class="ingredientCard" id="hydrogenPeroxide">
+        <div class="cardContent" id="question2">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>hydrogen Peroxide </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr" id="cardType">Antiseptic</p> 
+          <div class="ingredientDescr" id="cardDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>  Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Bad with vinegar</p>
+          </div>
+        </div>
+      </div>
+  
+      <p id="equal">=</p>
+  
+      <div class="effectCard" id="peraceticAcid">
+        <div class="cardContent" id="answer">
+          <p class="effectDescr" id="cardName"><i class="fa-solid fa-biohazard" style="color: #cc350f;"></i>Peracetic Acid</p>
+          <img src="mask.jpg" alt="">
+          <p class="effectDescr" id="cardType">Acid</p>
+          <div class="effectDescr" id="cardDescr">
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Effects: Highly corrosive and unstable. Burning of eyes and skin</p>
+          </div>
+        </div>
+      </div>
+
+      <form action="#">
+        <div class="quiz">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id quae tempore eius at, deleniti laudantium voluptate!</p>
+          <div class="quizQuestion">
+            <div class="choices">
+              <input type="radio" id="choice1" value="correct" name="choice">
+              <label for="choice1" id="choice1space">Peracetic Acid</label>
+              
+              <input type="radio" id="choice2" value="wrong" name="choice">
+              <label for="choice2">Chlorine Gas</label>
+            </div>
+            <div class="quizBtn">
+              <button>Submit</button>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="cardsInfo"></div>
+    </div>
+
+   
+  
+    <div class="displayCards" id="info2">
+      
+      <div class="ingredientCard" id="vinegar">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Vinegar </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr" id="cardType">Acid</p>
+          <div class="ingredientDescr" id="cardDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>  Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+  
+      <p id="plus">+</p>
+  
+      <div class="ingredientCard" id="bleach">
+        <div class="cardContent">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Bleach </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr" id="cardType">Corrosive</p>
+          <div class="ingredientDescr" id="cardDescr">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>  Good with only water</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Bad with most cleaning products</p>
+          </div>
+        </div>
+      </div>
+  
+      <p id="equal">=</p>
+  
+      <div class="effectCard" id="chlorinegas">
+        <div class="cardContent">
+          <p class="effectDescr" id="cardName"><i class="fa-solid fa-biohazard" style="color: #cc350f;"></i>  Chlorine Gas </p>
+          <img src="mask.jpg" alt="">
+          <p class="effectDescr" id="cardType">Poison</p>
+          <div class="effectDescr" id="cardDescr">
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Effects:Irritating and corrosive to the eyes and skin. </p>
+          </div>
+        </div>
+      </div>
+      <div class="cardsInfo">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at laboriosam atque aut repudiandae consequatur, vitae neque error aperiam, eius ut iure? Unde ex quam suscipit, ut doloribus necessitatibus voluptatem?</p>
+      </div>
+  
+    </div>
+  </section>
+
 
       <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
 </html>
