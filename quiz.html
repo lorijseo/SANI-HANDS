@@ -50,6 +50,7 @@
   <section class="ingredientInfo" >
     <h2>What happens when we mix chemicals?</h2>
 
+    <!-- ************QUESTION 1************  -->
     <div class="displayCards" id="info1">
 
       <div class="ingredientCard" id="vinegar">
@@ -99,7 +100,7 @@
             <input type="radio" id="choice1" value="correct" name="choice">
             <label for="choice1" id="choice1space">Peracetic Acid</label>
             
-            <input type="radio" id="choice2" value="wrong" name="choice">
+            <input type="radio" id="choice2" name="choice">
             <label for="choice2">Chlorine Gas</label>
           </div>
           <div class="quizBtn">
@@ -112,11 +113,11 @@
     </div>
 
    
-  
+    <!-- ************QUESTION 2************  -->  
     <div class="displayCards" id="info2">
       
       <div class="ingredientCard" id="vinegar">
-        <div class="cardContent">
+        <div class="cardContent" id="question1">
           <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Vinegar </p>
           <img src="product.jpg" alt="">
           <p class="ingredientDescr" id="cardType">Acid</p>
@@ -130,7 +131,7 @@
       <p id="plus">+</p>
   
       <div class="ingredientCard" id="bleach">
-        <div class="cardContent">
+        <div class="cardContent" id="question2">
           <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Bleach </p>
           <img src="product.jpg" alt="">
           <p class="ingredientDescr" id="cardType">Corrosive</p>
@@ -153,9 +154,88 @@
           </div>
         </div>
       </div>
-      <div class="cardsInfo">
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at laboriosam atque aut repudiandae consequatur, vitae neque error aperiam, eius ut iure? Unde ex quam suscipit, ut doloribus necessitatibus voluptatem?</p>
+
+      <div class="quiz">
+        <h3>What happens when we mix these two together?</h3>
+        <div class="quizQuestion">
+          <div class="choices">
+            <input type="radio" id="choice1" value="" name="choices">
+            <label for="choice1" id="choice1space">Peracetic Acid</label>
+            
+            <input type="radio" id="choice2" value="correct" name="choices">
+            <label for="choice2">Chlorine Gas</label>
+          </div>
+          <div class="quizBtn">
+            <button>Submit</button>
+          </div>
+        </div>
       </div>
+
+      <div class="cardsInfo"></div>
+  
+    </div>
+
+
+    <!-- ************QUESTION 3************  -->
+    <div class="displayCards" id="info3">
+      
+      <div class="ingredientCard" id="vinegar">
+        <div class="cardContent" id="question1">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Vinegar </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr" id="cardType">Acid</p>
+          <div class="ingredientDescr" id="cardDescr"  style="display:none">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>  Good with dish soap</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Bad with hydrogen peroxide</p>
+          </div>
+        </div>
+      </div>
+  
+      <p id="plus">+</p>
+  
+      <div class="ingredientCard" id="bakingsoda">
+        <div class="cardContent" id="question2">
+          <p class="ingredientDescr" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>Bleach </p>
+          <img src="product.jpg" alt="">
+          <p class="ingredientDescr" id="cardType">Corrosive</p>
+          <div class="ingredientDescr" id="cardDescr"  style="display:none">
+            <p><i class="fa-solid fa-thumbs-up" style="color: green;"></i>  Good with only water</p>
+            <p><i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Bad with most cleaning products</p>
+          </div>
+        </div>
+      </div>
+  
+      <p id="equal">=</p>
+
+
+      <div class="nullifyCard" id="nullify">
+        <div class="cardContent" id="answer" style="display:none">
+          <p class="nullifyDescr" id="cardName"><i class="fa-solid fa-poo" style="color: #717d94;"></i> Nullify </p>
+          <img src="mask.jpg" alt="">
+          <p class="nullifyDescr" id="cardType">Ineffective</p>
+          <div class="nullifyDescr" id="cardDescr">
+            <p>Ingredients combined are not compatible, but they are also not harmful.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="quiz">
+        <h3>What happens when we mix these two together?</h3>
+        <div class="quizQuestion">
+          <div class="choices">
+            <input type="radio" id="choice1" value="correct" name="choices">
+            <label for="choice1" id="choice1space">Nullify</label>
+            
+            <input type="radio" id="choice2" value="" name="choices">
+            <label for="choice2">Chlorine Gas</label>
+          </div>
+          <div class="quizBtn">
+            <button>Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cardsInfo"></div>
   
     </div>
   </section>

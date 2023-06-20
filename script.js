@@ -13,14 +13,32 @@
 // const questionCard2 = document.querySelector("#question2");
 // questionCard2.querySelector("#cardDescr").style.display = "none";
 
-first = document.querySelector("#info1")
-const quizBtn = first.querySelector(".quizBtn")
+question1 = document.querySelector("#info1")
+const quizBtn1 = question1.querySelector(".quizBtn")
+
+question2 = document.querySelector("#info2")
+const quizBtn2 = question2.querySelector(".quizBtn")
+
+question3 = document.querySelector("#info3")
+const quizBtn3 = question3.querySelector(".quizBtn")
 
 //from button to parent we need to go up three parents 
 
-quizBtn.addEventListener("click", function(e){
+quizBtn1.addEventListener("click", function(e){
     e.preventDefault();
-    displayCorrect(first);
+    displayCorrect(question1);
+
+})
+
+quizBtn2.addEventListener("click", function(e){
+    e.preventDefault();
+    displayCorrect(question2);
+
+})
+
+quizBtn3.addEventListener("click", function(e){
+    e.preventDefault();
+    displayCorrect(question3);
 
 })
 
