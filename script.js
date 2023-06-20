@@ -1,4 +1,6 @@
 // import {cards, cardCombo} from "./cardInfo.js";
+// console.log(cards);
+// console.log(cardCombo);
 
 // parent = document.querySelector("#info2")
 // parent.querySelector("#answer").style.display = "flex";
@@ -63,11 +65,90 @@ function displayCorrect(parent){
     `
 }
 
+function displayExplanation(parent){
 
 
-// look at card combo
+    parent.querySelector(".cardsInfo").innerHTML = ` <div class="displayCorrect">${isCorrect}! </div> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at laboriosam atque aut repudiandae consequatur, vitae neque error aperiam, eius ut iure? Unde ex quam suscipit, ut doloribus necessitatibus voluptatem?</p>
+    `
+}
 
 
-//for each item create card
+let cardCombo = [
+    {
+        ingredients: ["Hydrogen Peroxide", "Vinegar"],
+        outcome: "Peracetic Acid",
+        explanation: "weeeeepo"
+    },
 
-//display card in a combo
+    {
+        ingredients: ["Bleach", "Vinegar"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Ammonia"],
+        outcome: "Chloramines",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Rubbing Alcohol"],
+        outcome: "Chloroform",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Toilet Bowl Cleaner"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Mold Remover"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Oven Cleaner"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Vinegar", "Baking Soda"],
+        outcome: "Nullify",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Drain Cleaner"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Glass Cleaner"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Trichloroisocyanuric Acid", "Oxalic Acid"],
+        outcome: "Chlorine Gas",
+        explanation: ""
+    },
+
+    {
+        ingredients: ["Bleach", "Lemon Juice"],
+        outcome: "Chlorine Gas"
+    },
+
+    {
+        ingredients: ["Drain Cleaner", "Drain Cleaner"],
+        outcome: "Chlorine Gas"
+    },
+
+
+]
