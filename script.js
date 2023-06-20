@@ -1,4 +1,6 @@
 // import {cards, cardCombo} from "./cardInfo.js";
+// let cardCombo = cardCombo;
+// let card = cards;
 // console.log(cards);
 // console.log(cardCombo);
 
@@ -46,10 +48,10 @@ quizBtn3.addEventListener("click", function(e){
 
 
 function displayCorrect(parent){
-    var choice1 = parent.querySelector("#choice1").checked;
-    var choice2 = parent.querySelector("#choice2").checked;
+    var choice1 = parent.querySelector(".choice1").checked;
+    var choice2 = parent.querySelector(".choice2").checked;
     var isCorrect = ""
-    if ((choice1 && parent.querySelector("#choice1").value == "correct") || (choice2 && parent.querySelector("#choice2").value == "correct")){
+    if ((choice1 && parent.querySelector(".choice1").value == "correct") || (choice2 && parent.querySelector(".choice2").value == "correct")){
         isCorrect = "Correct";
     }
     else{
@@ -92,9 +94,11 @@ function displayExplanation(parent){
     if (ingredient2.indexOf("_") !== -1){
         let underscore = ingredient2.indexOf("_");
         const secondLetter = ingredient2.charAt(underscore + 1).toUpperCase();
-        ingredient2 = ingredient2.slice(0,9) + secondLetter + ingredient2.slice(10);
+        ingredient2 = ingredient2.slice(0,underscore+1) + secondLetter + ingredient2.slice(underscore+2);
         ingredient2 = ingredient2.replace("_", " ");
     }
+
+    console.log(ingredient2);
 
     for (let i=0; i<cardCombo.length;i+=1){
         let ingredientsList = cardCombo[i].ingredients;
@@ -109,82 +113,86 @@ function displayExplanation(parent){
 }
 
 
+
 let cardCombo = [
     {
         ingredients: ["Hydrogen Peroxide", "Vinegar"],
         outcome: "Peracetic Acid",
-        explanation: "weeeeepo"
+        explanation: "Mixing Hydrogen Peroxide and Vinegar can create Peracetic Acid. You can use both of these ingredients to keep surfaces clean and disinfected as long as one completely dries before using the other."
     },
 
     {
         ingredients: ["Bleach", "Vinegar"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Bleach and Vinegar can create Chlorine Gas. Bleach is recommended to be mixed only with water. "
     },
 
     {
         ingredients: ["Bleach", "Ammonia"],
-        outcome: "Chloramines",
-        explanation: ""
+        outcome: "Chloramine",
+        explanation: "Mixing Bleach and Ammonia can create Chloramine. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Bleach", "Rubbing Alcohol"],
         outcome: "Chloroform",
-        explanation: ""
+        explanation: "Mixing Bleach and Ammonia can create Chloroform. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Bleach", "Toilet Bowl Cleaner"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Bleach and Toilet Bowl Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Bleach", "Mold Remover"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Bleach and Mold Remover can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Bleach", "Oven Cleaner"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Bleach and Oven Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Vinegar", "Baking Soda"],
         outcome: "Nullify",
-        explanation: ""
+        explanation: "Mixing Vinegar and Baking Soda creates a nonharmful, oily mixture. It's not a good combination for cleaning because it is mostly used for volcano eruptions for science fairs."
     },
 
     {
         ingredients: ["Bleach", "Drain Cleaner"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Bleach and Drain Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Bleach", "Glass Cleaner"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Bleach and Glass Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Trichloroisocyanuric Acid", "Oxalic Acid"],
         outcome: "Chlorine Gas",
-        explanation: ""
+        explanation: "Mixing Trichloroisocyanuric Acid and Oxalic Acid can create Chlorine Gas. Oxalic Acid reacts violently with oxidixing agents."
     },
 
     {
         ingredients: ["Bleach", "Lemon Juice"],
-        outcome: "Chlorine Gas"
+        outcome: "Chlorine Gas",
+        explanation: "Mixing Bleach and Glass Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {
         ingredients: ["Drain Cleaner", "Drain Cleaner"],
-        outcome: "Chlorine Gas"
+        outcome: "Chlorine Gas",
+        explanation: "Mixing Drain Cleaner with a different Glass Cleaner can create Chlorine Gas. Most Drain Cleaners have bleach and other acid that release Chlorine Gas or other hazardous gas."
     },
 
 
 ];
+
