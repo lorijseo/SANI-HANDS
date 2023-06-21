@@ -30,19 +30,22 @@ const quizBtn3 = question3.querySelector(".quizBtn")
 
 quizBtn1.addEventListener("click", function(e){
     e.preventDefault();
-    displayExplanation(question1)
+    displayExplanation(question1);
+    quizBtn1.style.display = "none";
 
 })
 
 quizBtn2.addEventListener("click", function(e){
     e.preventDefault();
-    displayExplanation(question2)
+    displayExplanation(question2);
+    quizBtn2.style.display = "none";
 
 })
 
 quizBtn3.addEventListener("click", function(e){
     e.preventDefault();
     displayExplanation(question3)
+    quizBtn3.style.display = "none";
 
 })
 
@@ -50,21 +53,28 @@ quizBtn3.addEventListener("click", function(e){
 function displayCorrect(parent){
     var choice1 = parent.querySelector(".choice1").checked;
     var choice2 = parent.querySelector(".choice2").checked;
-    var isCorrect = ""
+    var isCorrect = false;
+
+    //verify correctness
     if ((choice1 && parent.querySelector(".choice1").value == "correct") || (choice2 && parent.querySelector(".choice2").value == "correct")){
-        isCorrect = "Correct";
+        isCorrect = true;
+    }
+ 
+    //disabled unchecked option
+    if (choice1){
+        parent.querySelector(".choice2").disabled = true;
     }
     else{
-        isCorrect = "Incorrect";
+        parent.querySelector(".choice1").disabled = true;
     }
 
+    //display answers
     parent.querySelector("#question1").querySelector("#cardDescr").style.display = "block";
     parent.querySelector("#question2").querySelector("#cardDescr").style.display = "block";
 
-    parent.querySelector(".cardsInfo").style.display = 'flex';
+    parent.querySelector(".cardsExplanation").style.display = 'flex';
     parent.querySelector("#answer").style.display = 'flex';
-    // parent.querySelector(".cardsInfo").innerHTML = ` <div class="displayCorrect">${isCorrect}! </div> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt, at laboriosam atque aut repudiandae consequatur, vitae neque error aperiam, eius ut iure? Unde ex quam suscipit, ut doloribus necessitatibus voluptatem?</p>
-    // `
+
     return isCorrect;
 }
 
@@ -73,16 +83,16 @@ function displayExplanation(parent){
 
     let ingredientsCollection = parent.getElementsByClassName("ingredientCard");
 
-    //get first name
+    //get first ingredient name
     let ingredient1 = ingredientsCollection[0].id;
     let firstLetter = ingredient1.charAt(0).toUpperCase();
     ingredient1 = firstLetter + ingredient1.slice(1);
 
-    console.log(ingredient1);
+    // console.log(ingredient1);
   
-    console.log(ingredientsCollection[1].id);
+    // console.log(ingredientsCollection[1].id);
 
-    //get second name
+    //get second ingredient name
     let ingredient2 = ingredientsCollection[1].id;
 
     firstLetter = ingredient2.charAt(0).toUpperCase();
@@ -98,14 +108,24 @@ function displayExplanation(parent){
         ingredient2 = ingredient2.replace("_", " ");
     }
 
-    console.log(ingredient2);
+    // console.log(ingredient2);
 
+
+    // display explanation
     for (let i=0; i<cardCombo.length;i+=1){
         let ingredientsList = cardCombo[i].ingredients;
         if ((ingredientsList.indexOf(ingredient1) !== -1) && (ingredientsList.indexOf(ingredient2) !== -1)){
-            parent.querySelector(".cardsInfo").innerHTML = ` 
-            <div class="displayCorrect">${isCorrect}! </div> <p>${cardCombo[i].explanation}</p>
-            `
+            if (isCorrect) {
+                parent.querySelector(".cardsExplanation").innerHTML = ` 
+                <div class="displayCorrect" id="correct_icon"><i class="fa-solid fa-check"></i> </div> <p class="displayExplanation">${cardCombo[i].explanation}</p>
+                `
+            }
+            else{
+                parent.querySelector(".cardsExplanation").innerHTML = ` 
+                <div class="displayCorrect" id="wrong_icon"><i class="fa-solid fa-xmark"></i> </div> <p class="displayExplanation">${cardCombo[i].explanation}</p>
+                `
+            }
+
         }
     }
 

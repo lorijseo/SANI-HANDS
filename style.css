@@ -9,16 +9,20 @@ nav{
 }
 
 .navbar{
-    padding:0;
+    padding-bottom:10px;
 }
 
 .navbar-brand{
-    font-size:5em;
+    font-size:40px;
+}
+
+.navbar-brand:hover{
+    color:black;
 }
 
 .nav-item{
     background-color:#ffcd46;
-    font-size: 2em;
+    font-size: 20px;
     margin-top: 4%;
     margin-left: 5%;
 }
@@ -34,7 +38,7 @@ a{
 
 /* navbar collapse toggler icon */
 .navbar-toggler-icon{
-    font-size: 2em;
+    font-size: 30px;
 }
 
 .navbar-toggler{
@@ -62,12 +66,12 @@ a{
 
 /* **********MAIN********** */
 .mainMsg h1{
-    font-size: 5.5em;
+    font-size: 40px;
 }
 
 .mainMsg p{
     margin:2%;
-    font-size: 2em;
+    font-size: 20px;
     text-align: center;
 
 }
@@ -82,7 +86,7 @@ a{
     margin-left: auto;
     margin-right: auto;
     width:90%;
-    height:800px;
+    height:600px;
     object-fit: cover;
 }
 
@@ -111,19 +115,20 @@ h2{
     margin:3%;
     /* border: 2px dotted red; */
     align-items: center;
-    background-color: #f6d76d;
+    background-color: #ffcd46;
     /* background-color: #f9f0b5; */
     border-radius: 3%;
 
 }
 
 .exploreCard:hover{
-    background-color: #ffcd46;
+    background-color: #f6d76d;
     cursor:pointer;
 }
 
 .exploreTitle{
     font-weight: 500;
+    text-align: center;
 
 }
 .exploreDescr{
@@ -148,7 +153,7 @@ h2{
 
 .pageIntro h1{
     margin-top: 2%;
-    font-size: 6em;
+    font-size: 40px;
     text-align: center;
 }
 
@@ -157,7 +162,7 @@ h2{
 }
 
 .pageIntro div{
-    font-size: 2em;
+    font-size: 20px;
     text-align: center;
     margin: 5% 15% 0 15%;
     background-color: #ffcd46;
@@ -186,7 +191,7 @@ h2{
 
 #cardDescr{
     line-height: 1;
-    font-size: 0.9em;
+    font-size: 15px;
     height:98px;
 }
 
@@ -194,7 +199,7 @@ h2{
 
 .ingredientInfo h2{
     text-align: center;
-    font-size: 3em;
+    font-size: 20px;
     color:#ffcd46;
 }
 .displayCards{
@@ -210,15 +215,15 @@ h2{
 }
 
 #plus{
-    font-size: 5em;
+    font-size: 50px;
 }
 
 #equal{
-    font-size: 5em;
+    font-size: 50px;
 }
 
 .cardsInfo{
-    font-size: 1.2em;
+    font-size: 20px;
     margin: 1% 10%;
     background-color: #ffcd46;
     border-radius: 10px;
@@ -315,12 +320,12 @@ form{
 }
 
 .quiz h3{
-    font-size: 2em;
+    font-size: 20px;
     padding: 2% 2%;
     text-align: center;
 }
 .choices{
-    font-size: 1.5em;
+    font-size: 15px;
     background-color: #ffcd46;
     border-radius: 10px;
     padding: 7px 20px;
@@ -337,7 +342,7 @@ form{
     /* margin-left: 40%; */
     border: none;
     font-weight: 600;
-    font-size: 2em;
+    font-size: 15px;
 }
 
 .quizBtn button:hover{
@@ -345,22 +350,40 @@ form{
     cursor: pointer;
 }
 
-.cardsInfo{
-    display:none;
-    align-items: center;
-    margin:2%;
-}
+
+
 
 .displayCorrect{
-    font-size: 3em;
-    margin-right: 5%;
+    font-size: 100px;
+    /* margin-right: 5%; */
+    align-items: center;
+    display:flex;
+}
+
+#correct_icon{
+    color:green;
+}
+
+#wrong_icon{
+    color:red;
+}
+
+.displayExplanation{
+    font-size: 20px;
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    /* display:none; */
+    align-items: center;
+    margin:2%;
+
 }
 
 
 /* ************************ABOUT PAGE************************** */
 
 .about h1{
-    font-size: 5em;
+    font-size: 40px;
     text-align: center;
     margin:3%;
 }
@@ -379,17 +402,17 @@ form{
 .ourStory{
     width:40%;
     margin:3%;
-    font-size: 1.5em;
+    font-size: 15px;
 }
 
 .ourStory h2{
-    font-size: 3em;
+    font-size: 30px;
     margin:0
 }
 
 /* **********CONTACT********** */
 .contactUs h3{
-    font-size: 3em;
+    font-size: 30px;
     text-align: center;
     margin:3%;
 }
@@ -405,13 +428,13 @@ form{
 }
 
 .displayContact p{
-    font-size: 1.5;
+    font-size: 15px;
     text-align: center;
     font-weight: 700;
 
 }
 
 .displayContact a{
-    font-size: 5em;
+    font-size: 40px;
 
 }
