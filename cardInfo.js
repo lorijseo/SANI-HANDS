@@ -3,8 +3,8 @@ let cards = [
         id:0,
         name: "Vinegar",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "A natural disinfectant that combats odors",
+        bad: "The acidity wears down granite or natural stone countertops",
         info: ""
     },
 
@@ -12,8 +12,8 @@ let cards = [
         id:1,
         name: "Hydrogen Peroxide",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "A natural bleaching compound that kills bacteria, viruses, and mold",
+        bad: "Can cause mild irritation of throat and eyes",
         info: ""
     },
 
@@ -21,8 +21,8 @@ let cards = [
         id:2,
         name: "Bleach",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Strong and effective disinfectant",
+        bad: "Reacts with ammonia and acids that create toxic fumes ",
         info: ""
     },
 
@@ -30,8 +30,8 @@ let cards = [
         id:3,
         name: "Ammonia",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Effective at breaking down household grime or stains such as cooking grease and wine stains.",
+        bad: "High concentration can cause corrosive injuries to eyes and skin with permanant damages",
         info: ""
     },
 
@@ -66,8 +66,8 @@ let cards = [
         id:7,
         name: "Baking Soda",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Natural product that is also in food that removes tough stains and odors",
+        bad: "Leaves behind a white, dusty residue after it dries",
         info: ""
     },
 
@@ -75,8 +75,8 @@ let cards = [
         id:8,
         name: "Drain Cleaner",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Effective and efficient way to unclog and clean drains",
+        bad: "Contains toxic chemicals that are highly corrosive. Mixing different drain cleaners that contain a variety of toxic chemical can create toxic fumes",
         info: ""
     },
 
@@ -84,8 +84,8 @@ let cards = [
         id:9,
         name: "Oxalic Acid",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "A strong acid that removes rust and tough stains on concrete and metal. It bleaches wood by restoring wood to its natural color",
+        bad: "May cause skin irritation from exposure",
         info: ""
     },
 
@@ -93,8 +93,8 @@ let cards = [
         id:10,
         name: "Trichloroisocyanuric Acid",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Eradicates microorganisms in swimming pools and hot tubs",
+        bad: "Fumes can irritate and burn skin, eyes, nose, throat, and lungs",
         info: ""
     },
 
@@ -111,15 +111,6 @@ let cards = [
         id:12,
         name: "Glass Cleaner",
         type: "Ingredient",
-        good: "",
-        bad: "",
-        info: ""
-    },
-
-    {
-        id:13,
-        name: "Peracetic Acid",
-        type: "Effect",
         good: "",
         bad: "",
         info: ""
@@ -179,14 +170,6 @@ let cards = [
         info: "Not harmful. Does not clean as intended. The mixture is not compatible and neutralizes its effect.  "
     },
 
-    {
-        id:20,
-        name: "Baking Soda",
-        type: "Ingredient",
-        good: "",
-        bad: "",
-        info: ""
-    },
 
     {
         id:21,
@@ -199,28 +182,18 @@ let cards = [
 
     {
         id:22,
-        name: "Trichloroisocyanuric Acid",
+        name: "Hydrochloric Acid",
         type: "Ingredient",
-        good: "Eradicating microorganisms in swimming pools and hot tubs",
-        bad: "",
-        info: ""
+        good: "Common ingredient in bathroom cleaing supplies that can clean tough stains",
+        bad: "Corrosive nature cause irritation and burn to eyes, skin, and throat.",
+        info: "Hydrogen chloride can be formed during the burning of many plastics. Hydrochloric acid is found in the gases evolved from volcanoes, particularly ones found in Mexico and South America. Hydrochloric acid is also found in the digestive tract of most mammals."
     },
-
-    {
-        id:23,
-        name: "Oxalic Acid",
-        type: "Ingredient",
-        good: "Removes rust and other difficult stains",
-        bad: "",
-        info: ""
-    },
-
     {
         id:24,
         name: "Lemon Juice",
         type: "Ingredient",
-        good: "Best all-natural cleaner",
-        bad: "",
+        good: "Best all-natural cleaner due to its low pH and antibacterial properties",
+        bad: "Can corrode marble and leave marks and stains.",
         info: ""
     },
 
@@ -228,8 +201,8 @@ let cards = [
         id:25,
         name: "Citric Acid",
         type: "Ingredient",
-        good: "Removes mold and mildew",
-        bad: "",
+        good: "Safe and effective disinfectant that removes mold and mildew",
+        bad: "Acidic content that can irritate nose and trigger asthma symptoms",
         info: ""
     },
 
@@ -303,6 +276,10 @@ let cardCombo = [
         outcome: "Chlorine Gas"
     },
 
+        {
+        ingredients: ["Bleach", "Citric Acid"],
+        outcome: "Chlorine Gas"
+    },
 
 ]
 
