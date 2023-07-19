@@ -111,6 +111,7 @@ h2{
 
 .exploreCard{
     display:flex;
+    width:25%;
     flex-direction: column;
     margin:3%;
     /* border: 2px dotted red; */
@@ -312,6 +313,17 @@ h2{
 .effectCard .cardContent{
     display:none;
 } */
+
+.questionNumber{
+    font-size: 20px;
+    margin: 1% 10%;
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
 
 .quiz{
     display:flex;

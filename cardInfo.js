@@ -131,7 +131,7 @@ let cards = [
         type: "Effect",
         good: "",
         bad: "",
-        info: "A yellow to colorless liquid that let out fumes that cause irritation to eyes, nose, and throat. It is less volatile than Chlorine Gas but it stays in water longer."
+        info: "Known as mustard gas from WWI, a yellow to colorless liquid that let out fumes that cause irritation to eyes, nose, and throat. It is less volatile than Chlorine Gas but it stays in water longer."
     },
 
     {
