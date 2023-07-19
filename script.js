@@ -30,21 +30,21 @@ const quizBtn3 = question3.querySelector(".quizBtn")
 
 quizBtn1.addEventListener("click", function(e){
     e.preventDefault();
-    displayExplanation(question1);
+    displayQuizExplanation(question1);
     quizBtn1.style.display = "none";
 
 })
 
 quizBtn2.addEventListener("click", function(e){
     e.preventDefault();
-    displayExplanation(question2);
+    displayQuizExplanation(question2);
     quizBtn2.style.display = "none";
 
 })
 
 quizBtn3.addEventListener("click", function(e){
     e.preventDefault();
-    displayExplanation(question3)
+    displayQuizExplanation(question3)
     quizBtn3.style.display = "none";
 
 })
@@ -78,7 +78,7 @@ function displayCorrect(parent){
     return isCorrect;
 }
 
-function displayExplanation(parent){
+function displayQuizExplanation(parent){
     let isCorrect = displayCorrect(parent);
 
     let ingredientsCollection = parent.getElementsByClassName("ingredientCard");
@@ -117,12 +117,12 @@ function displayExplanation(parent){
         if ((ingredientsList.indexOf(ingredient1) !== -1) && (ingredientsList.indexOf(ingredient2) !== -1)){
             if (isCorrect) {
                 parent.querySelector(".cardsExplanation").innerHTML = ` 
-                <div class="displayCorrect" id="correct_icon"><i class="fa-solid fa-check"></i> </div> <p class="displayExplanation">${cardCombo[i].explanation}</p>
+                <div class="displayCorrect" id="correct_icon"><i class="fa-solid fa-check"></i> </div> <p class="displayQuizExplanation">${cardCombo[i].explanation}</p>
                 `
             }
             else{
                 parent.querySelector(".cardsExplanation").innerHTML = ` 
-                <div class="displayCorrect" id="wrong_icon"><i class="fa-solid fa-xmark"></i> </div> <p class="displayExplanation">${cardCombo[i].explanation}</p>
+                <div class="displayCorrect" id="wrong_icon"><i class="fa-solid fa-xmark"></i> </div> <p class="displayQuizExplanation">${cardCombo[i].explanation}</p>
                 `
             }
 
@@ -154,9 +154,15 @@ let cardCombo = [
     },
 
     {
-        ingredients: ["Bleach", "Rubbing Alcohol"],
+        ingredients: ["Bleach", "Isopropyl Alcohol"],
         outcome: "Chloroform",
-        explanation: "Mixing Bleach and Ammonia can create Chloroform. Bleach is recommended to be mixed only with water."
+        explanation: "Mixing Bleach and Isopropyl Alcohol can create Chloroform. Bleach is recommended to be mixed only with water."
+    },
+
+        {
+        ingredients: ["Vinegar", "Isopropyl Alcohol"],
+        outcome: "Glass and Mirror Cleaner",
+        explanation: "Mixing Vinegar and Isopopyl Alcohol create a spray for glass and mirror cleaner. They can give a nice shine for tiles and other surfaces."
     },
 
     {

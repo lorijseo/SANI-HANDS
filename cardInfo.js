@@ -37,19 +37,19 @@ let cards = [
 
     {
         id:4,
-        name: "Rubbing Alcohol",
+        name: "Isopropyl Alcohol",
         type: "Ingredient",
-        good: "",
-        bad: "",
-        info: ""
+        good: "Clean and disinfect hard surfaces",
+        bad: "Can damage finished surfaces and certain fabrics. Can create harmful fumes ",
+        info: "Also known as rubbing alcohol, it can be used as a disinfectant and sterilizer. Due to its high alcohol content, it's not recommended near fire. It evaporates quickly so it can create harmful fumes."
     },
 
     {
         id:5,
         name: "Toilet Bowl Cleaner",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Effectively and efficiently cleans and disinfects toilet and combats odors",
+        bad: "Most contain acidic chemicals that can be harmful to lungs and skin",
         info: ""
     },
 
@@ -57,8 +57,8 @@ let cards = [
         id:6,
         name: "Mold Remover",
         type: "Ingredient",
-        good: "",
-        bad: "",
+        good: "Reduces spread of mold and eliminates odors",
+        bad: "Most contain hydrogen peroxide and bleach. Inhaling it can irritate throat, lungs, and skin. ",
         info: ""
     },
 
@@ -131,16 +131,16 @@ let cards = [
         type: "Effect",
         good: "",
         bad: "",
-        info: ""
+        info: "A colorless liquid that can severly irritate lungs and burn skin and eyes."
     },
 
     {
         id:15,
-        name: "Chloramines",
+        name: "Chloramine",
         type: "Effect",
         good: "",
         bad: "",
-        info: "Poison that is less volatile than Chlorine Gas but it stays in water longer"
+        info: "A yellow to colorless liquid that let out fumes that cause irritation to eyes, nose, and throat. It is less volatile than Chlorine Gas but it stays in water longer."
     },
 
     {

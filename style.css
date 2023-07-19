@@ -313,9 +313,9 @@ h2{
     display:none;
 } */
 
-/* .quiz{
+.quiz{
     display:flex;
-} */
+}
 
 form{
     margin: 3%;
@@ -329,16 +329,19 @@ form{
 
 }
 
-.quiz h3{
-    font-size: 20px;
+.quizLabel{
+    font-size: 30px;
     padding: 2% 2%;
-    text-align: center;
+    font-weight: 500;
+    width: 50%;
+
 }
 .choices{
     font-size: 15px;
-    background-color: #ffcd46;
+    margin:auto;
+    /* background-color: #ffcd46;
     border-radius: 10px;
-    padding: 7px 20px;
+    padding: 7px 20px; */
 }
 
 input:hover{
@@ -350,9 +353,12 @@ label:hover{
 }
 
 .choices #choice1space{
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
+.quizBtn{
+    margin: auto;
+}
 .quizBtn button{
     background-color: #ffcd46;
     border-radius: 10px;
@@ -387,7 +393,7 @@ label:hover{
     color:red;
 }
 
-.displayExplanation{
+.displayQuizExplanation{
     font-size: 20px;
     background-color: #ffcd46;
     border-radius: 10px;
