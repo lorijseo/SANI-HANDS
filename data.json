@@ -1,0 +1,123 @@
+{
+    "cards": [
+        {
+            "id":0,
+            "name": "Vinegar",
+            "type": "Ingredient",
+            "good": "A natural disinfectant that combats odors",
+            "bad": "The acidity wears down granite or natural stone countertops",
+            "info": ""
+    
+        },
+    
+        {
+            "id":1,
+            "name": "Hydrogen Peroxide",
+            "type": "Ingredient",
+            "good": "A natural bleaching compound that kills bacteria, viruses, and mold",
+            "bad": "Can cause mild irritation of throat and eyes",
+            "info": ""
+        },
+    
+        {
+            "id":2,
+            "name": "Bleach",
+            "type": "Ingredient",
+            "good": "Strong and effective disinfectant",
+            "bad": "Reacts with ammonia and acids that create toxic fumes ",
+            "info": ""
+        },
+    
+        {
+            "id":3,
+            "name": "Ammonia",
+            "type": "Ingredient",
+            "good": "Effective at breaking down household grime or stains such as cooking grease and wine stains.",
+            "bad": "High concentration can cause corrosive injuries to eyes and skin with permanant damages",
+            "info": ""
+        },
+    
+        {
+            "id":4,
+            "name": "Isopropyl Alcohol",
+            "type": "Ingredient",
+            "good": "Clean and disinfect hard surfaces",
+            "bad": "Can damage finished surfaces and certain fabrics. Can create harmful fumes ",
+            "info": "Also known as rubbing alcohol, it can be used as a disinfectant and sterilizer. Due to its high alcohol content, it's not recommended near fire. It evaporates quickly so it can create harmful fumes."
+        }
+    
+    ],
+
+    "combo": [
+        {
+            "ingredients": ["Hydrogen Peroxide", "Vinegar"],
+            "outcome": "Peracetic Acid"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Vinegar"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Ammonia"],
+            "outcome": "Chloramines"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Rubbing Alcohol"],
+            "outcome": "Chloroform"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Toilet Bowl Cleaner"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Mold Remover"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Oven Cleaner"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Vinegar", "Baking Soda"],
+            "outcome": "Nullify"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Drain Cleaner"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Glass Cleaner"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Trichloroisocyanuric Acid", "Oxalic Acid"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Lemon Juice"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Drain Cleaner", "Drain Cleaner"],
+            "outcome": "Chlorine Gas"
+        },
+    
+        {
+            "ingredients": ["Bleach", "Citric Acid"],
+            "outcome": "Chlorine Gas"
+        }
+    
+    ]
+}
