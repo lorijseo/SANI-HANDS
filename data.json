@@ -7,7 +7,8 @@
             "type": "Ingredient",
             "good": "A natural disinfectant that combats odors",
             "bad": "The acidity wears down granite or natural stone countertops",
-            "info": ""
+            "info": "",
+            "img": "cardImages/vinegar.jpg"
     
         },
     

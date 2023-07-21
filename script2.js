@@ -28,7 +28,7 @@ function createCard(cardData){
         <div class="${formatType + "Card"}" id="${formatName}">
         <div class="cardContent">
         <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardName} </p>
-        <img src="images/product.jpg" alt="">
+        <img src="${cardData.img}" alt=""height="128.42px">
         <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
         <div class="${formatType + "Descr"}" id="cardDescr">
 

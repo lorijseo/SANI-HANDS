@@ -12,7 +12,7 @@ quizPage.addEventListener("click", function(e){
 
 
 
-
+// **********************QUIZPAGE**********************
 question1 = document.querySelector("#info1")
 const quizBtn1 = question1.querySelector(".quizBtn")
 
