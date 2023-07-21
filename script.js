@@ -1,3 +1,17 @@
+// **********************HOMEPAGE**********************
+
+let infoPage = document.querySelector("#info_page");
+infoPage.addEventListener("click", function(e){
+    window.location.href = "info.html";
+})
+
+let quizPage = document.querySelector("#quiz_page");
+quizPage.addEventListener("click", function(e){
+    window.location.href = "quiz.html";
+})
+
+
+
 
 question1 = document.querySelector("#info1")
 const quizBtn1 = question1.querySelector(".quizBtn")
