@@ -20,6 +20,7 @@ function createCard(cardData){
     let cardType = cardData.type;
     let cardName = cardData.name;
     let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
+    // does not consider two worded names, account for underscore
     let formatName = cardName.charAt(0).toLowerCase() + cardName.slice(1);
     console.log(formatType)
 
@@ -28,7 +29,7 @@ function createCard(cardData){
         <div class="${formatType + "Card"}" id="${formatName}">
         <div class="cardContent">
         <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardName} </p>
-        <img src="${cardData.img}" alt=""height="128.42px">
+        <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
         <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
         <div class="${formatType + "Descr"}" id="cardDescr">
 
@@ -73,7 +74,7 @@ let createBtn = document.getElementById("create")
 
 createBtn.addEventListener("click", function(e){
     e.preventDefault();
-    getCardData("Vinegar")
+    getCardData("Isopropyl Alcohol")
 
 
 })

@@ -27,7 +27,8 @@
             "type": "Ingredient",
             "good": "Strong and effective disinfectant",
             "bad": "Reacts with ammonia and acids that create toxic fumes ",
-            "info": ""
+            "info": "",
+            "img": "cardImages/bleach.png"
         },
     
         {
@@ -36,7 +37,8 @@
             "type": "Ingredient",
             "good": "Effective at breaking down household grime or stains such as cooking grease and wine stains.",
             "bad": "High concentration can cause corrosive injuries to eyes and skin with permanant damages",
-            "info": ""
+            "info": "",
+            "img": "cardImages/ammonia.jpg"
         },
     
         {
@@ -45,7 +47,8 @@
             "type": "Ingredient",
             "good": "Clean and disinfect hard surfaces",
             "bad": "Can damage finished surfaces and certain fabrics. Can create harmful fumes ",
-            "info": "Also known as rubbing alcohol, it can be used as a disinfectant and sterilizer. Due to its high alcohol content, it's not recommended near fire. It evaporates quickly so it can create harmful fumes."
+            "info": "Also known as rubbing alcohol, it can be used as a disinfectant and sterilizer. Due to its high alcohol content, it's not recommended near fire. It evaporates quickly so it can create harmful fumes.",
+            "img": "cardImages/isopropyl_alcohol.jpg"
         },
 
         {
