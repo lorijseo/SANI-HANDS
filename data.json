@@ -45,6 +45,15 @@
             "good": "Clean and disinfect hard surfaces",
             "bad": "Can damage finished surfaces and certain fabrics. Can create harmful fumes ",
             "info": "Also known as rubbing alcohol, it can be used as a disinfectant and sterilizer. Due to its high alcohol content, it's not recommended near fire. It evaporates quickly so it can create harmful fumes."
+        },
+
+        {
+            "id":16,
+            "name": "Chlorine Gas",
+            "type": "Effect",
+            "good": "",
+            "bad": "",
+            "info": "Yellow poisonous gas that causes coughing, eye and nose irritation, and shortness of breath."
         }
     
     ],
