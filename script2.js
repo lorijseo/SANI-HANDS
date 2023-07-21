@@ -52,18 +52,17 @@ function cardDescription(cardData, name){
 
         `
     }
-    elif (cardData.type = "Effect"){
+
+    else if (cardData.type == "Effect"){
         displayDescr.innerHTML = `
             <p><span style="padding-right:5px;"></span> <i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Effects: ${cardData.info} </p>
         `
-
     }
 
-    elif (cardData.type = "Product"){
+    else if (cardData.type == "Product"){
         displayDescr.innerHTML = `
             <p><span style="padding-right:5px;"></span> <i class="fa-solid fa-skull-crossbones" style="color: red"></i>  Effects: ${cardData.info} </p>
         `
-
     }
 
 }

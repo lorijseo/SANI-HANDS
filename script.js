@@ -1,21 +1,3 @@
-// import {cards, cardCombo} from "./cardInfo.js";
-// let cardCombo = cardCombo;
-// let card = cards;
-// console.log(cards);
-// console.log(cardCombo);
-
-// parent = document.querySelector("#info2")
-// parent.querySelector("#answer").style.display = "flex";
-
-
-// document.querySelector("#answer").style.display = "none";
-
-
-// const questionCard1 = document.querySelector("#question1");
-// questionCard1.querySelector("#cardDescr").style.display = "none";
-
-// const questionCard2 = document.querySelector("#question2");
-// questionCard2.querySelector("#cardDescr").style.display = "none";
 
 question1 = document.querySelector("#info1")
 const quizBtn1 = question1.querySelector(".quizBtn")
