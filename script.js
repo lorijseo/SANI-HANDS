@@ -133,6 +133,24 @@ function displayQuizExplanation(parent){
 }
 
 
+// function createCard(name,type,good,bad,effect,info){
+
+
+// }
+
+// function createCard(){
+//     const sample = require('data.json');
+//     console.log(sample);
+
+// }
+
+// let createBtn = document.getElementById("create")
+
+// createBtn.addEventListener("click", function(e){
+//     e.preventDefault();
+//     createCard();
+
+// })
 
 let cardCombo = [
     {
