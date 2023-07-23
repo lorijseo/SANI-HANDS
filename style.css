@@ -140,8 +140,8 @@ h2{
 
 .displayExplore img{
     max-width:100%;
-    max-height: 500px;
-    object-fit: contain;
+    max-height: auto;
+    object-fit: cover;
     
 }
 
