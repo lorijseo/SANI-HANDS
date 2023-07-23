@@ -1,10 +1,5 @@
-// function createCard(name,type,good,bad,effect,info){
 
-
-
-// }
 async function getCardData(searchName){
-    console.log("weee")
     const response = await fetch("data.json");
     const data = await response.json();
     for (let i=0; data.cards.length; i++){
@@ -16,19 +11,35 @@ async function getCardData(searchName){
 
 }
 
+function findCardId(cardData){
+    let cardName = cardData.name;
+    if (cardName.indexOf(" ") !== -1){
+        let firstWordEnds = cardName.indexOf(" ");
+        let firstWord = cardName.charAt(0).toLowerCase() + cardName.slice(1, firstWordEnds);
+        let secondWord = cardName.charAt(firstWordEnds + 1).toLowerCase() + cardName.slice(firstWordEnds+2, cardName.length);
+        let idName = firstWord + "_" + secondWord;
+
+        // console.log(cardId)
+        return idName
+    }
+    else{
+        let idName = cardName.charAt(0).toLowerCase() + cardName.slice(1);
+        return idName
+    }
+}
+
+
 function createCard(cardData){
     let cardType = cardData.type;
-    let cardName = cardData.name;
     let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
     // does not consider two worded names, account for underscore
-    let formatName = cardName.charAt(0).toLowerCase() + cardName.slice(1);
-    console.log(formatType)
+    let formatName = findCardId(cardData)
 
     let displayCard = document.querySelector(".creation");
     displayCard.innerHTML = `
         <div class="${formatType + "Card"}" id="${formatName}">
         <div class="cardContent">
-        <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardName} </p>
+        <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardData.name} </p>
         <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
         <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
         <div class="${formatType + "Descr"}" id="cardDescr">
@@ -42,8 +53,10 @@ function createCard(cardData){
 
 }
 
-function cardDescription(cardData, name){
-    let cardId = "#" + name; 
+
+
+function cardDescription(cardData, idName){
+    let cardId = "#" + idName; 
     let findCard = document.querySelector(cardId)
     let displayDescr = findCard.querySelector("#cardDescr")
     if (cardData.type = "Ingredient"){
@@ -68,13 +81,10 @@ function cardDescription(cardData, name){
 
 }
 
-// function displayCard(cardData, )
 
 let createBtn = document.getElementById("create")
 
 createBtn.addEventListener("click", function(e){
     e.preventDefault();
-    getCardData("Isopropyl Alcohol")
-
-
+    getCardData("Baking Soda")
 })
