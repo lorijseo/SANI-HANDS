@@ -86,5 +86,5 @@ let createBtn = document.getElementById("create")
 
 createBtn.addEventListener("click", function(e){
     e.preventDefault();
-    getCardData("Baking Soda")
+    getCardData("Toiletbowl Cleaner")
 })

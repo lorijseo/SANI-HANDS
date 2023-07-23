@@ -1,17 +1,3 @@
-// **********************HOMEPAGE**********************
-
-let infoPage = document.querySelector("#info_page");
-infoPage.addEventListener("click", function(e){
-    window.location.href = "info.html";
-})
-
-let quizPage = document.querySelector("#quiz_page");
-quizPage.addEventListener("click", function(e){
-    window.location.href = "quiz.html";
-})
-
-
-
 // **********************QUIZPAGE**********************
 question1 = document.querySelector("#info1")
 const quizBtn1 = question1.querySelector(".quizBtn")
@@ -84,9 +70,6 @@ function displayQuizExplanation(parent){
     let firstLetter = ingredient1.charAt(0).toUpperCase();
     ingredient1 = firstLetter + ingredient1.slice(1);
 
-    // console.log(ingredient1);
-  
-    // console.log(ingredientsCollection[1].id);
 
     //get second ingredient name
     let ingredient2 = ingredientsCollection[1].id;
@@ -94,7 +77,6 @@ function displayQuizExplanation(parent){
     firstLetter = ingredient2.charAt(0).toUpperCase();
     ingredient2 = firstLetter + ingredient2.slice(1);
 
-    console.log(ingredient2);
 
     // if there's an underscore
     if (ingredient2.indexOf("_") !== -1){
@@ -103,8 +85,6 @@ function displayQuizExplanation(parent){
         ingredient2 = ingredient2.slice(0,underscore+1) + secondLetter + ingredient2.slice(underscore+2);
         ingredient2 = ingredient2.replace("_", " ");
     }
-
-    // console.log(ingredient2);
 
 
     // display explanation
@@ -129,24 +109,6 @@ function displayQuizExplanation(parent){
 }
 
 
-// function createCard(name,type,good,bad,effect,info){
-
-
-// }
-
-// function createCard(){
-//     const sample = require('data.json');
-//     console.log(sample);
-
-// }
-
-// let createBtn = document.getElementById("create")
-
-// createBtn.addEventListener("click", function(e){
-//     e.preventDefault();
-//     createCard();
-
-// })
 
 let cardCombo = [
     {
@@ -173,11 +135,11 @@ let cardCombo = [
         explanation: "Mixing Bleach and Isopropyl Alcohol can create Chloroform. Bleach is recommended to be mixed only with water."
     },
 
-        {
-        ingredients: ["Vinegar", "Isopropyl Alcohol"],
-        outcome: "Glass and Mirror Cleaner",
-        explanation: "Mixing Vinegar and Isopopyl Alcohol create a spray for glass and mirror cleaner. They can give a nice shine for tiles and other surfaces."
-    },
+    // {
+    //     ingredients: ["Vinegar", "Isopropyl Alcohol"],
+    //     outcome: "Glass and Mirror Cleaner",
+    //     explanation: "Mixing Vinegar and Isopopyl Alcohol create a spray for glass and mirror cleaner. They can give a nice shine for tiles and other surfaces."
+    // },
 
     {
         ingredients: ["Bleach", "Toilet Bowl Cleaner"],
@@ -224,7 +186,7 @@ let cardCombo = [
     {
         ingredients: ["Bleach", "Lemon Juice"],
         outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Glass Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
+        explanation: "Mixing Bleach and Lemon Juice can create Chlorine Gas. Bleach is recommended to be mixed only with water."
     },
 
     {

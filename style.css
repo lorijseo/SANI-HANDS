@@ -141,7 +141,7 @@ h2{
 .displayExplore img{
     max-width:100%;
     max-height: auto;
-    object-fit: cover;
+    object-fit: scale-down;
     
 }
 

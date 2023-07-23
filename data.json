@@ -18,7 +18,8 @@
             "type": "Ingredient",
             "good": "A natural bleaching compound that kills bacteria, viruses, and mold",
             "bad": "Can cause mild irritation of throat and eyes",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -57,16 +58,18 @@
             "type": "Effect",
             "good": "",
             "bad": "",
-            "info": "Yellow poisonous gas that causes coughing, eye and nose irritation, and shortness of breath."
+            "info": "Yellow poisonous gas that causes coughing, eye and nose irritation, and shortness of breath.",
+            "img": "cardImages/.jpg"
         },
 
         {
             "id":5,
-            "name": "Toilet Bowl Cleaner",
+            "name": "Toiletbowl Cleaner",
             "type": "Ingredient",
             "good": "Effectively and efficiently cleans and disinfects toilet and combats odors",
             "bad": "Most contain acidic chemicals that can be harmful to lungs and skin",
-            "info": ""
+            "info": "",
+            "img": "cardImages/toiletbowl_cleaner.jpg"
         },
     
         {
@@ -75,7 +78,8 @@
             "type": "Ingredient",
             "good": "Reduces spread of mold and eliminates odors",
             "bad": "Most contain hydrogen peroxide and bleach. Inhaling it can irritate throat, lungs, and skin. ",
-            "info": ""
+            "info": "",
+            "img": "cardImages/mold_remover.jpg"
         },
     
         {
@@ -84,7 +88,8 @@
             "type": "Ingredient",
             "good": "Natural product that is also in food that removes tough stains and odors",
             "bad": "Leaves behind a white, dusty residue after it dries",
-            "info": ""
+            "info": "",
+            "img": "cardImages/baking_soda.jpg"
         },
     
         {
@@ -93,7 +98,8 @@
             "type": "Ingredient",
             "good": "Effective and efficient way to unclog and clean drains",
             "bad": "Contains toxic chemicals that are highly corrosive. Mixing different drain cleaners that contain a variety of toxic chemical can create toxic fumes",
-            "info": ""
+            "info": "",
+            "img": "cardImages/drain_cleaner.jpg"
         },
     
         {
@@ -102,7 +108,8 @@
             "type": "Ingredient",
             "good": "A strong acid that removes rust and tough stains on concrete and metal. It bleaches wood by restoring wood to its natural color",
             "bad": "May cause skin irritation from exposure",
-            "info": ""
+            "info": "",
+            "img": "cardImages/oxalic_acid.jpg"
         },
     
         {
@@ -111,7 +118,8 @@
             "type": "Ingredient",
             "good": "Eradicates microorganisms in swimming pools and hot tubs",
             "bad": "Fumes can irritate and burn skin, eyes, nose, throat, and lungs",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -120,7 +128,8 @@
             "type": "Ingredient",
             "good": "",
             "bad": "",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -129,7 +138,8 @@
             "type": "Ingredient",
             "good": "",
             "bad": "",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -138,7 +148,8 @@
             "type": "Effect",
             "good": "",
             "bad": "",
-            "info": "A colorless liquid that can severly irritate lungs and burn skin and eyes."
+            "info": "A colorless liquid that can severly irritate lungs and burn skin and eyes.",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -147,7 +158,8 @@
             "type": "Effect",
             "good": "",
             "bad": "",
-            "info": "Known as mustard gas from WWI, a yellow to colorless liquid that let out fumes that cause irritation to eyes, nose, and throat. It is less volatile than Chlorine Gas but it stays in water longer."
+            "info": "Known as mustard gas from WWI, a yellow to colorless liquid that let out fumes that cause irritation to eyes, nose, and throat. It is less volatile than Chlorine Gas but it stays in water longer.",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -156,7 +168,8 @@
             "type": "Effect",
             "good": "",
             "bad": "",
-            "info": "Yellow poisonous gas that causes coughing, eye and nose irritation, and shortness of breath."
+            "info": "Yellow poisonous gas that causes coughing, eye and nose irritation, and shortness of breath.",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -165,7 +178,8 @@
             "type": "Effect",
             "good": "",
             "bad": "",
-            "info": "Colorless and flammable toxic that causes severe lung irritation and compromises cardiac functions. "
+            "info": "Colorless and flammable toxic that causes severe lung irritation and compromises cardiac functions. ",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -174,7 +188,8 @@
             "type": "Effect",
             "good": "",
             "bad": "",
-            "info": "Colorless liquid that quickly evaporates into a gas that is harmful to eyes, skin, liver, kidneys, and nervous system. "
+            "info": "Colorless liquid that quickly evaporates into a gas that is harmful to eyes, skin, liver, kidneys, and nervous system. ",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -183,7 +198,8 @@
             "type": "Nullify",
             "good": "",
             "bad": "",
-            "info": "Not harmful. Does not clean as intended. The mixture is not compatible and neutralizes its effect.  "
+            "info": "Not harmful. Does not clean as intended. The mixture is not compatible and neutralizes its effect.  ",
+            "img": "cardImages/.jpg"
         },
     
     
@@ -193,7 +209,8 @@
             "type": "Ingredient",
             "good": "",
             "bad": "",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -202,7 +219,8 @@
             "type": "Ingredient",
             "good": "Common ingredient in bathroom cleaing supplies that can clean tough stains",
             "bad": "Corrosive nature cause irritation and burn to eyes, skin, and throat.",
-            "info": "Hydrogen chloride can be formed during the burning of many plastics. Hydrochloric acid is found in the gases evolved from volcanoes, particularly ones found in Mexico and South America. Hydrochloric acid is also found in the digestive tract of most mammals."
+            "info": "Hydrogen chloride can be formed during the burning of many plastics. Hydrochloric acid is found in the gases evolved from volcanoes, particularly ones found in Mexico and South America. Hydrochloric acid is also found in the digestive tract of most mammals.",
+            "img": "cardImages/.jpg"
         },
         {
             "id":24,
@@ -210,7 +228,8 @@
             "type": "Ingredient",
             "good": "Best all-natural cleaner due to its low pH and antibacterial properties",
             "bad": "Can corrode marble and leave marks and stains.",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         },
     
         {
@@ -219,7 +238,8 @@
             "type": "Ingredient",
             "good": "Safe and effective disinfectant that removes mold and mildew",
             "bad": "Acidic content that can irritate nose and trigger asthma symptoms",
-            "info": ""
+            "info": "",
+            "img": "cardImages/.jpg"
         }
     
     
@@ -228,72 +248,86 @@
     "combo": [
         {
             "ingredients": ["Hydrogen Peroxide", "Vinegar"],
-            "outcome": "Peracetic Acid"
+            "outcome": "Peracetic Acid",
+            "explanation": "Mixing Hydrogen Peroxide and Vinegar can create Peracetic Acid. You can use both of these ingredients to keep surfaces clean and disinfected as long as one completely dries before using the other."
         },
     
         {
             "ingredients": ["Bleach", "Vinegar"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Vinegar can create Chlorine Gas. Bleach is recommended to be mixed only with water. "
         },
     
         {
             "ingredients": ["Bleach", "Ammonia"],
-            "outcome": "Chloramines"
+            "outcome": "Chloramines",
+            "explanation": "Mixing Bleach and Ammonia can create Chloramine. Bleach is recommended to be mixed only with water."
         },
     
         {
-            "ingredients": ["Bleach", "Rubbing Alcohol"],
-            "outcome": "Chloroform"
+            "ingredients": ["Bleach", "Isopropyl Alcohol"],
+            "outcome": "Chloroform",
+            "explanation": "Mixing Bleach and Isopropyl Alcohol can create Chloroform. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Bleach", "Toilet Bowl Cleaner"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Toilet Bowl Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Bleach", "Mold Remover"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Mold Remover can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Bleach", "Oven Cleaner"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Oven Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Vinegar", "Baking Soda"],
-            "outcome": "Nullify"
+            "outcome": "Nullify",
+            "explanation": "Mixing Vinegar and Baking Soda creates a nonharmful, oily mixture. It's not a good combination for cleaning because it is mostly used for volcano eruptions for science fairs."
         },
     
         {
             "ingredients": ["Bleach", "Drain Cleaner"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Drain Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Bleach", "Glass Cleaner"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Glass Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Trichloroisocyanuric Acid", "Oxalic Acid"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Trichloroisocyanuric Acid and Oxalic Acid can create Chlorine Gas. Oxalic Acid reacts violently with oxidixing agents."
         },
     
         {
             "ingredients": ["Bleach", "Lemon Juice"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Lemon Juice can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         },
     
         {
             "ingredients": ["Drain Cleaner", "Drain Cleaner"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Drain Cleaner with a different Glass Cleaner can create Chlorine Gas. Most Drain Cleaners have bleach and other acid that release Chlorine Gas or other hazardous gas."
         },
     
         {
             "ingredients": ["Bleach", "Citric Acid"],
-            "outcome": "Chlorine Gas"
+            "outcome": "Chlorine Gas",
+            "explanation": "Mixing Bleach and Citric Acid can create Chlorine Gas. Bleach is recommended to be mixed only with water."
         }
     
     ]
