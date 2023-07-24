@@ -294,7 +294,11 @@ h2{
 
 .searchOption{
     text-align:center;
-    /* margin:auto; */
+    margin:4%;
+}
+
+.searchOption h2{
+    margin: 2%;
 }
 input{
     width:50%;
@@ -302,6 +306,30 @@ input{
     border-radius: 10px;
     border: 3px solid #ffcd46;
     font-size: 20px;
+}
+
+.searchOption #searchBtn{
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.creation .ingredientCard{
+    /* width:100%; */
+    margin:auto;
+}
+
+.creation .effectCard{
+    /* width:100%; */
+    margin:auto;
+}
+
+.creation .nullifyCard{
+    /* width:100%; */
+    margin:auto;
 }
 /* ************************QUIZ PAGE************************** */
 

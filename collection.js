@@ -1,5 +1,6 @@
 
 async function getCardData(searchName){
+    // const searchValue = searchTxt.value;
     const response = await fetch("data.json");
     const data = await response.json();
     for (let i=0; data.cards.length; i++){
@@ -8,6 +9,7 @@ async function getCardData(searchName){
             createCard(data.cards[i])
         }
     }
+    console.log("doesn't exist!!!!")
 
 }
 
@@ -26,31 +28,6 @@ function findCardId(cardData){
         let idName = cardName.charAt(0).toLowerCase() + cardName.slice(1);
         return idName
     }
-}
-
-
-function createCard(cardData){
-    let cardType = cardData.type;
-    let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
-    // does not consider two worded names, account for underscore
-    let formatName = findCardId(cardData)
-
-    let displayCard = document.querySelector(".creation");
-    displayCard.innerHTML = `
-        <div class="${formatType + "Card"}" id="${formatName}">
-        <div class="cardContent">
-        <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardData.name} </p>
-        <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
-        <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
-        <div class="${formatType + "Descr"}" id="cardDescr">
-
-        </div>
-        </div>
-    </div>
-    `
-    cardDescription(cardData, formatName);
-
-
 }
 
 
@@ -81,10 +58,39 @@ function cardDescription(cardData, idName){
 
 }
 
+function createCard(cardData){
+    let cardType = cardData.type;
+    let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
+    // does not consider two worded names, account for underscore
+    let formatName = findCardId(cardData)
 
-let createBtn = document.getElementById("create")
+    let displayCard = document.querySelector(".creation");
+    displayCard.innerHTML = `
+        <div class="${formatType + "Card"}" id="${formatName}">
+        <div class="cardContent">
+        <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardData.name} </p>
+        <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
+        <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
+        <div class="${formatType + "Descr"}" id="cardDescr">
+
+        </div>
+        </div>
+    </div>
+    `
+    cardDescription(cardData, formatName);
+
+
+}
+
+
+const createBtn = document.getElementById("searchBtn");
+
 
 createBtn.addEventListener("click", function(e){
     e.preventDefault();
-    getCardData("Vinegar")
+    const searchTxt = document.getElementById("search").value;
+
+    console.log(searchTxt);
+    getCardData(searchTxt);
+    document.getElementById("search").value = '';
 })
