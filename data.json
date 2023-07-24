@@ -19,7 +19,7 @@
             "good": "A natural bleaching compound that kills bacteria, viruses, and mold",
             "bad": "Can cause mild irritation of throat and eyes",
             "info": "",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/ingredient_icon.png"
         },
     
         {
@@ -119,7 +119,7 @@
             "good": "Eradicates microorganisms in swimming pools and hot tubs",
             "bad": "Fumes can irritate and burn skin, eyes, nose, throat, and lungs",
             "info": "",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/ingredient_icon.png"
         },
     
         {
@@ -139,7 +139,7 @@
             "good": "",
             "bad": "",
             "info": "",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/ingredient_icon.png"
         },
     
         {
@@ -149,7 +149,7 @@
             "good": "",
             "bad": "",
             "info": "A colorless liquid that can severly irritate lungs and burn skin and eyes.",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/ingredient_icon.png"
         },
     
         {
@@ -159,7 +159,7 @@
             "good": "",
             "bad": "",
             "info": "Known as mustard gas from WWI, a yellow to colorless liquid that let out fumes that cause irritation to eyes, nose, and throat. It is less volatile than Chlorine Gas but it stays in water longer.",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/chlorine_gas.jpg"
         },
     
         {
@@ -169,7 +169,7 @@
             "good": "",
             "bad": "",
             "info": "Yellow poisonous gas that causes coughing, eye and nose irritation, and shortness of breath.",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/chlorine_gas.jpg"
         },
     
         {
@@ -179,7 +179,7 @@
             "good": "",
             "bad": "",
             "info": "Colorless and flammable toxic that causes severe lung irritation and compromises cardiac functions. ",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/effect_icon.jpg"
         },
     
         {
@@ -189,7 +189,7 @@
             "good": "",
             "bad": "",
             "info": "Colorless liquid that quickly evaporates into a gas that is harmful to eyes, skin, liver, kidneys, and nervous system. ",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/effect_icon.jpg"
         },
     
         {
@@ -210,7 +210,7 @@
             "good": "",
             "bad": "",
             "info": "",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/oven_cleaner.png"
         },
     
         {
@@ -220,7 +220,7 @@
             "good": "Common ingredient in bathroom cleaing supplies that can clean tough stains",
             "bad": "Corrosive nature cause irritation and burn to eyes, skin, and throat.",
             "info": "Hydrogen chloride can be formed during the burning of many plastics. Hydrochloric acid is found in the gases evolved from volcanoes, particularly ones found in Mexico and South America. Hydrochloric acid is also found in the digestive tract of most mammals.",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/ingredient_icon.png"
         },
         {
             "id":24,
@@ -229,7 +229,7 @@
             "good": "Best all-natural cleaner due to its low pH and antibacterial properties",
             "bad": "Can corrode marble and leave marks and stains.",
             "info": "",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/lemon_juice.png"
         },
     
         {
@@ -239,7 +239,7 @@
             "good": "Safe and effective disinfectant that removes mold and mildew",
             "bad": "Acidic content that can irritate nose and trigger asthma symptoms",
             "info": "",
-            "img": "cardImages/.jpg"
+            "img": "cardImages/citric_acid.png"
         }
     
     
