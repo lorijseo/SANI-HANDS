@@ -89,7 +89,9 @@ h2{
 .displayExplore{
     display: flex;
     justify-content: space-evenly;
-    margin:5%;
+    margin:2% 9%;
+    /* margin-left: 9%;
+    margin-right: 9%; */
     /* border: 2px dotted red; */
     /* background-color: #cfdbd5; */
 }
@@ -99,7 +101,7 @@ h2{
     display:flex;
     width:25%;
     flex-direction: column;
-    margin:3%;
+    margin: 2% 5%;
     /* border: 2px dotted red; */
     align-items: center;
     background-color: #ffcd46;
@@ -123,12 +125,23 @@ h2{
     margin:5%;
 }
 
+
+
 .displayExplore img{
+    /* width:400px; */
+    max-height:250px;
     max-width:100%;
-    max-height: auto;
-    object-fit: scale-down;
+    object-fit: cover;
+    object-position: 50%;
+    
+    /* margin-top:10%; */
+    border-radius: 3%;
     
 }
+
+/* .imgDisplay{
+    max-height:300px;
+} */
 
 .displayCards{
     display:flex;
@@ -158,6 +171,17 @@ h2{
     padding: 7px 20px;
 }
 
+.infoDescr{
+    font-size: 20px;
+    margin: 1% 10%;
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+}
+
 /* **********CARD DISPLAY********** */
 .cardContent{
     margin-left:5%;
@@ -179,7 +203,7 @@ h2{
 
 #cardDescr{
     line-height: 1;
-    font-size: 10px;
+    font-size: 12px;
     height:110px;
 
 }
@@ -204,11 +228,11 @@ h2{
 }
 
 #plus{
-    font-size: 50px;
+    font-size: 100px;
 }
 
 #equal{
-    font-size: 50px;
+    font-size: 100px;
 }
 
 .cardsInfo{
@@ -268,7 +292,7 @@ h2{
 .ingredientDescr{
     background-color: white;
     border: 3px solid green;
-    font-size:12px ;
+    font-size:14px ;
     
 
 }
@@ -276,19 +300,19 @@ h2{
 .effectDescr{
     background-color: white;
     border: 3px solid red;
-    font-size:12px ;
+    font-size:14px ;
 }
 
 .productDescr{
     background-color: white;
     border: 3px solid blue;
-    font-size:12px ;
+    font-size:14px ;
 }
 
 .nullifyDescr{
     background-color: white;
     border: 3px solid grey;
-    font-size:12px ;
+    font-size:14px ;
 }
 /* ************************COLLECTION PAGE************************** */
 
