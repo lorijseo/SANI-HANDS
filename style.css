@@ -45,22 +45,6 @@ a{
     margin-top: 3%;
 }
 
-/* .card-deck{
-    display:flex;
-    justify-content: space-around;
-    margin: 10%;
-
-}
-
-.card-border{
-    margin: 2%;
-}
-
-.card-img-top{
-    width:362px;
-    height: 180px;
-
-} */
 
 /* ************************HOME PAGE************************** */
 
@@ -86,6 +70,7 @@ a{
     display:block;
     margin-left: auto;
     margin-right: auto;
+    margin-top:2%;
     width:90%;
     height:700px;
     object-fit: cover;
@@ -446,7 +431,8 @@ label:hover{
 
 .ourStory h2{
     font-size: 30px;
-    margin:0
+    margin:0;
+    margin-bottom: 2%;
 }
 
 /* **********CONTACT********** */
