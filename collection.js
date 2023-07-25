@@ -1,21 +1,19 @@
 
-async function getCardData(searchName, num){
+async function getCardData(findName){
     // const searchValue = searchTxt.value;
     const response = await fetch("data.json");
     const data = await response.json();
     for (let i=0; data.cards.length; i++){
-        if (data.cards[i].name == searchName){
+
+        if (data.cards[i].name == findName){
             console.log(data.cards[i])
-            createCard(data.cards[i],num)
-            //delete btn for searched cards
-            createDeleteBtn(num);
+            return data.cards[i]
         }
     }
-    console.log("doesn't exist!!!!")
-
 }
 
 function findCardId(cardData){
+    //change name to lowercase with underscore
     let cardName = cardData.name;
     if (cardName.indexOf(" ") !== -1){
         let firstWordEnds = cardName.indexOf(" ");
@@ -84,8 +82,12 @@ function findIcon(data){
 }
 
 function createCard(cardData, num){
+
+    console.log(cardData)
     let cardType = cardData.type;
+    console.log(cardType)
     let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
+
     // does not consider two worded names, account for underscore
     let formatName = findCardId(cardData)
     let supplyNum = "supply"+num
@@ -114,43 +116,64 @@ function createCard(cardData, num){
         </div>
     </div>
     `
-
-    // newSupply.innerHTML = `
-    //     <div class="displaySupplies" id="${supplyNum}">
-    //     <div class="${formatType + "Card"}" id="${formatName}">
-    //     <div class="cardContent">
-    //     <p class="${formatType + "Descr"}" id="cardName"><i class="fa-solid fa-flask" style="color: green;"></i>${cardData.name} </p>
-    //     <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
-    //     <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
-    //     <div class="${formatType + "Descr"}" id="cardDescr">
-
-    //     </div>
-    //     </div>
-    // </div></div>
-    // `
+    //find card description
     cardDescription(cardData, formatName);
+    
 
 
 }
 
 
 const searchBtn = document.getElementById("searchBtn");
-
 let counter = 0
-searchBtn.addEventListener("click", function(e){
+
+searchBtn.addEventListener("click", async function(e){
     e.preventDefault();
     const searchTxt = document.getElementById("search").value;
     counter += 1;
-    console.log(counter)
-    console.log(searchTxt);
-    getCardData(searchTxt, counter);
+    // console.log(counter)
+    // console.log(searchTxt);
     
+    //REFORMAT INPUT to accept lower case
+
+    //get card Data
+    const data = await getCardData(searchTxt);
+    
+    //create Card
+        //find card id
+        // find icon
+        //card description
+
+    createCard(data, counter)
+    //create Delete btn
+    createDeleteBtn(counter);
     document.getElementById("search").value = '';
 })
 
+function reformatInput(searchInput){
+    let lowerCase = searchInput.toLowerCase();
+    let upperFirstWord = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1,lowerCase.length);
 
+    // there is at least one space in the name
+    if (upperFirstWord.indexOf(" ") !== -1){
+        console.log("hi");
+        
+        let upperNextWord = upperFirstWord;
+        
+        for (i=0;i=upperFirstWord.length;i++){
+            return console.log(upperFirstWord[i])
+            if (upperFirstWord[i] === " "){
+                
+                upperNextWord = upperFirstWord.slice(0,i) + upperFirstWord.charAt(i+1).toUpperCase() + upperFirstWord.slice(i+2);
+            }
+        }
+        return upperNextWord;
+    }
+    return upperFirstWord;
 
+}
 
+console.log(reformatInput("baking soda"))
 // ***************************************************************************
 
 let cardType = document.querySelector("#type");
