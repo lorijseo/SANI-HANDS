@@ -2,377 +2,397 @@
     scroll-behavior: smooth !important;
 } */
 
-body{
-    margin:0% 2% 2% 2%;
+body {
+  margin: 0% 2% 2% 2%;
+}
+
+button {
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  border: none;
 }
 
 /* navbar */
 
-nav{
-    background-color: white;
+nav {
+  background-color: white;
 }
 
-.navbar{
-    padding-bottom:10px;
+.navbar {
+  padding-bottom: 10px;
 }
 
-.navbar-brand{
-    font-size:40px;
+.navbar-brand {
+  font-size: 40px;
 }
 
-.navbar-brand:hover{
-    color:black;
+.navbar-brand:hover {
+  color: black;
 }
 
-.nav-item{
-    background-color:#ffcd46;
-    font-size: 20px;
-    margin-top: 4%;
-    margin-left: 5%;
+.nav-item {
+  background-color: #ffcd46;
+  font-size: 20px;
+  margin-top: 4%;
+  margin-left: 5%;
 }
 
-#navbarNav{
-    justify-content: flex-end;
-    margin-right: 6%;
+#navbarNav {
+  justify-content: flex-end;
+  margin-right: 6%;
 }
 
-a{
-    color:black;
+a {
+  color: black;
 }
 
 /* navbar collapse toggler icon */
-.navbar-toggler-icon{
-    font-size: 30px;
+.navbar-toggler-icon {
+  font-size: 30px;
 }
 
-.navbar-toggler{
-    margin-top: 3%;
+.navbar-toggler {
+  margin-top: 3%;
 }
-
 
 /* ************************HOME PAGE************************** */
 
 /* **********MAIN********** */
-.mainMsg h1{
-    font-size: 40px;
+.mainMsg h1 {
+  font-size: 40px;
 }
 
-.mainMsg p{
-    margin-top:2%;
-    font-size: 20px;
-    text-align: left;
-
+.mainMsg p {
+  margin-top: 2%;
+  font-size: 20px;
+  text-align: left;
 }
-.mainMsg{
-    position:absolute;
-    top: 40%;
-    left: 10%;
-    width: 70%;
+.mainMsg {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  width: 70%;
 }
 
-.main img{
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top:2%;
-    width:90%;
-    height:700px;
-    object-fit: cover;
+.main img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%;
+  width: 90%;
+  height: 700px;
+  object-fit: cover;
 }
 
 /* **********CAROUSEL********** */
-.carousel{
-    margin:10%;
+.carousel {
+  margin: 10%;
 }
 
-h2{
-    margin:5%;
+h2 {
+  margin: 5%;
 }
 
 /* **********EXPLORE CARDS********** */
-.displayExplore{
-    display: flex;
-    justify-content: space-evenly;
-    margin:2% 9%;
-    /* margin-left: 9%;
+.displayExplore {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2% 9%;
+  /* margin-left: 9%;
     margin-right: 9%; */
-    /* border: 2px dotted red; */
-    /* background-color: #cfdbd5; */
+  /* border: 2px dotted red; */
+  /* background-color: #cfdbd5; */
 }
 
-
-.exploreCard{
-    display:flex;
-    width:25%;
-    flex-direction: column;
-    margin: 2% 5%;
-    /* border: 2px dotted red; */
-    align-items: center;
-    background-color: #ffcd46;
-    /* background-color: #f9f0b5; */
-    border-radius: 3%;
-
+.exploreCard {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  margin: 2% 5%;
+  /* border: 2px dotted red; */
+  align-items: center;
+  background-color: #ffcd46;
+  /* background-color: #f9f0b5; */
+  border-radius: 3%;
 }
 
-.exploreCard:hover{
-    background-color: #f6d76d;
-    cursor:pointer;
+.exploreCard:hover {
+  background-color: #f6d76d;
+  cursor: pointer;
 }
 
-.exploreTitle{
-    font-weight: 500;
-    text-align: center;
-    margin: 1%;
-
+.exploreTitle {
+  font-weight: 500;
+  text-align: center;
+  margin: 1%;
 }
-.exploreDescr{
-    margin:5%;
+.exploreDescr {
+  margin: 5%;
 }
 
+.displayExplore img {
+  /* width:400px; */
+  max-height: 250px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: 50%;
 
-
-.displayExplore img{
-    /* width:400px; */
-    max-height:250px;
-    max-width:100%;
-    object-fit: cover;
-    object-position: 50%;
-    
-    /* margin-top:10%; */
-    border-radius: 3%;
-    
+  /* margin-top:10%; */
+  border-radius: 3%;
 }
 
 /* .imgDisplay{
     max-height:300px;
 } */
 
-.displayCards{
-    display:flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
+.displayCards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 /* ************************INFO PAGE************************** */
 
-.pageIntro h1{
-    margin-top: 2%;
-    font-size: 40px;
-    text-align: center;
+.pageIntro h1 {
+  margin-top: 2%;
+  font-size: 40px;
+  text-align: center;
 }
 
-.pageIntro h2{
-    margin: 2%;
+.pageIntro h2 {
+  margin: 2%;
 }
 
-.pageIntro div{
-    font-size: 20px;
-    text-align: center;
-    margin: 5% 15% 0 15%;
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
+.pageIntro div {
+  font-size: 20px;
+  text-align: center;
+  margin: 5% 15% 0 15%;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
 }
 
-.infoDescr{
-    font-size: 20px;
-    margin: 1% 10%;
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
+.infoDescr {
+  font-size: 20px;
+  margin: 1% 10%;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
 }
 
 /* **********CARD DISPLAY********** */
-.cardContent{
-    margin-left:5%;
-    margin-right:5%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    display:flex;
-    flex-direction: column;
-
+.cardContent {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  display: flex;
+  flex-direction: column;
 }
 
-#cardName{
-    text-align: center;
+.cardContent img {
+  height: 128.42px;
+  object-fit: contain;
 }
 
-#cardType{
-    text-align: center;
+#cardName {
+  text-align: center;
 }
 
-#cardDescr{
-    line-height: 1;
-    font-size: 12px;
-    height:110px;
+#cardType {
+  text-align: center;
+}
 
+#cardDescr {
+  line-height: 1;
+  font-size: 12px;
+  height: 110px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 /* **********CARD FORMAT DISPLAY********** */
 
-.ingredientInfo h2{
-    text-align: center;
-    font-size: 20px;
-    color:#ffcd46;
+.ingredientInfo h2 {
+  text-align: center;
+  font-size: 20px;
+  color: #ffcd46;
 }
-.displayCards{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    /* background-color: #ffcd46; */
-    border: 2px solid  #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    margin:4%;
-
-}
-
-#plus{
-    font-size: 100px;
+.displayCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #ffcd46; */
+  border: 2px solid #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin: 4%;
 }
 
-#equal{
-    font-size: 100px;
+#plus {
+  font-size: 100px;
 }
 
-.cardsInfo{
-    font-size: 20px;
-    margin: 1% 10%;
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
+#equal {
+  font-size: 100px;
 }
 
-
+.cardsInfo {
+  font-size: 20px;
+  margin: 1% 10%;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+}
 
 /* **********CARD TEMPLATE OF DIFFERENT TYPES********** */
-.ingredientCard{
-    margin: 3%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 220px;
-    height: 350px;
-    border-style: double;
-    /* border: 4px solid green; */
-
+.ingredientCard {
+  margin: 3%;
+  background-color: #cfdbd5;
+  border-radius: 3%;
+  width: 220px;
+  height: 350px;
+  border-style: double;
+  /* border: 4px solid green; */
 }
-.effectCard{
-    margin: 3%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 220px;
-    height: 350px;
-    border-style: double;
-    /* border: 5px solid black; */
-
+.effectCard {
+  margin: 3%;
+  background-color: #cfdbd5;
+  border-radius: 3%;
+  width: 220px;
+  height: 350px;
+  border-style: double;
+  /* border: 5px solid black; */
 }
-.productCard{
-    margin: 3%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 220px;
-    height: 350px;
-    border-style: double;
-    /* border: 5px solid black; */
-
+.productCard {
+  margin: 3%;
+  background-color: #cfdbd5;
+  border-radius: 3%;
+  width: 220px;
+  height: 350px;
+  border-style: double;
+  /* border: 5px solid black; */
 }
 
-.nullifyCard{
-    margin: 3%;
-    background-color: #cfdbd5;
-    border-radius: 3%;
-    width: 220px;
-    height: 350px;
-    border-style: double;
-    /* border: 5px solid black; */
-
+.nullifyCard {
+  margin: 3%;
+  background-color: #cfdbd5;
+  border-radius: 3%;
+  width: 220px;
+  height: 350px;
+  border-style: double;
+  /* border: 5px solid black; */
 }
 
-
-.ingredientDescr{
-    background-color: white;
-    border: 3px solid green;
-    font-size:14px ;
-    
-
+.ingredientDescr {
+  background-color: white;
+  border: 3px solid green;
+  font-size: 14px;
 }
 
-.effectDescr{
-    background-color: white;
-    border: 3px solid red;
-    font-size:14px ;
+.effectDescr {
+  background-color: white;
+  border: 3px solid red;
+  font-size: 14px;
 }
 
-.productDescr{
-    background-color: white;
-    border: 3px solid blue;
-    font-size:14px ;
+.productDescr {
+  background-color: white;
+  border: 3px solid blue;
+  font-size: 14px;
 }
 
-.nullifyDescr{
-    background-color: white;
-    border: 3px solid grey;
-    font-size:14px ;
+.nullifyDescr {
+  background-color: white;
+  border: 3px solid grey;
+  font-size: 14px;
 }
 /* ************************COLLECTION PAGE************************** */
 
-.searchOption{
-    text-align:center;
-    margin:4%;
+.searchOption {
+  text-align: center;
+  margin: 4%;
 }
 
-.searchOption h2{
-    margin: 2%;
+.searchOption h2 {
+  margin: 2%;
 }
 
-.searchOption input{
-    width:50%;
-    text-align:center;
-    border-radius: 10px;
-    border: 3px solid #ffcd46;
-    font-size: 20px;
+.searchOption input {
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+  border: 3px solid #ffcd46;
+  font-size: 20px;
 }
 
-.searchOption #searchBtn{
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    border: none;
-    font-weight: 600;
-    font-size: 20px
+.searchOption #searchBtn {
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  border: none;
+  font-weight: 600;
+  font-size: 20px;
 }
 
-.mySupplies .ingredientCard{
-    /* width:100%; */
-    margin:auto;
+.mySupplies .ingredientCard {
+  /* width:100%; */
+  margin: auto;
 }
 
-.mySupplies .effectCard{
-    /* width:100%; */
-    margin:auto;
+.mySupplies .effectCard {
+  /* width:100%; */
+  margin: auto;
 }
 
-.mySupplies .nullifyCard{
-    /* width:100%; */
-    margin:auto;
+.mySupplies .nullifyCard {
+  /* width:100%; */
+  margin: auto;
 }
 
-.mySupplies{
-    display:flex;
-    justify-content: space-evenly;
-    align-items: center;
-    /* background-color: #ffcd46; */
-    /* border: 2px solid  #ffcd46;
+.mySupplies {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* background-color: #ffcd46; */
+  /* border: 2px solid  #ffcd46;
     border-radius: 10px;
     padding: 7px 20px;
     margin:4%; */
-
 }
 
+/* .displaySupplies button {
+  display: flex; 
+  text-align: center;
+  align-items: center; 
+} */
+
+#createSupplies {
+  display: flex;
+}
+
+#createSupplies #promptName {
+  display: none;
+}
+
+#createSupplies #promptGoodBad {
+  display: none;
+}
+
+#createSupplies #promptInfo {
+  display: none;
+}
+
+#createCard {
+  border: 1px solid #ffcd46;
+  padding: 5px;
+  border-radius: 3px;
+}
 /* ************************QUIZ PAGE************************** */
 
 /* #cardDescr{
@@ -383,214 +403,202 @@ h2{
     display:none;
 } */
 
-.questionNumber{
-    font-size: 20px;
-    margin: 1% 10%;
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    width: 100%;
-    text-align: center;
-    font-weight: 700;
+.questionNumber {
+  font-size: 20px;
+  margin: 1% 10%;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
 }
 
-.quiz{
-    display:flex;
+.quiz {
+  display: flex;
 }
 
-form{
-    margin: 3%;
+form {
+  margin: 3%;
 }
 
-
-.quizQuestion{
-    display:flex;
-    justify-content: center;
-    margin-left: 10% 0;
-
+.quizQuestion {
+  display: flex;
+  justify-content: center;
+  margin-left: 10% 0;
 }
 
-.quizLabel{
-    font-size: 30px;
-    padding: 2% 2%;
-    font-weight: 500;
-    width: 50%;
-
+.quizLabel {
+  font-size: 30px;
+  padding: 2% 2%;
+  font-weight: 500;
+  width: 50%;
 }
-.choices{
-    font-size: 15px;
-    margin:auto;
-    /* background-color: #ffcd46;
+.choices {
+  font-size: 15px;
+  margin: auto;
+  /* background-color: #ffcd46;
     border-radius: 10px;
     padding: 7px 20px; */
 }
 
-input:hover{
-    cursor: pointer;
+input:hover {
+  cursor: pointer;
 }
 
-label:hover{
-    cursor: pointer;
+label:hover {
+  cursor: pointer;
 }
 
-.choices #choice1space{
-    margin-right: 20px;
+.choices #choice1space {
+  margin-right: 20px;
 }
 
-.quizBtn{
-    margin: auto;
+.quizBtn {
+  margin: auto;
 }
 
-.quizBtn button{
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    margin-left: 15%;
-    /* margin-left: 40%; */
-    border: none;
-    font-weight: 600;
-    font-size: 15px;
+.quizBtn button {
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin-left: 15%;
+  /* margin-left: 40%; */
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
 }
 
-.quizBtn button:hover{
-    opacity: 0.8;
-    cursor: pointer;
+.quizBtn button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-
-
-
-.displayCorrect{
-    font-size: 100px;
-    /* margin-right: 5%; */
-    align-items: center;
-    display:flex;
+.displayCorrect {
+  font-size: 100px;
+  /* margin-right: 5%; */
+  align-items: center;
+  display: flex;
 }
 
-#correct_icon{
-    color:green;
+#correct_icon {
+  color: green;
 }
 
-#wrong_icon{
-    color:red;
+#wrong_icon {
+  color: red;
 }
 
-.displayQuizExplanation{
-    font-size: 20px;
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    /* display:none; */
-    align-items: center;
-    margin:2%;
-
+.displayQuizExplanation {
+  font-size: 20px;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  /* display:none; */
+  align-items: center;
+  margin: 2%;
 }
-
 
 /* ************************ABOUT PAGE************************** */
 
-.about h1{
-    font-size: 40px;
-    text-align: center;
-    margin:3%;
+.about h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 3%;
 }
-.aboutDisplay{
-    margin:5%;
-    display:flex;
-    flex-wrap: wrap;
-}
-
-.aboutDisplay img{
-    width: 50%;
-    height:600px;
-    object-fit: cover;
+.aboutDisplay {
+  margin: 5%;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.ourStory{
-    width:40%;
-    margin:3%;
-    font-size: 15px;
+.aboutDisplay img {
+  width: 50%;
+  height: 600px;
+  object-fit: cover;
 }
 
-.ourStory h2{
-    font-size: 30px;
-    margin:0;
-    margin-bottom: 2%;
+.ourStory {
+  width: 40%;
+  margin: 3%;
+  font-size: 15px;
+}
+
+.ourStory h2 {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 2%;
 }
 
 /* **********CONTACT********** */
-.contactUs h3{
-    font-size: 30px;
-    text-align: center;
-    margin:3%;
+.contactUs h3 {
+  font-size: 30px;
+  text-align: center;
+  margin: 3%;
 }
-.displayContact{
-    display:flex;
-    /* border: 1px solid #ffcd46; */
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #ffcd46 ;
-    border-radius: 10px;
-    padding: 7px 20px;
-    margin:0 10%;
-}
-
-.displayContact p{
-    font-size: 15px;
-    text-align: center;
-    font-weight: 700;
-
+.displayContact {
+  display: flex;
+  /* border: 1px solid #ffcd46; */
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  margin: 0 10%;
 }
 
-.displayContact a{
-    font-size: 40px;
-
+.displayContact p {
+  font-size: 15px;
+  text-align: center;
+  font-weight: 700;
 }
 
-.sendEmail{
-    /* display: flex; */
-    text-align: center;
-    margin: 5%;
-    /* display:none; */
-    /* overflow-y: auto;
+.displayContact a {
+  font-size: 40px;
+}
+
+.sendEmail {
+  /* display: flex; */
+  text-align: center;
+  margin: 5%;
+  /* display:none; */
+  /* overflow-y: auto;
     scroll-behavior: smooth; */
 }
 
-.sendEmail form{
-    display:none;
-    /* overflow-y: auto;
+.sendEmail form {
+  display: none;
+  /* overflow-y: auto;
     scroll-behavior: smooth; */
-    
 }
 
-.sendEmail label{
-    font-size:20px;
-    font-weight: 700;
+.sendEmail label {
+  font-size: 20px;
+  font-weight: 700;
 }
 
-#promptUser{
-    margin:5%;
+#promptUser {
+  margin: 5%;
 }
 
-.sendEmail input{
-    width:30%;
-    text-align:left;
-    border-radius: 10px;
-    border: 3px solid #ffcd46;
-    font-size: 20px;
+.sendEmail input {
+  width: 30%;
+  text-align: left;
+  border-radius: 10px;
+  border: 3px solid #ffcd46;
+  font-size: 20px;
 }
 
-#sendEmailBtn{
-    background-color: #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    /* margin-left: 5%; */
-    border: none;
-    font-weight: 600;
-    font-size: 15px;
+#sendEmailBtn {
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 7px 20px;
+  /* margin-left: 5%; */
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
 }
 
-#sendEmailBtn:hover{
-    cursor:pointer;
-    
+#sendEmailBtn:hover {
+  cursor: pointer;
 }

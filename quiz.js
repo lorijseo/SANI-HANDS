@@ -8,6 +8,9 @@ const quizBtn2 = question2.querySelector(".quizBtn")
 question3 = document.querySelector("#info3")
 const quizBtn3 = question3.querySelector(".quizBtn")
 
+question4 = document.querySelector("#info4")
+const quizBtn4 = question4.querySelector(".quizBtn")
+
 //from button to parent we need to go up three parents 
 
 quizBtn1.addEventListener("click", function(e){
@@ -28,6 +31,13 @@ quizBtn3.addEventListener("click", function(e){
     e.preventDefault();
     displayQuizExplanation(question3)
     quizBtn3.style.display = "none";
+
+})
+
+quizBtn4.addEventListener("click", function(e){
+    e.preventDefault();
+    displayQuizExplanation(question4)
+    quizBtn4.style.display = "none";
 
 })
 
@@ -84,6 +94,13 @@ function displayQuizExplanation(parent){
         const secondLetter = ingredient2.charAt(underscore + 1).toUpperCase();
         ingredient2 = ingredient2.slice(0,underscore+1) + secondLetter + ingredient2.slice(underscore+2);
         ingredient2 = ingredient2.replace("_", " ");
+    }
+
+    if (ingredient1.indexOf("_") !== -1){
+        let underscore = ingredient1.indexOf("_");
+        const secondLetter = ingredient1.charAt(underscore + 1).toUpperCase();
+        ingredient1 = ingredient1.slice(0,underscore+1) + secondLetter + ingredient1.slice(underscore+2);
+        ingredient1 = ingredient1.replace("_", " ");
     }
 
 
