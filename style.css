@@ -556,7 +556,7 @@ label:hover{
     scroll-behavior: smooth; */
 }
 
-form{
+.sendEmail form{
     display:none;
     /* overflow-y: auto;
     scroll-behavior: smooth; */
