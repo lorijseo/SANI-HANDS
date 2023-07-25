@@ -324,6 +324,7 @@ h2{
 .searchOption h2{
     margin: 2%;
 }
+
 input{
     width:50%;
     text-align:center;
@@ -422,6 +423,7 @@ label:hover{
 .quizBtn{
     margin: auto;
 }
+
 .quizBtn button{
     background-color: #ffcd46;
     border-radius: 10px;
@@ -526,4 +528,39 @@ label:hover{
 .displayContact a{
     font-size: 40px;
 
+}
+
+.sendEmail{
+    /* display: flex; */
+    text-align: center;
+    margin: 10%;
+    /* display:none; */
+
+}
+
+label{
+    font-size:20px;
+    font-weight: 700;
+}
+
+#promptUser{
+    margin:5%;
+}
+
+.sendEmail input{
+    width:30%;
+    text-align:center;
+    border-radius: 10px;
+    border: 3px solid #ffcd46;
+    font-size: 20px;
+}
+
+#sendEmailBtn{
+    background-color: #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    /* margin-left: 5%; */
+    border: none;
+    font-weight: 600;
+    font-size: 15px;
 }
