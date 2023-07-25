@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth !important;
+}
+
 body{
     margin:0% 2% 2% 2%;
 }
@@ -533,9 +537,19 @@ label:hover{
 .sendEmail{
     /* display: flex; */
     text-align: center;
-    margin: 10%;
-    /* display:none; */
+    margin: 5%;
+    display:none;
+    overflow-y: auto;
+    display:none;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
 
+form{
+    /* display:none; */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    
 }
 
 label{
