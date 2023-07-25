@@ -65,19 +65,38 @@
 
   <section id="createSupplies">
     <h3>WEEEEE</h3>
-    <form action="">
-      <label for="type">Choose Card Type:</label>
-      <select name="type" id="type" required>
-        <option value="ingredient">Ingredient</option>
-        <option value="effect">Effect</option>
-        <option value="product">Product</option>
-        <option value="null">Null</option>
-      </select>
+    <form action="" id="createCard">
+      <div id="promptType">
+        <label for="type">Choose Card Type:</label>
+        <select name="type" id="type" required>
+          <option value="" selected disabled hidden>Select</option>
+          <option value="Ingredient">Ingredient</option>
+          <option value="Effect">Effect</option>
+          <option value="Product">Product</option>
+          <option value="Nullify">Null</option>
+        </select>
+      </div>
 
-      <label for="name" type="text">Name:</label>
-      <input type="text" id="name">
+      <div id="promptName">
+        <label for="name" type="text">Name:</label>
+        <input type="text" id="name" minlength="3" maxlength="25" required>
+      </div>
 
-      <label for=""></label>
+      <div id="promptGoodBad">
+        <label for="good" type="text">Advantages:</label>
+        <input type="text" id="good" minlength="3" maxlength="65">
+  
+        <label for="bad" type="text">Disadvantages:</label>
+        <input type="text" id="bad" minlength="3" maxlength="65">
+      </div>
+      
+      <div id="promptInfo">
+        <label for="info" type="text">Description:</label>
+        <input type="text" id="info" minlength="3" maxlength="150">
+      </div>
+
+      <button action="submit" id="createBtn">Create Card</button>
+
     </form>
   </section>
     
