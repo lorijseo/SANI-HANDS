@@ -50,56 +50,64 @@
     </div>
   </section>
 
-  <section class="searchOption">
-    <h2>Find cards by name:</h2>
-    <!-- <label for="search">Search for INGREDIENT cards or EFFECT cards</label> -->
-    <input type="text" id="search" name="search" placeholder="i.e. Bleach, Chlorine Gas, etc.." required>
-    <button id="searchBtn">Search</button>
-  </section>
+  <section class="myCleaning">
+    <div id="searchOption" >
+      <h2>Find cards by name:</h2>
+      <!-- <label for="search">Search for INGREDIENT cards or EFFECT cards</label> -->
+      <input type="text" id="search" name="search" placeholder="i.e. Bleach, Chlorine Gas, etc.." required>
+      <button action="submit" id="searchBtn">Search</button>
+    </div>
+      
+  
+    <div id="createSupplies">
+      <h3>Create your own card</h3>
+      <form action="" id="createCard">
+        <div id="promptType">
+          <label for="type">Choose Card Type:</label>
+          <select name="type" id="type" required>
+            <option value="" selected disabled hidden>Select</option>
+            <option value="Ingredient">Ingredient</option>
+            <option value="Effect">Effect</option>
+            <option value="Product">Product</option>
+            <option value="Nullify">Null</option>
+          </select>
+        </div>
+  
+        <div id="promptName">
+          <label for="name" type="text">Name:</label>
+          <!-- <br> -->
+          <input type="text" id="name" minlength="3" maxlength="25" required>
+        </div>
+  
+        <div id="promptGoodBad">
+          <label for="good" type="text">Advantages:</label>
+          <input type="text" id="good" minlength="3" maxlength="65">
     
+          <label for="bad" type="text">Disadvantages:</label>
+          <input type="text" id="bad" minlength="3" maxlength="65">
+        </div>
+        
+        <div id="promptInfo">
+          <label for="info" type="text">Description:</label>
+          <input type="text" id="info" minlength="3" maxlength="150">
+        </div>
+  
+        <button action="submit" id="createBtn">Create Card</button>
+  
+      </form>
+    </div>
 
+  </section>
+
+
+  <!-- cards display here -->
   <section id="searchSupplies">
     <h3>My cleaning supplies:</h3>
     <div class="mySupplies"></div>
   </section>
-
-  <section id="createSupplies">
-    <h3>WEEEEE</h3>
-    <form action="" id="createCard">
-      <div id="promptType">
-        <label for="type">Choose Card Type:</label>
-        <select name="type" id="type" required>
-          <option value="" selected disabled hidden>Select</option>
-          <option value="Ingredient">Ingredient</option>
-          <option value="Effect">Effect</option>
-          <option value="Product">Product</option>
-          <option value="Nullify">Null</option>
-        </select>
-      </div>
-
-      <div id="promptName">
-        <label for="name" type="text">Name:</label>
-        <input type="text" id="name" minlength="3" maxlength="25" required>
-      </div>
-
-      <div id="promptGoodBad">
-        <label for="good" type="text">Advantages:</label>
-        <input type="text" id="good" minlength="3" maxlength="65">
-  
-        <label for="bad" type="text">Disadvantages:</label>
-        <input type="text" id="bad" minlength="3" maxlength="65">
-      </div>
-      
-      <div id="promptInfo">
-        <label for="info" type="text">Description:</label>
-        <input type="text" id="info" minlength="3" maxlength="150">
-      </div>
-
-      <button action="submit" id="createBtn">Create Card</button>
-
-    </form>
-  </section>
     
+
+  <!-- collection of one of each type of card -->
   <section class="collection">
 
     <div class="ingredientCard" id="vinegar">
@@ -203,7 +211,7 @@
 
   
 
-    
+  <a href="https://www.flaticon.com/free-icons/clean" title="clean icons">Clean icons created by Eucalyp - Flaticon</a>
       <!-- bootstrap -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
