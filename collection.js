@@ -4,31 +4,40 @@ async function getCardData(findName){
     const response = await fetch("data.json");
     const data = await response.json();
     for (let i=0; data.cards.length; i++){
-
-        if (data.cards[i].name == findName){
-            console.log(data.cards[i])
-            return data.cards[i]
+        try{
+            if (data.cards[i].name == findName){
+                console.log(data.cards[i])
+                return data.cards[i]
+            }
         }
+        catch{
+            alert(`We do not have ${findName} in our library! Try again`)
+            return false
+        }
+
     }
 }
+
 
 function findCardId(cardData){
     //change name to lowercase with underscore
     let cardName = cardData.name;
-    if (cardName.indexOf(" ") !== -1){
-        let firstWordEnds = cardName.indexOf(" ");
-        let firstWord = cardName.charAt(0).toLowerCase() + cardName.slice(1, firstWordEnds);
-        let secondWord = cardName.charAt(firstWordEnds + 1).toLowerCase() + cardName.slice(firstWordEnds+2, cardName.length);
-        let idName = firstWord + "_" + secondWord;
+    let allLowerCase = cardName.toLowerCase();
 
-        // console.log(cardId)
-        return idName
+    //consider if there is at least one space in the name
+    if (allLowerCase.indexOf(" ") !== -1){
+        for (let i=0; i<cardName.length; i++){
+            let spaceFound = allLowerCase.indexOf(" ");
+
+            if (spaceFound !== -1){
+                let currentWord = allLowerCase.slice(0,spaceFound) + "_" + allLowerCase.slice(spaceFound+1);
+                allLowerCase = currentWord;
+            }
+        }
     }
-    else{
-        let idName = cardName.charAt(0).toLowerCase() + cardName.slice(1);
-        return idName
-    }
+    return allLowerCase;
 }
+
 
 
 
@@ -38,15 +47,26 @@ function cardDescription(cardData, idName){
     let displayDescr = findCard.querySelector("#cardDescr")
     if (cardData.type == "Ingredient"){
         displayDescr.innerHTML = `
-            <p><span style="padding-right:5px;"></span> <i class="fa-solid fa-thumbs-up" style="color: green;"></i>&nbsp${cardData.good}</p>
-            <p><span style="padding-right:5px;"></span> <i class="fa-solid fa-skull-crossbones" style="color: red"></i>&nbsp${cardData.bad}</p>
 
+
+
+        <div class="descr">
+        <i class="fa-solid fa-thumbs-up fa-lg" style="color: green;"></i>
+        <span>${cardData.good} </span>
+        </div>
+        <div class="descr">
+        <i class="fa-solid fa-thumbs-down fa-lg" style="color: red"></i> 
+        <span>${cardData.bad}</span> 
+        </div>
         `
     }
 
     else if (cardData.type == "Effect"){
         displayDescr.innerHTML = `
-            <p><span style="padding-right:5px;"></span> <i class="fa-solid fa-skull-crossbones" style="color: red"></i>&nbsp${cardData.info} </p>
+            <div class="descr">
+            <i class="fa-solid fa-skull-crossbones fa-lg" style="color: orange"></i>
+            <span>${cardData.info}</span>
+          </div>
         `
     }
 
@@ -64,28 +84,28 @@ function cardDescription(cardData, idName){
 function findIcon(data){
     let cardType = data.type;
     if (cardType == "Ingredient"){
-        return '<i class="fa-solid fa-flask" style="color: green;"></i>'
+        return '<i class="fa-solid fa-flask fa-xl" style="color: green;"></i>'
     }
 
     else if (cardType == "Effect"){
-        return '<i class="fa-solid fa-biohazard" style="color: #cc350f;"></i>'
+        return '<i class="fa-solid fa-biohazard fa-xl" style="color: #cc350f;"></i>'
     }
 
     else if (cardType == "Product"){
-        return '<i class="fa-solid fa-spray-can-sparkles" style="color: #2f72e4;"></i>'
+        return '<i class="fa-solid fa-spray-can-sparkles fa-xl" style="color: #2f72e4;"></i>'
     }
 
     else if (cardType == "Nullify"){
-        return '<i class="fa-solid fa-poo" style="color: #717d94;"></i>'
+        return '<i class="fa-solid fa-poo fa-xl" style="color: #717d94;"></i>'
     }
 
 }
 
 function createCard(cardData, num){
 
-    console.log(cardData)
+    // console.log(cardData)
     let cardType = cardData.type;
-    console.log(cardType)
+    // console.log(cardType)
     let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
 
     // does not consider two worded names, account for underscore
@@ -107,9 +127,14 @@ function createCard(cardData, num){
     newSupply.innerHTML = `
         <div class="${formatType + "Card"}" id="${formatName}">
         <div class="cardContent">
-        <p class="${formatType + "Descr"}" id="cardName">${getIcon}&nbsp${cardData.name} </p>
+
+        <div class="title">
+        ${getIcon}
+        <span class="${formatType + "Descr"}" id="cardName">${cardData.name}</span>
+        </div>
+
         <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
-        <p class="${formatType + "Descr"}" id="cardType">${cardType}</p>
+  
         <div class="${formatType + "Descr"}" id="cardDescr">
 
         </div>
@@ -130,50 +155,52 @@ let counter = 0
 searchBtn.addEventListener("click", async function(e){
     e.preventDefault();
     const searchTxt = document.getElementById("search").value;
-    counter += 1;
+    
     // console.log(counter)
     // console.log(searchTxt);
     
     //REFORMAT INPUT to accept lower case
+    const formattedTxt = await reformatInput(searchTxt);
+    // console.log(formattedTxt);
+
 
     //get card Data
-    const data = await getCardData(searchTxt);
+    const data = await getCardData(formattedTxt);
     
-    //create Card
-        //find card id
-        // find icon
-        //card description
+    //verify if data on name exists
+    if (data){
+        counter += 1;
+        //create Card
+        createCard(data, counter);
 
-    createCard(data, counter)
-    //create Delete btn
-    createDeleteBtn(counter);
+        //create Delete btn
+        createDeleteBtn(counter);
+    }
     document.getElementById("search").value = '';
+
 })
+
 
 function reformatInput(searchInput){
     let lowerCase = searchInput.toLowerCase();
     let upperFirstWord = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1,lowerCase.length);
 
-    // there is at least one space in the name
+    // consider if there is at least one space in the name
     if (upperFirstWord.indexOf(" ") !== -1){
-        console.log("hi");
-        
         let upperNextWord = upperFirstWord;
-        
-        for (i=0;i=upperFirstWord.length;i++){
-            return console.log(upperFirstWord[i])
+
+        for (let i=0;i<upperFirstWord.length;i++){
             if (upperFirstWord[i] === " "){
-                
-                upperNextWord = upperFirstWord.slice(0,i) + upperFirstWord.charAt(i+1).toUpperCase() + upperFirstWord.slice(i+2);
+                upperNextWord = upperFirstWord.slice(0,i+1) + upperFirstWord.charAt(i+1).toUpperCase() + upperFirstWord.slice(i+2);
+                upperFirstWord = upperNextWord;
             }
         }
         return upperNextWord;
     }
     return upperFirstWord;
-
 }
 
-console.log(reformatInput("baking soda"))
+
 // ***************************************************************************
 
 let cardType = document.querySelector("#type");
@@ -194,14 +221,28 @@ cardType.addEventListener("change", function(e){
 const createBtn = document.querySelector("#createBtn");
 createBtn.addEventListener("click", function(e){
     e.preventDefault();
-    const data = createData();
-    counter +=1;
-    createCard(data, counter);
-    createDeleteBtn(counter);
-    deletePromptData();
+    //validate input before creating card
+    const isValid = validateName();
+
+    if (isValid){
+        const data = createData();
+        counter +=1;
+        createCard(data, counter);
+        createDeleteBtn(counter);
+        deletePromptData();
+    }
+    else{
+        alert("Name cannot begin with a number")
+    }
+
 
 })
 
+function validateName(){
+    const name = document.querySelector("#name").value;
+    const isValidName = /^[a-z]/.test(name.charAt(0))
+    return isValidName
+}
 
 
 function createData(){

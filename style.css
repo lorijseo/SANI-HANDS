@@ -194,13 +194,29 @@ h2 {
   flex-direction: column;
 }
 
+.title i{
+    max-width: 21px;
+}
 .cardContent img {
   height: 128.42px;
   object-fit: contain;
+  margin: 4% 0;
+  /* margin-top: 4%; */
 }
 
-#cardName {
+.title #cardName {
+
   text-align: center;
+  overflow:hidden;
+  word-break: break-all;
+  font-size: 14px;
+  float:right;
+  min-width: 84%;
+  max-width:89%;
+  font-weight: 630;
+  margin: 0;
+  
+
 }
 
 #cardType {
@@ -208,11 +224,13 @@ h2 {
 }
 
 #cardDescr {
-  line-height: 1;
+  line-height: 1.2;
   font-size: 12px;
-  height: 110px;
+  height: 150px;
   word-wrap: break-word;
-  word-break: break-all;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 /* **********CARD FORMAT DISPLAY********** */
@@ -254,7 +272,7 @@ h2 {
   margin: 3%;
   background-color: #cfdbd5;
   border-radius: 3%;
-  width: 220px;
+  width: 270px;
   height: 350px;
   border-style: double;
   /* border: 4px solid green; */
@@ -263,7 +281,7 @@ h2 {
   margin: 3%;
   background-color: #cfdbd5;
   border-radius: 3%;
-  width: 220px;
+  width: 270px;
   height: 350px;
   border-style: double;
   /* border: 5px solid black; */
@@ -272,7 +290,7 @@ h2 {
   margin: 3%;
   background-color: #cfdbd5;
   border-radius: 3%;
-  width: 220px;
+  width: 270px;
   height: 350px;
   border-style: double;
   /* border: 5px solid black; */
@@ -282,7 +300,7 @@ h2 {
   margin: 3%;
   background-color: #cfdbd5;
   border-radius: 3%;
-  width: 220px;
+  width: 270px;
   height: 350px;
   border-style: double;
   /* border: 5px solid black; */
@@ -290,29 +308,53 @@ h2 {
 
 .ingredientDescr {
   background-color: white;
-  border: 3px solid green;
+  border: 2px solid green;
   font-size: 14px;
+  
 }
+
+.descr{
+    display:flex;
+    align-items: center;
+    /* flex:wrap; */
+    /* padding: 2%; */
+}
+
+.descr i{
+    padding: 3%;
+}
+
+
 
 .effectDescr {
   background-color: white;
-  border: 3px solid red;
+  border: 2px solid red;
   font-size: 14px;
 }
 
 .productDescr {
+
   background-color: white;
-  border: 3px solid blue;
+  border: 2px solid blue;
   font-size: 14px;
 }
 
+/* #cardType{
+    background-color: rgb(123, 123, 151);
+  border: 2px solid blue;
+  font-size: 14px;
+} */
+
 .nullifyDescr {
   background-color: white;
-  border: 3px solid grey;
+  border: 2px solid grey;
   font-size: 14px;
 }
 /* ************************COLLECTION PAGE************************** */
 
+/* .collection{
+    display:flex;
+} */
 .searchOption {
   text-align: center;
   margin: 4%;
