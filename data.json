@@ -7,7 +7,7 @@
       "good": "A natural disinfectant that combats odors",
       "bad": "The acidity wears down granite or natural stone countertops",
       "info": "",
-      "img": "cardImages/vinegar.jpg"
+      "img": "cardImages/vinegar_icon.png"
     },
 
     {
@@ -17,7 +17,7 @@
       "good": "A natural bleaching compound that kills bacteria, viruses, and mold",
       "bad": "Can cause mild irritation of throat and eyes",
       "info": "",
-      "img": "cardImages/ingredient_icon.png"
+      "img": "cardImages/hydorgen_peroxide_icon.png"
     },
 
     {
@@ -37,7 +37,7 @@
       "good": "Effective at breaking down household grime or stains such as cooking grease and wine stains.",
       "bad": "High concentration can cause corrosive injuries to eyes and skin with permanant damages",
       "info": "",
-      "img": "cardImages/ammonia.jpg"
+      "img": "cardImages/ammonia_icon.png"
     },
 
     {
@@ -57,7 +57,7 @@
       "good": "Effectively and efficiently cleans and disinfects toilet and combats odors",
       "bad": "Most contain acidic chemicals that can be harmful to lungs and skin",
       "info": "",
-      "img": "cardImages/toiletbowl_cleaner.jpg"
+      "img": "cardImages/toilet_bowl_cleaner_icon.png"
     },
 
     {
@@ -67,7 +67,7 @@
       "good": "Reduces spread of mold and eliminates odors",
       "bad": "Most contain hydrogen peroxide and bleach. Inhaling it can irritate throat, lungs, and skin. ",
       "info": "",
-      "img": "cardImages/mold_remover.jpg"
+      "img": "cardImages/mold_remover_icon.png"
     },
 
     {
@@ -77,7 +77,7 @@
       "good": "Natural product that is also in food that removes tough stains and odors",
       "bad": "Leaves behind a white, dusty residue after it dries",
       "info": "",
-      "img": "cardImages/baking_soda.jpg"
+      "img": "cardImages/baking_soda_icon.png"
     },
 
     {
@@ -87,7 +87,7 @@
       "good": "Effective and efficient way to unclog and clean drains",
       "bad": "Contains toxic chemicals that are highly corrosive. Mixing different drain cleaners that contain a variety of toxic chemical can create toxic fumes",
       "info": "",
-      "img": "cardImages/drain_cleaner.jpg"
+      "img": "cardImages/drain_cleaner_icon.png"
     },
 
     {
@@ -97,7 +97,7 @@
       "good": "A strong acid that removes rust and tough stains on concrete and metal. It bleaches wood by restoring wood to its natural color",
       "bad": "May cause skin irritation from exposure",
       "info": "",
-      "img": "cardImages/oxalic_acid.jpg"
+      "img": "cardImages/oxalic_acid_icon.png"
     },
 
     {
@@ -107,7 +107,7 @@
       "good": "Eradicates microorganisms in swimming pools and hot tubs",
       "bad": "Fumes can irritate and burn skin, eyes, nose, throat, and lungs",
       "info": "",
-      "img": "cardImages/ingredient_icon.png"
+      "img": "cardImages/swimming-pool.png"
     },
 
     {
@@ -127,7 +127,7 @@
       "good": "",
       "bad": "",
       "info": "A colorless liquid that can severly irritate lungs and burn skin and eyes.",
-      "img": "cardImages/ingredient_icon.png"
+      "img": "cardImages/peracetic_acid_icon.png"
     },
 
     {

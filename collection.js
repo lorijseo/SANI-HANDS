@@ -208,12 +208,14 @@ cardType.addEventListener("change", function(e){
     e.preventDefault();
     document.querySelector("#promptName").style.display="block";
     if (document.querySelector("#type").value === "Ingredient"){
-        document.querySelector("#promptGoodBad").style.display="block";
-        document.querySelector("#promptInfo").style.display="none";
+        document.querySelector("#good").disabled = false;
+        document.querySelector("#bad").disabled = false;
+        document.querySelector("#info").disabled = true;
     }
     else{
-        document.querySelector("#promptInfo").style.display="block";
-        document.querySelector("#promptGoodBad").style.display="none";
+        document.querySelector("#good").disabled = true;
+        document.querySelector("#bad").disabled = true;
+        document.querySelector("#info").disabled = false;
     }
     
 });
@@ -269,7 +271,7 @@ function createDeleteBtn(cardId){
     const btn = document.createElement('button');
 
     btn.id = "deleteBtn";
-    btn.innerHTML = "DELETE";
+    btn.innerHTML = `<i class="fa-solid fa-trash-can" style="color: red"></i>`;
     findCard.appendChild(btn);
 
     btn.addEventListener("click", function(e){
@@ -278,9 +280,6 @@ function createDeleteBtn(cardId){
     })
 
 }
-
-
-
 
 function deletePromptData(){
     document.querySelector("#type").value = "";
