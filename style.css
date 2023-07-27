@@ -17,6 +17,26 @@ button:hover {
   cursor: pointer;
 }
 
+input:hover {
+  cursor: pointer;
+}
+
+label:hover {
+  cursor: pointer;
+}
+
+a {
+  color: black;
+}
+
+h2 {
+  margin: 5%;
+}
+
+form {
+  margin: 3%;
+}
+
 /* navbar */
 
 nav {
@@ -47,9 +67,7 @@ nav {
   margin-right: 6%;
 }
 
-a {
-  color: black;
-}
+
 
 /* navbar collapse toggler icon */
 .navbar-toggler-icon {
@@ -94,9 +112,6 @@ a {
   margin: 10%;
 }
 
-h2 {
-  margin: 5%;
-}
 
 /* **********EXPLORE CARDS********** */
 .displayExplore {
@@ -466,9 +481,7 @@ h2 {
   display: flex;
 }
 
-form {
-  margin: 3%;
-}
+
 
 .quizQuestion {
   display: flex;
@@ -490,13 +503,7 @@ form {
     padding: 7px 20px; */
 }
 
-input:hover {
-  cursor: pointer;
-}
 
-label:hover {
-  cursor: pointer;
-}
 
 .choices #choice1space {
   margin-right: 20px;
@@ -606,18 +613,8 @@ label:hover {
 }
 
 .sendEmail {
-  /* display: flex; */
   text-align: center;
   margin: 5%;
-  /* display:none; */
-  /* overflow-y: auto;
-    scroll-behavior: smooth; */
-}
-
-.sendEmail form {
-  /* display: none; */
-  /* overflow-y: auto;
-    scroll-behavior: smooth; */
 }
 
 .sendEmail label {
@@ -630,7 +627,7 @@ label:hover {
 }
 
 .sendEmail input {
-  width: 30%;
+  width: 70%;
   text-align: left;
   border-radius: 10px;
   border: 3px solid #ffcd46;
@@ -647,6 +644,3 @@ label:hover {
   font-size: 15px;
 }
 
-#sendEmailBtn:hover {
-  cursor: pointer;
-}
