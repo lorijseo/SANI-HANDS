@@ -51,6 +51,7 @@ function displayCorrect(parent){
     if ((choice1 && parent.querySelector(".choice1").value == "correct") || (choice2 && parent.querySelector(".choice2").value == "correct")){
         isCorrect = true;
     }
+    console.log(isCorrect);
  
     //disabled unchecked option
     if (choice1){
@@ -66,11 +67,13 @@ function displayCorrect(parent){
 
     parent.querySelector(".cardsExplanation").style.display = 'flex';
     parent.querySelector("#answer").style.display = 'flex';
+    console.log(isCorrect)
 
     return isCorrect;
 }
 
-function displayQuizExplanation(parent){
+function displayQuizExplanation(cardCombo, parent){
+    console.log("weeeeeeeeeee1")
     let isCorrect = displayCorrect(parent);
 
     let ingredientsCollection = parent.getElementsByClassName("ingredientCard");

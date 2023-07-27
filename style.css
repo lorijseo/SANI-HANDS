@@ -244,6 +244,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  padding: 2%;
 }
 
 /* **********CARD FORMAT DISPLAY********** */
@@ -530,6 +531,18 @@ nav {
 .quizBtn button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+#question1 #cardDescr {
+  display: none;
+}
+
+#question2 #cardDescr {
+  display: none;
+}
+
+#answer {
+  display: none;
 }
 
 .displayCorrect {
