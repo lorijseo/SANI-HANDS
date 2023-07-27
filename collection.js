@@ -3,7 +3,7 @@ async function getCardData(findName){
     // const searchValue = searchTxt.value;
     const response = await fetch("data.json");
     const data = await response.json();
-    for (let i=0; data.cards.length; i++){
+    for (let i=0; i<data.cards.length; i++){
         try{
             if (data.cards[i].name == findName){
                 console.log(data.cards[i])
@@ -101,6 +101,18 @@ function findIcon(data){
 
 }
 
+function createSupplyContainer(newId){
+    //create new element
+    let displayCard = document.querySelector(".mySupplies");
+    let newSupply = document.createElement('div');
+
+    newSupply.id = newId;
+    newSupply.className = "displaySupplies"
+
+    displayCard.appendChild(newSupply);
+    return newSupply
+}
+
 function createCard(cardData, num){
 
     // console.log(cardData)
@@ -116,15 +128,17 @@ function createCard(cardData, num){
     const getIcon = findIcon(cardData)
 
     //create new element
-    let displayCard = document.querySelector(".mySupplies");
-    let newSupply = document.createElement('div');
+    // let displayCard = document.querySelector(".mySupplies");
+    // let newSupply = document.createElement('div');
 
-    newSupply.id = supplyNum;
-    newSupply.className = "displaySupplies"
+    // newSupply.id = supplyNum;
+    // newSupply.className = "displaySupplies"
 
-    displayCard.appendChild(newSupply);
+    // displayCard.appendChild(newSupply);
 
-    newSupply.innerHTML = `
+    const supplyContainer = createSupplyContainer(supplyNum);
+
+    supplyContainer.innerHTML = `
         <div class="${formatType + "Card"}" id="${formatName}">
         <div class="cardContent">
 
@@ -146,7 +160,7 @@ function createCard(cardData, num){
     
 
 
-}
+};
 
 
 const searchBtn = document.getElementById("searchBtn");
@@ -288,3 +302,5 @@ function deletePromptData(){
     document.querySelector("#bad").value= "";
     document.querySelector("#info").value= "";
 }
+
+// export {findIcon, findCardId, cardDescription, createCard};
