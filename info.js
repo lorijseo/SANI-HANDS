@@ -219,6 +219,8 @@ function createCard(cardData){
 const showBtn = document.querySelector("#showInfo");
 showBtn.addEventListener("click", async function(e){
     e.preventDefault();
+    libraryBtn.disabled = false;
+    showBtn.disabled = true;
     document.querySelector(".userDisplay").innerHTML = "";
     const comboData = await getData("combo");
 
@@ -243,7 +245,24 @@ showBtn.addEventListener("click", async function(e){
 const libraryBtn = document.querySelector("#seeAll");
 libraryBtn.addEventListener("click", async function(e){
     e.preventDefault();
+    libraryBtn.disabled = true;
+    showBtn.disabled = false;
     document.querySelector(".userDisplay").innerHTML = "";
+    const cardsData = await getData("cards");
+
+    for (let i=0; i<cardsData.length; i++){
+        const currentData = cardsData[i];
+        createContainer(i);
+        document.querySelector(`#info${i}`).className = "myLibrary";
+        const displayCurrentCard = createCard(currentData);
+        document.querySelector(`#info${i}`).innerHTML = `${displayCurrentCard}`
+
+    }
+
+})
+
+window.addEventListener("load", async function(){
+    libraryBtn.disabled = true;
     const cardsData = await getData("cards");
 
     for (let i=0; i<cardsData.length; i++){
