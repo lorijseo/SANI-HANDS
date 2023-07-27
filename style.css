@@ -615,7 +615,7 @@ label:hover {
 }
 
 .sendEmail form {
-  display: none;
+  /* display: none; */
   /* overflow-y: auto;
     scroll-behavior: smooth; */
 }
