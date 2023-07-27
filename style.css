@@ -67,8 +67,6 @@ nav {
   margin-right: 6%;
 }
 
-
-
 /* navbar collapse toggler icon */
 .navbar-toggler-icon {
   font-size: 30px;
@@ -111,7 +109,6 @@ nav {
 .carousel {
   margin: 10%;
 }
-
 
 /* **********EXPLORE CARDS********** */
 .displayExplore {
@@ -362,6 +359,16 @@ nav {
   border: 2px solid grey;
   font-size: 14px;
 }
+
+.userDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+}
+
+.myLibrary {
+  padding: 3%;
+}
 /* ************************COLLECTION PAGE************************** */
 
 /* .collection{
@@ -481,8 +488,6 @@ nav {
   display: flex;
 }
 
-
-
 .quizQuestion {
   display: flex;
   justify-content: center;
@@ -502,8 +507,6 @@ nav {
     border-radius: 10px;
     padding: 7px 20px; */
 }
-
-
 
 .choices #choice1space {
   margin-right: 20px;
@@ -643,4 +646,3 @@ nav {
   font-weight: 600;
   font-size: 15px;
 }
-

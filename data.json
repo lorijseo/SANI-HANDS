@@ -91,6 +91,16 @@
     },
 
     {
+      "id": 8.5,
+      "name": "Drain Cleaner",
+      "type": "Ingredient",
+      "good": "Effective and efficient way to unclog and clean drains",
+      "bad": "Contains toxic chemicals that are highly corrosive. Mixing different drain cleaners that contain a variety of toxic chemical can create toxic fumes",
+      "info": "",
+      "img": "cardImages/drain_cleaner_icon.png"
+    },
+
+    {
       "id": 9,
       "name": "Oxalic Acid",
       "type": "Ingredient",
@@ -245,7 +255,7 @@
 
     {
       "ingredients": ["Bleach", "Ammonia"],
-      "outcome": "Chloramines",
+      "outcome": "Chloramine",
       "explanation": "Mixing Bleach and Ammonia can create Chloramine. Bleach is recommended to be mixed only with water."
     },
 
@@ -286,12 +296,6 @@
     },
 
     {
-      "ingredients": ["Bleach", "Glass Cleaner"],
-      "outcome": "Chlorine Gas",
-      "explanation": "Mixing Bleach and Glass Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
-
-    {
       "ingredients": ["Trichloroisocyanuric Acid", "Oxalic Acid"],
       "outcome": "Chlorine Gas",
       "explanation": "Mixing Trichloroisocyanuric Acid and Oxalic Acid can create Chlorine Gas. Oxalic Acid reacts violently with oxidixing agents."
@@ -306,7 +310,7 @@
     {
       "ingredients": ["Drain Cleaner", "Drain Cleaner"],
       "outcome": "Chlorine Gas",
-      "explanation": "Mixing Drain Cleaner with a different Glass Cleaner can create Chlorine Gas. Most Drain Cleaners have bleach and other acid that release Chlorine Gas or other hazardous gas."
+      "explanation": "Mixing Drain Cleaner with a different Drain Cleaner can create Chlorine Gas. Most Drain Cleaners have bleach and other acid that release Chlorine Gas or other hazardous gas."
     },
 
     {

@@ -1,49 +1,57 @@
-
-
-// import {findIcon, findCardId, cardDescription, createCard} from './collection.js'
-
-// createCard = require("./collection")
-
-async function getData(){
+async function getData(whichData){
     const response = await fetch("data.json");
     const data = await response.json();
-
-    for (let i=0; i<data.combo.length; i++){
-        const thisCombo = data.combo[i]
-        const getCardInfo = await searchCards(thisCombo.ingredients[0], thisCombo.ingredients[1], thisCombo.outcome);
-
-        //counter for id the index number?
-
-        console.log(getCardInfo);
-        //create cards
-        const firstCard = await createCard(getCardInfo[0]);
-        const secondCard = await createCard(getCardInfo[1]);
-        const thirdCard = await createCard(getCardInfo[2]);
-        //display cards
-            //create element
-
-        // console.log(getCardInfo);
-        console.log("wooo");
-        // return getCardInfo
-
+    if(whichData === "combo"){
+        return data.combo
     }
-    // return allData
+    else if (whichData === "cards"){
+        return data.cards
+    }
 }
 
+//compile araay of all cards
+async function allCards(data){
+    let cardData = []
+    for (let i=0; i<data.length; i++){
+        const cardsFound = await searchCards(data[i].ingredients[0], data[i].ingredients[1], data[i].outcome, data[i].explanation);
+        cardData[i] = cardsFound;
+        // console.log(cardData)
+    }
+    return cardData
+}
 
 //fetch cards from names
-async function searchCards(name1, name2, name3){
+async function searchCards(name1, name2, name3, info){
     const cardNames = [name1, name2, name3];
+
     const response = await fetch("data.json");
     const data = await response.json();
     let saveData = [];
-    for (let i=0; i<data.cards.length; i++){
-        if (saveData.length == 3){
+    let counter = 0;
+    for (let i=0; i<=data.cards.length; i++){
+        // console.log(data.cards[i].name)
+        // console.log(counter)
+        // base case if all three cards are found
+        if (counter === 3){
+            saveData.push(info);
             return saveData
         }
         else if (cardNames.includes(data.cards[i].name)){
-            saveData.push(data.cards[i])
+            const position = cardNames.indexOf(data.cards[i].name);
+
+            //consider if same card is added twice
+            if (saveData[position] == undefined){
+                saveData[position] = data.cards[i]
+                
+            }
+            else{
+                saveData[position+1] = data.cards[i]
+            }
+            counter +=1;
+
+            // console.log(saveData)
         }
+
     }
 }
 
@@ -70,13 +78,11 @@ function findCardId(cardData){
 
 
 
+//param: idName
+function cardDescription(cardData){
 
-function cardDescription(cardData, idName){
-    let cardId = "#" + idName; 
-    let findCard = document.querySelector(cardId)
-    let displayDescr = findCard.querySelector("#cardDescr")
     if (cardData.type == "Ingredient"){
-        displayDescr.innerHTML = `
+        return`
 
 
 
@@ -92,7 +98,7 @@ function cardDescription(cardData, idName){
     }
 
     else if (cardData.type == "Effect"){
-        displayDescr.innerHTML = `
+        return `
             <div class="descr">
             <i class="fa-solid fa-skull-crossbones fa-lg" style="color: orange"></i>
             <span>${cardData.info}</span>
@@ -101,7 +107,7 @@ function cardDescription(cardData, idName){
     }
 
     else if ((cardData.type == "Product")||(cardData.type=="Nullify")){
-        displayDescr.innerHTML = `
+        return`
             <p><span style="padding-right:5px;"></span>${cardData.info} </p>
         `
     }
@@ -131,40 +137,65 @@ function findIcon(data){
 
 }
 
-function createSupplyContainer(newId){
-    //create new element
-    let displayCard = document.querySelector(".test");
-    let newSupply = document.createElement('div');
 
-    newSupply.id = newId;
-    newSupply.className = "displaySupplies"
 
-    displayCard.appendChild(newSupply);
-    return newSupply
+function createContainer(idNum){
+
+    const displayContainer = document.querySelector(".userDisplay");
+
+    let newInfo = document.createElement('div');
+    // newInfo.className = "displayCards";
+    newInfo.id = "info" + idNum
+
+    displayContainer.appendChild(newInfo);
+
 }
 
-async function createCard(cardData, num){
+function createInfoTitle(data){
+    const card1 = data[0].name;
+    const card2 = data[1].name;
 
-    // console.log(cardData)
+    return`
+    <div class="infoDescr">${card1} & ${card2}</div>`
+}
+
+function createExplanation(explanation){
+    return `      <div class="cardsInfo">
+    <p>${explanation}</p>
+  </div>`
+
+}
+
+function displayInfo(data){
+    const title = createInfoTitle(data);
+    const card1 = createCard(data[0]);
+    const card2 = createCard(data[1]);
+    const card3 = createCard(data[2]);
+    const explanation = createExplanation(data[3]);
+
+    // document.querySelector(".test").innerHTML = `${show}`
+
+    return `
+    ${title} ${card1} <p id="plus">+</p> ${card2} <p id="equal">=</p> ${card3} ${explanation} `
+
+}
+
+//param: num
+function createCard(cardData){
+    console.log(cardData)
     let cardType = cardData.type;
-    // console.log(cardType)
     let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
 
     // does not consider two worded names, account for underscore
     let formatName = findCardId(cardData)
-    let supplyNum = "supply"+num
+    // let supplyNum = "supply"+num
 
     //determine icon 
-    const getIcon = findIcon(cardData)
+    const getIcon = findIcon(cardData);
 
-    //create new element
-    const supplyContainer = createSupplyContainer(supplyNum);
+    const description = cardDescription(cardData);
 
-    // ************************************************************************
-    //find card description
-    // const description = cardDescription(cardData, formatName);
-
-    supplyContainer.innerHTML = `
+    return `
         <div class="${formatType + "Card"}" id="${formatName}">
         <div class="cardContent">
 
@@ -175,37 +206,53 @@ async function createCard(cardData, num){
 
         <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
   
-        <div class="${formatType + "Descr"}" id="cardDescr">
+        <div class="${formatType + "Descr"}" id="cardDescr"> ${description}
 
         </div>
         </div>
     </div>
     `
-    //find card description
-    cardDescription(cardData, formatName);
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// searchCards("Vinegar", "Citric Acid", "Chlorine Gas")
-// const showThis = getData();
 
 
 const showBtn = document.querySelector("#showInfo");
 showBtn.addEventListener("click", async function(e){
     e.preventDefault();
-    getData();
-    // const showThis = await getData();
-    // document.querySelector(".test").innerHTML = showThis[0].type;
+    document.querySelector(".userDisplay").innerHTML = "";
+    const comboData = await getData("combo");
+
+    const allCardsData = await allCards(comboData);
+    // console.log(allCardsData);
+
+    for (let i=0; i<allCardsData.length; i++){
+        const currentData = allCardsData[i];
+
+        //create new container to display
+        createContainer(i);
+        // initialize class to style
+        document.querySelector(`#info${i}`).className = "displayCards";
+
+        const displayCurrentInfo = displayInfo(currentData);
+        document.querySelector(`#info${i}`).innerHTML = `${displayCurrentInfo}`
+
+    }
+
+})
+
+const libraryBtn = document.querySelector("#seeAll");
+libraryBtn.addEventListener("click", async function(e){
+    e.preventDefault();
+    document.querySelector(".userDisplay").innerHTML = "";
+    const cardsData = await getData("cards");
+
+    for (let i=0; i<cardsData.length; i++){
+        const currentData = cardsData[i];
+        createContainer(i);
+        document.querySelector(`#info${i}`).className = "myLibrary";
+        const displayCurrentCard = createCard(currentData);
+        document.querySelector(`#info${i}`).innerHTML = `${displayCurrentCard}`
+
+    }
+
 })
