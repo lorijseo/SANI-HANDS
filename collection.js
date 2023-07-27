@@ -311,6 +311,7 @@ function createEditBtn(data,cardId){
         const dropdown = document.querySelector("#type");
 
         for(let i=0; i<dropdown.length; i++){
+            // START HERE*********************
             console.log(dropdown.options[i].value)
         }
         document.querySelector("#type").selectedIndex = 1;
