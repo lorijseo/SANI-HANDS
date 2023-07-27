@@ -189,6 +189,8 @@ searchBtn.addEventListener("click", async function(e){
 
         //create Delete btn
         createDeleteBtn(counter);
+
+
     }
     document.getElementById("search").value = '';
 
@@ -245,6 +247,7 @@ createBtn.addEventListener("click", function(e){
         counter +=1;
         createCard(data, counter);
         createDeleteBtn(counter);
+        createEditBtn(data,counter);
         deletePromptData();
     }
     else{
@@ -294,6 +297,32 @@ function createDeleteBtn(cardId){
     })
 
 }
+
+function createEditBtn(data,cardId){
+    const makeId = "#supply" + cardId;
+    const findCard = document.querySelector(makeId);
+    const btn = document.createElement('button');
+
+    btn.id = "editBtn";
+    btn.innerHTML = `<i class="fa-solid fa-pen" style="color: grey"></i>`;
+    findCard.appendChild(btn);
+
+    btn.addEventListener("click", function(e){
+        const dropdown = document.querySelector("#type");
+
+        for(let i=0; i<dropdown.length; i++){
+            console.log(dropdown.options[i].value)
+        }
+        document.querySelector("#type").selectedIndex = 1;
+        document.querySelector("#name").value = data.name;
+        document.querySelector("#good").value = data.good;
+        document.querySelector("#bad").value = data.bad;
+        document.querySelector("#info").value = data.info;
+
+    })
+
+}
+
 
 function deletePromptData(){
     document.querySelector("#type").value = "";

@@ -54,8 +54,11 @@
     <div id="searchOption" >
       <h2>Find cards by name:</h2>
       <!-- <label for="search">Search for INGREDIENT cards or EFFECT cards</label> -->
-      <input type="text" id="search" name="search" placeholder="i.e. Bleach, Chlorine Gas, etc.." required>
-      <button action="submit" id="searchBtn">Search</button>
+      <form action="">
+        <input type="text" id="search" name="search" placeholder="i.e. Bleach, Chlorine Gas, etc.." required>
+        <button type="submit" id="searchBtn">Search</button>
+      </form>
+
     </div>
       
   
@@ -92,7 +95,7 @@
           <input type="text" id="info" minlength="3" maxlength="150">
         </div>
   
-        <button action="submit" id="createBtn">Create Card</button>
+        <button type="submit" id="createBtn">Create Card</button>
   
       </form>
     </div>
