@@ -103,7 +103,7 @@ function findIcon(data){
 
 function createSupplyContainer(newId){
     //create new element
-    let displayCard = document.querySelector(".mySupplies");
+    let displayCard = document.querySelector(`.mySupplies`);
     let newSupply = document.createElement('div');
 
     newSupply.id = newId;
@@ -136,7 +136,7 @@ function createCard(cardData, num){
 
     // displayCard.appendChild(newSupply);
 
-    const supplyContainer = createSupplyContainer(supplyNum);
+    const supplyContainer = createSupplyContainer(supplyNum, parent );
 
     supplyContainer.innerHTML = `
         <div class="${formatType + "Card"}" id="${formatName}">
@@ -243,15 +243,15 @@ createBtn.addEventListener("click", function(e){
     const isValid = validateName();
 
     if (isValid){
-        const data = createData();
         counter +=1;
+        const data = createData(counter);
         createCard(data, counter);
         createDeleteBtn(counter);
-        createEditBtn(data,counter);
+        createEditBtn(counter);
         deletePromptData();
     }
     else{
-        alert("Name cannot begin with a number")
+        alert("Invalid Name")
     }
 
 
@@ -259,17 +259,19 @@ createBtn.addEventListener("click", function(e){
 
 function validateName(){
     const name = document.querySelector("#name").value;
-    const isValidName = /^[a-z]/.test(name.charAt(0))
+    const isValidName = /^[a-z,A-Z]/.test(name.charAt(0))
     return isValidName
 }
 
 
-function createData(){
+function createData(num){
     const type = document.querySelector("#type").value;
     const name = document.querySelector("#name").value;
     const good = document.querySelector("#good").value;
     const bad = document.querySelector("#bad").value;
     const info = document.querySelector("#info").value;
+
+    const text = num.toString();
 
     let data = {
         "name": name,
@@ -279,6 +281,8 @@ function createData(){
         "info": info,
         "img": "cardImages/product_icon.png"
     }
+
+    localStorage.setItem(text, JSON.stringify(data));
     return data
 }
 
@@ -298,8 +302,46 @@ function createDeleteBtn(cardId){
 
 }
 
-function createEditBtn(data,cardId){
-    const makeId = "#supply" + cardId;
+// function createEditBtn(data,cardId){
+//     const makeId = "#supply" + cardId;
+//     const findCard = document.querySelector(makeId);
+//     const btn = document.createElement('button');
+
+//     btn.id = "editBtn";
+//     btn.innerHTML = `<i class="fa-solid fa-pen" style="color: grey"></i>`;
+//     findCard.appendChild(btn);
+
+//     btn.addEventListener("click", function(e){
+//         const dropdown = document.querySelector("#type");
+
+//         for(let i=0; i<dropdown.length; i++){
+//             // START HERE*********************
+//             console.log(dropdown.options[i].value)
+//         }
+//         document.querySelector("#type").selectedIndex = 1;
+//         document.querySelector("#name").value = data.name;
+//         document.querySelector("#good").value = data.good;
+//         document.querySelector("#bad").value = data.bad;
+//         document.querySelector("#info").value = data.info;
+
+//     })
+
+// }
+
+function displayInputValues(num){
+    const text = num.toString();
+    let storageData = JSON.parse(localStorage.getItem(text));
+
+    document.querySelector("#type").value = storageData.type
+    document.querySelector("#name").value = storageData.name;
+    document.querySelector("#good").value = storageData.good;
+    document.querySelector("#bad").value = storageData.bad;
+    document.querySelector("#info").value = storageData.info;
+
+}
+
+function createEditBtn(num){
+    const makeId = "#supply" + num;
     const findCard = document.querySelector(makeId);
     const btn = document.createElement('button');
 
@@ -308,21 +350,55 @@ function createEditBtn(data,cardId){
     findCard.appendChild(btn);
 
     btn.addEventListener("click", function(e){
-        const dropdown = document.querySelector("#type");
+        displayInputValues(num);
 
-        for(let i=0; i<dropdown.length; i++){
-            // START HERE*********************
-            console.log(dropdown.options[i].value)
-        }
-        document.querySelector("#type").selectedIndex = 1;
-        document.querySelector("#name").value = data.name;
-        document.querySelector("#good").value = data.good;
-        document.querySelector("#bad").value = data.bad;
-        document.querySelector("#info").value = data.info;
+        const saveChangeBtn = document.querySelector("#saveChangeBtn");
+        saveChangeBtn.addEventListener("click", function(e){
+            const isValid = validateName();
+            if (isValid){
+                // saves updated data into local storage
+                const data = createData(num);
+                // document.querySelector(`#supply${num}`).innerHTML= ``;
+                //cannot remove, we must replace it
+                createCard(data, num);
+                //***must include buttons */
+                createDeleteBtn(num);
+                createEditBtn(num);
+                deletePromptData();
+                //fetch our card
+                //get data from local storage and replace it
+                document.querySelector("#createBtn").style.display = "block";
+                document.querySelector("#saveChangeBtn").style.display = "none";
+                document.querySelector("#noChangeBtn").style.display = "none";
+            }
+            else{
+                alert("Invalid Name")
+            }
+
+            //return back to displaying create button and hiding other buttons and clearing input
+        })
+
+
+
+        //change createcardBtn to saveChanges or nvm
+        document.querySelector("#createBtn").style.display = "none";
+        document.querySelector("#saveChangeBtn").style.display = "block";
+        document.querySelector("#noChangeBtn").style.display = "block";
+
+
+
+        //save Change will overwrite previous Card
+
+        //nvm will empty inputs, 
 
     })
 
 }
+
+// const saveChangeBtn = document.querySelector("#saveChangeBtn");
+// saveChangeBtn.addEventListener("click", function(e){
+//     createData(num);
+// })
 
 
 function deletePromptData(){

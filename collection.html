@@ -79,23 +79,25 @@
         <div id="promptName">
           <label for="name" type="text">Name:</label>
           <!-- <br> -->
-          <input type="text" id="name" minlength="3" maxlength="25" required>
+          <input type="text" id="name" maxlength="25" required>
         </div>
   
         <div id="promptGoodBad">
           <label for="good" type="text">Advantages:</label>
-          <input type="text" id="good" minlength="3" maxlength="65">
+          <input type="text" id="good"  maxlength="65">
     
           <label for="bad" type="text">Disadvantages:</label>
-          <input type="text" id="bad" minlength="3" maxlength="65">
+          <input type="text" id="bad"  maxlength="65">
         </div>
         
         <div id="promptInfo">
           <label for="info" type="text">Description:</label>
-          <input type="text" id="info" minlength="3" maxlength="150">
+          <input type="text" id="info"  maxlength="150">
         </div>
   
-        <button type="submit" id="createBtn">Create Card</button>
+        <button id="createBtn">Create Card</button>
+        <button id="saveChangeBtn">Save Change</button>
+        <button id="noChangeBtn">NVM</button>
   
       </form>
     </div>

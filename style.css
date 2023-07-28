@@ -454,8 +454,12 @@ nav {
   max-width: 500px;
 }
 
-#deleteBtn {
+#deleteBtn, #editBtn {
   background-color: white;
+}
+
+#saveChangeBtn, #noChangeBtn{
+  display:none;
 }
 
 .myCleaning {
