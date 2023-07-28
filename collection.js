@@ -127,16 +127,7 @@ function createCard(cardData, num){
     //determine icon 
     const getIcon = findIcon(cardData)
 
-    //create new element
-    // let displayCard = document.querySelector(".mySupplies");
-    // let newSupply = document.createElement('div');
-
-    // newSupply.id = supplyNum;
-    // newSupply.className = "displaySupplies"
-
-    // displayCard.appendChild(newSupply);
-
-    const supplyContainer = createSupplyContainer(supplyNum, parent );
+    const supplyContainer = createSupplyContainer(supplyNum);
 
     supplyContainer.innerHTML = `
         <div class="${formatType + "Card"}" id="${formatName}">
@@ -184,6 +175,8 @@ searchBtn.addEventListener("click", async function(e){
     //verify if data on name exists
     if (data){
         counter += 1;
+        const text = counter.toString();
+        localStorage.setItem(text, JSON.stringify(data));
         //create Card
         createCard(data, counter);
 
@@ -223,7 +216,17 @@ let cardType = document.querySelector("#type");
 cardType.addEventListener("change", function(e){
     e.preventDefault();
     document.querySelector("#promptName").style.display="block";
-    if (document.querySelector("#type").value === "Ingredient"){
+    updateInputForm();
+    
+});
+
+function updateInputForm(){
+    if (document.querySelector("#type").value == ""){
+        document.querySelector("#good").disabled = false;
+        document.querySelector("#bad").disabled = false;
+        document.querySelector("#info").disabled = false;
+    }
+    else if (document.querySelector("#type").value == "Ingredient"){
         document.querySelector("#good").disabled = false;
         document.querySelector("#bad").disabled = false;
         document.querySelector("#info").disabled = true;
@@ -233,8 +236,7 @@ cardType.addEventListener("change", function(e){
         document.querySelector("#bad").disabled = true;
         document.querySelector("#info").disabled = false;
     }
-    
-});
+}
 
 const createBtn = document.querySelector("#createBtn");
 createBtn.addEventListener("click", function(e){
@@ -249,6 +251,7 @@ createBtn.addEventListener("click", function(e){
         createDeleteBtn(counter);
         createEditBtn(counter);
         deletePromptData();
+        updateInputForm();
     }
     else{
         alert("Invalid Name")
@@ -263,28 +266,6 @@ function validateName(){
     return isValidName
 }
 
-
-function createData(num){
-    const type = document.querySelector("#type").value;
-    const name = document.querySelector("#name").value;
-    const good = document.querySelector("#good").value;
-    const bad = document.querySelector("#bad").value;
-    const info = document.querySelector("#info").value;
-
-    const text = num.toString();
-
-    let data = {
-        "name": name,
-        "type": type,
-        "good": good,
-        "bad": bad,
-        "info": info,
-        "img": "cardImages/product_icon.png"
-    }
-
-    localStorage.setItem(text, JSON.stringify(data));
-    return data
-}
 
 function createDeleteBtn(cardId){
     const makeId = "#supply" + cardId;
@@ -301,6 +282,16 @@ function createDeleteBtn(cardId){
     })
 
 }
+
+// const deleteBtn = document.querySelector("#deleteBtn");
+// if (deleteBtn){
+//     deleteBtn.addEventListener("click", function(e){
+//         findCard.remove();
+
+//     })
+// }
+
+// const deleteBtn = document.querySelector("")
 
 // function createEditBtn(data,cardId){
 //     const makeId = "#supply" + cardId;
@@ -328,6 +319,29 @@ function createDeleteBtn(cardId){
 
 // }
 
+
+function createData(num){
+    const type = document.querySelector("#type").value;
+    const name = document.querySelector("#name").value;
+    const good = document.querySelector("#good").value;
+    const bad = document.querySelector("#bad").value;
+    const info = document.querySelector("#info").value;
+
+    const text = num.toString();
+
+    let data = {
+        "name": name,
+        "type": type,
+        "good": good,
+        "bad": bad,
+        "info": info,
+        "img": "cardImages/product_icon.png"
+    }
+
+    localStorage.setItem(text, JSON.stringify(data));
+    return data
+}
+
 function displayInputValues(num){
     const text = num.toString();
     let storageData = JSON.parse(localStorage.getItem(text));
@@ -344,56 +358,97 @@ function createEditBtn(num){
     const makeId = "#supply" + num;
     const findCard = document.querySelector(makeId);
     const btn = document.createElement('button');
+    // const makeBtnId = "editBtn" + num
 
-    btn.id = "editBtn";
+    // btn.id = makeBtnId
+    // btn.className = "editBtn";
+    btn.id = "editBtn"
     btn.innerHTML = `<i class="fa-solid fa-pen" style="color: grey"></i>`;
     findCard.appendChild(btn);
 
     btn.addEventListener("click", function(e){
         displayInputValues(num);
-
-        const saveChangeBtn = document.querySelector("#saveChangeBtn");
-        saveChangeBtn.addEventListener("click", function(e){
-            const isValid = validateName();
-            if (isValid){
-                // saves updated data into local storage
-                const data = createData(num);
-                // document.querySelector(`#supply${num}`).innerHTML= ``;
-                //cannot remove, we must replace it
-                createCard(data, num);
-                //***must include buttons */
-                createDeleteBtn(num);
-                createEditBtn(num);
-                deletePromptData();
-                //fetch our card
-                //get data from local storage and replace it
-                document.querySelector("#createBtn").style.display = "block";
-                document.querySelector("#saveChangeBtn").style.display = "none";
-                document.querySelector("#noChangeBtn").style.display = "none";
-            }
-            else{
-                alert("Invalid Name")
-            }
-
-            //return back to displaying create button and hiding other buttons and clearing input
-        })
-
-
-
-        //change createcardBtn to saveChanges or nvm
+        // let cardType = document.querySelector("#type");
+        if (document.querySelector("#type").value == "Ingredient"){
+            document.querySelector("#good").disabled = false;
+            document.querySelector("#bad").disabled = false;
+            document.querySelector("#info").disabled = true;
+        }
+        else{
+            document.querySelector("#good").disabled = true;
+            document.querySelector("#bad").disabled = true;
+            document.querySelector("#info").disabled = false;
+        }
+    
         document.querySelector("#createBtn").style.display = "none";
         document.querySelector("#saveChangeBtn").style.display = "block";
+        document.querySelector("#saveChangeBtn").className = num;
+
         document.querySelector("#noChangeBtn").style.display = "block";
 
-
-
+        //save id num to save btn
+        
+        // return num
+    
+    
         //save Change will overwrite previous Card
-
+    
         //nvm will empty inputs, 
-
+    
     })
-
+    
 }
+
+
+// const editBtn = document.querySelector("#editBtn");
+
+// if (editBtn){
+//     editBtn.addEventListener("click", function(e){
+//         displayInputValues(num);
+    
+//         document.querySelector("#createBtn").style.display = "none";
+//         document.querySelector("#saveChangeBtn").style.display = "block";
+//         document.querySelector("#noChangeBtn").style.display = "block";
+//         // return num
+    
+    
+//         //save Change will overwrite previous Card
+    
+//         //nvm will empty inputs, 
+    
+//     })
+
+// }
+
+
+
+let saveChangeBtn = document.querySelector("#saveChangeBtn");
+saveChangeBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    const isValid = validateName();
+    const num = saveChangeBtn.className;
+    
+    if (isValid){
+        // saves updated data into local storage
+        const data = createData(num);
+
+        editCard(data, num);
+
+        createDeleteBtn(num);
+        createEditBtn(num);
+        deletePromptData();
+        updateInputForm();
+
+        document.querySelector("#createBtn").style.display = "block";
+        document.querySelector("#saveChangeBtn").style.display = "none";
+        document.querySelector("#noChangeBtn").style.display = "none";
+    }
+    else{
+        alert("Invalid Name")
+    }
+
+    //return back to displaying create button and hiding other buttons and clearing input
+})
 
 // const saveChangeBtn = document.querySelector("#saveChangeBtn");
 // saveChangeBtn.addEventListener("click", function(e){
@@ -409,4 +464,47 @@ function deletePromptData(){
     document.querySelector("#info").value= "";
 }
 
-// export {findIcon, findCardId, cardDescription, createCard};
+function editCard(cardData, num){
+    let cardType = cardData.type;
+    let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
+
+    // does not consider two worded names, account for underscore
+    let formatName = findCardId(cardData)
+    let supplyNum = "supply"+num
+
+    //determine icon 
+    const getIcon = findIcon(cardData)
+
+    //findsupplycontainer
+    const supplyContainer = findSupplyContainer(supplyNum);
+
+    supplyContainer.innerHTML = `
+        <div class="${formatType + "Card"}" id="${formatName}">
+        <div class="cardContent">
+
+        <div class="title">
+        ${getIcon}
+        <span class="${formatType + "Descr"}" id="cardName">${cardData.name}</span>
+        </div>
+
+        <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
+
+        <div class="${formatType + "Descr"}" id="cardDescr">
+
+        </div>
+        </div>
+    </div>
+    `
+    //find card description
+    cardDescription(cardData, formatName);
+}
+
+function findSupplyContainer(currentId){
+    const id= `#${currentId}`
+    console.log(id);
+    let currentCard = document.querySelector(`#${currentId}`);
+    console.log(currentCard);
+    currentCard.innerHTML = "";
+    return currentCard
+
+}
