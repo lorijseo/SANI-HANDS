@@ -276,8 +276,9 @@ function createDeleteBtn(cardId){
     btn.innerHTML = `<i class="fa-solid fa-trash-can" style="color: red"></i>`;
     findCard.appendChild(btn);
 
-    btn.addEventListener("click", function(e){
+    btn.addEventListener("click", function(){
         findCard.remove();
+        localStorage.removeItem(cardId);
 
     })
 
