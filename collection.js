@@ -155,7 +155,7 @@ function createCard(cardData, num){
 
 
 const searchBtn = document.getElementById("searchBtn");
-let counter = 0
+
 
 searchBtn.addEventListener("click", async function(e){
     e.preventDefault();
@@ -173,8 +173,9 @@ searchBtn.addEventListener("click", async function(e){
     const data = await getCardData(formattedTxt);
     
     //verify if data on name exists
-    if (data){
-        counter += 1;
+    if (data){        
+        increaseStorageCounter();
+        let counter = getStorageCountNum();
         const text = counter.toString();
         localStorage.setItem(text, JSON.stringify(data));
         //create Card
@@ -182,15 +183,12 @@ searchBtn.addEventListener("click", async function(e){
 
         //create Delete btn
         createDeleteBtn(counter);
-
-
     }
     else{
         alert(`We have no data on ${searchTxt}. Try again!`)
     }
     document.getElementById("search").value = '';
     
-    console.log(localStorage.key(counter))
 })
 
 
@@ -249,8 +247,15 @@ createBtn.addEventListener("click", function(e){
     const isValid = validateName();
 
     if (isValid){
-        counter +=1;
+        increaseStorageCounter();
+        let counter = getStorageCountNum();
+        const text = counter.toString();
         const data = createData(counter);
+
+        
+        localStorage.setItem(text, JSON.stringify(data));
+
+        
         createCard(data, counter);
         createDeleteBtn(counter);
         createEditBtn(counter);
@@ -283,46 +288,12 @@ function createDeleteBtn(cardId){
     btn.addEventListener("click", function(){
         findCard.remove();
         localStorage.removeItem(cardId);
+        // decreaseStorageCounter();
 
     })
 
 }
 
-// const deleteBtn = document.querySelector("#deleteBtn");
-// if (deleteBtn){
-//     deleteBtn.addEventListener("click", function(e){
-//         findCard.remove();
-
-//     })
-// }
-
-// const deleteBtn = document.querySelector("")
-
-// function createEditBtn(data,cardId){
-//     const makeId = "#supply" + cardId;
-//     const findCard = document.querySelector(makeId);
-//     const btn = document.createElement('button');
-
-//     btn.id = "editBtn";
-//     btn.innerHTML = `<i class="fa-solid fa-pen" style="color: grey"></i>`;
-//     findCard.appendChild(btn);
-
-//     btn.addEventListener("click", function(e){
-//         const dropdown = document.querySelector("#type");
-
-//         for(let i=0; i<dropdown.length; i++){
-//             // START HERE*********************
-//             console.log(dropdown.options[i].value)
-//         }
-//         document.querySelector("#type").selectedIndex = 1;
-//         document.querySelector("#name").value = data.name;
-//         document.querySelector("#good").value = data.good;
-//         document.querySelector("#bad").value = data.bad;
-//         document.querySelector("#info").value = data.info;
-
-//     })
-
-// }
 
 
 function createData(num){
@@ -445,6 +416,7 @@ saveChangeBtn.addEventListener("click", function(e){
         deletePromptData();
         updateInputForm();
 
+
         document.querySelector("#createBtn").style.display = "block";
         document.querySelector("#saveChangeBtn").style.display = "none";
         document.querySelector("#noChangeBtn").style.display = "none";
@@ -522,38 +494,60 @@ clearBtn.addEventListener("click", function(e){
     document.querySelector(".mySupplies").innerHTML = "";
 })
 
+let emptyStorage = true;
 window.addEventListener("DOMContentLoaded", function(){
-    let emptyStorage = true;
-    for (let i =1; i<this.localStorage.length; i++){
+    const counterNum = getStorageCountNum();
+    if (counterNum){
+        for (let i =1; i<=counterNum; i++){
         
-        if (this.localStorage.getItem(i.toString())){
-            // get the object value
-            const cardData = JSON.parse(this.localStorage.getItem(i.toString()));
-            console.log(cardData)
-            
-            // verify search card or created card
-            const determineCard = cardData.id;
-            if (typeof determineCard === "string"){
-                //created card
+            if (this.localStorage.getItem(i.toString())){
+                // get the object value
+                const cardData = JSON.parse(this.localStorage.getItem(i.toString()));
+ 
+                // verify search card or created card
+                const determineCard = cardData.id;
+                if (typeof determineCard === "string"){
+                    //created card
+                    createCard(cardData, i);
+                    createDeleteBtn(i);
+                    createEditBtn(i);
+                }
+                else{
+                    //searched card
+                    createCard(cardData,i);
+                    createDeleteBtn(i)
+
+                }
+                emptyStorage = false;
             }
-            else{
-                //searched card
-                console.log(cardData.type)
-                createCard(cardData,i);
-                createDeleteBtn(i)
-            }
-            emptyStorage = false;
-            let countValue = this.localStorage.getItem("counter");
-            console.log(countValue);
-            let count = Number(countValue);
-            count +=1;
-            let updateCount = count.toString();
-            this.localStorage.setItem("counter", updateCount);
         }
+        //consider if cards were deleted manually by user
+        if (emptyStorage){
+            this.localStorage.setItem("counter", "0")
+        }
+
     }
-    if (emptyStorage){
+    //initialize counter to 0 if counter doesn't exist
+    else{
         this.localStorage.setItem("counter", "0")
     }
-    
-
 })
+
+function increaseStorageCounter(){
+    let countValue = JSON.parse(localStorage.getItem("counter"));
+    let count = Number(countValue) + 1;
+    let updateCount = count.toString();
+    localStorage.setItem("counter", updateCount);
+}
+
+function decreaseStorageCounter(){
+    let countValue = JSON.parse(localStorage.getItem("counter"));
+    let count = Number(countValue) - 1;
+    let updateCount = count.toString();
+    localStorage.setItem("counter", updateCount);
+}
+function getStorageCountNum(){
+    let countValue = JSON.parse(localStorage.getItem("counter"));
+    let num = Number(countValue)
+    return num
+}
