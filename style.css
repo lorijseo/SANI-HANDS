@@ -164,7 +164,7 @@ nav {
 
 .displayCards {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -181,7 +181,7 @@ nav {
 }
 
 .pageIntro div {
-  font-size: 20px;
+  font-size: 17px;
   text-align: center;
   margin: 5% 15% 0 15%;
   background-color: #ffcd46;
@@ -197,6 +197,15 @@ nav {
   padding: 7px 20px;
   width: 100%;
   text-align: center;
+  font-weight: 700;
+}
+
+#showInfo,
+#seeAll {
+  display: block;
+  text-align: center;
+  margin: 5% auto;
+  font-size: 30px;
   font-weight: 700;
 }
 
@@ -454,12 +463,14 @@ nav {
   max-width: 500px;
 }
 
-#deleteBtn, #editBtn {
+#deleteBtn,
+#editBtn {
   background-color: white;
 }
 
-#saveChangeBtn, #noChangeBtn{
-  display:none;
+#saveChangeBtn,
+#noChangeBtn {
+  display: none;
 }
 
 .myCleaning {
@@ -470,12 +481,12 @@ nav {
 }
 /* ************************QUIZ PAGE************************** */
 
-/* #cardDescr{
-    display:none;
-}
-
-.effectCard .cardContent{
-    display:none;
+/* #startQuizBtn {
+  display: block;
+  text-align: center;
+  margin: 5% auto;
+  font-size: 50px;
+  font-weight: 700;
 } */
 
 .questionNumber {

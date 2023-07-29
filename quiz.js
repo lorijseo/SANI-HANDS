@@ -1,45 +1,252 @@
-// **********************QUIZPAGE**********************
-question1 = document.querySelector("#info1")
-const quizBtn1 = question1.querySelector(".quizBtn")
+async function getData(whichData){
+    const response = await fetch("data.json");
+    const data = await response.json();
+    if(whichData === "combo"){
+        return data.combo
+    }
+    else if (whichData === "cards"){
+        return data.cards
+    }
+}
 
-question2 = document.querySelector("#info2")
-const quizBtn2 = question2.querySelector(".quizBtn")
+//compile araay of all cards
+async function allCards(data){
+    let cardData = []
+    for (let i=0; i<data.length; i++){
+        const cardsFound = await searchCards(data[i].ingredients[0], data[i].ingredients[1], data[i].outcome, data[i].explanation);
+        cardData[i] = cardsFound;
+        // console.log(cardData)
+    }
+    return cardData
+}
 
-question3 = document.querySelector("#info3")
-const quizBtn3 = question3.querySelector(".quizBtn")
+//fetch cards from names
+async function searchCards(name1, name2, name3, info){
+    const cardNames = [name1, name2, name3];
 
-question4 = document.querySelector("#info4")
-const quizBtn4 = question4.querySelector(".quizBtn")
+    const response = await fetch("data.json");
+    const data = await response.json();
+    let saveData = [];
+    let counter = 0;
+    for (let i=0; i<=data.cards.length; i++){
+        // console.log(data.cards[i].name)
+        // console.log(counter)
+        // base case if all three cards are found
+        if (counter === 3){
+            saveData.push(info);
+            return saveData
+        }
+        else if (cardNames.includes(data.cards[i].name)){
+            const position = cardNames.indexOf(data.cards[i].name);
 
-//from button to parent we need to go up three parents 
+            //consider if same card is added twice
+            if (saveData[position] == undefined){
+                saveData[position] = data.cards[i]
+                
+            }
+            else{
+                saveData[position+1] = data.cards[i]
+            }
+            counter +=1;
 
-quizBtn1.addEventListener("click", function(e){
-    e.preventDefault();
-    displayQuizExplanation(question1);
-    quizBtn1.style.display = "none";
+            // console.log(saveData)
+        }
 
-})
+    }
+}
 
-quizBtn2.addEventListener("click", function(e){
-    e.preventDefault();
-    displayQuizExplanation(question2);
-    quizBtn2.style.display = "none";
 
-})
 
-quizBtn3.addEventListener("click", function(e){
-    e.preventDefault();
-    displayQuizExplanation(question3)
-    quizBtn3.style.display = "none";
+function findCardId(cardData){
+    //change name to lowercase with underscore
+    let cardName = cardData.name;
+    let allLowerCase = cardName.toLowerCase();
 
-})
+    //consider if there is at least one space in the name
+    if (allLowerCase.indexOf(" ") !== -1){
+        for (let i=0; i<cardName.length; i++){
+            let spaceFound = allLowerCase.indexOf(" ");
 
-quizBtn4.addEventListener("click", function(e){
-    e.preventDefault();
-    displayQuizExplanation(question4)
-    quizBtn4.style.display = "none";
+            if (spaceFound !== -1){
+                let currentWord = allLowerCase.slice(0,spaceFound) + "_" + allLowerCase.slice(spaceFound+1);
+                allLowerCase = currentWord;
+            }
+        }
+    }
+    return allLowerCase;
+}
 
-})
+
+
+//param: idName
+function cardDescription(cardData){
+
+    if (cardData.type == "Ingredient"){
+        return`
+
+
+
+        <div class="descr">
+        <i class="fa-solid fa-thumbs-up fa-lg" style="color: green;"></i>
+        <span>${cardData.good} </span>
+        </div>
+        <div class="descr">
+        <i class="fa-solid fa-thumbs-down fa-lg" style="color: red"></i> 
+        <span>${cardData.bad}</span> 
+        </div>
+        `
+    }
+
+    else if (cardData.type == "Effect"){
+        return `
+            <div class="descr">
+            <i class="fa-solid fa-skull-crossbones fa-lg" style="color: orange"></i>
+            <span>${cardData.info}</span>
+          </div>
+        `
+    }
+
+    else if ((cardData.type == "Product")||(cardData.type=="Nullify")){
+        return`
+            <p><span style="padding-right:5px;"></span>${cardData.info} </p>
+        `
+    }
+
+
+
+}
+
+
+function findIcon(data){
+    let cardType = data.type;
+    if (cardType == "Ingredient"){
+        return '<i class="fa-solid fa-flask fa-xl" style="color: green;"></i>'
+    }
+
+    else if (cardType == "Effect"){
+        return '<i class="fa-solid fa-biohazard fa-xl" style="color: #cc350f;"></i>'
+    }
+
+    else if (cardType == "Product"){
+        return '<i class="fa-solid fa-spray-can-sparkles fa-xl" style="color: #2f72e4;"></i>'
+    }
+
+    else if (cardType == "Nullify"){
+        return '<i class="fa-solid fa-poo fa-xl" style="color: #717d94;"></i>'
+    }
+
+}
+
+function createContainer(idNum){
+
+    const displayContainer = document.querySelector(".userDisplay");
+
+    let newInfo = document.createElement('div');
+    // newInfo.className = "displayCards";
+    newInfo.id = "info" + idNum
+
+    displayContainer.appendChild(newInfo);
+
+}
+
+function createQuizContainer(idNum){
+
+    const displayContainer = document.querySelector(`#info${idNum}`);
+
+    let newQuiz = document.createElement('div');
+    newQuiz.className = "quiz"
+    newQuiz.id = "quiz" + idNum
+
+    displayContainer.appendChild(newQuiz);
+
+}
+
+function createExplanationContainer(idNum){
+    const displayContainer = document.querySelector(`#info${idNum}`);
+
+    let newExplanation = document.createElement('div');
+    newExplanation.className = "cardsExplanation"
+    newExplanation.id = "expl" + idNum
+
+    displayContainer.appendChild(newExplanation);
+}
+
+function createInfoTitle(data,num){
+    const questionNum = num + 1;
+    const card1 = data[0].name;
+    const card2 = data[1].name;
+
+    return`
+    <div class="infoDescr">Question#${questionNum}: ${card1} & ${card2}</div>`
+}
+
+// function createExplanation(explanation){
+//     return `      <div class="cardsInfo">
+//     <p>${explanation}</p>
+//   </div>`
+
+// }
+
+function displayInfo(data,num){
+    const title = createInfoTitle(data,num);
+    const card1 = createCard(data[0],1);
+    const card2 = createCard(data[1],2);
+    const card3 = createCard(data[2],3);
+
+    // document.querySelector(".test").innerHTML = `${show}`
+
+    return `
+    ${title} ${card1} <p id="plus">+</p> ${card2} <p id="equal">=</p> ${card3} `
+
+}
+
+
+function findQuizCard(num){
+    if (num === 1){
+        return "question1"
+    }
+    else if (num === 2){
+        return "question2"
+    }
+    else{
+        return "answer"
+    }
+}
+
+//param: num
+function createCard(cardData,num){
+    let cardType = cardData.type;
+    let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
+
+    // does not consider two worded names, account for underscore
+    let formatName = findCardId(cardData)
+    // let supplyNum = "supply"+num
+
+    //determine icon 
+    const getIcon = findIcon(cardData);
+
+    const description = cardDescription(cardData);
+
+    const quizCard = findQuizCard(num);
+
+    return `
+        <div class="${formatType + "Card"}" id="${formatName}">
+        <div class="cardContent" id=${quizCard}>
+
+        <div class="title">
+        ${getIcon}
+        <span class="${formatType + "Descr"}" id="cardName">${cardData.name}</span>
+        </div>
+
+        <img src="${cardData.img}" alt=" style="height=128.42px"  style = "object-fit:contain">
+  
+        <div class="${formatType + "Descr"}" id="cardDescr"> ${description}
+
+        </div>
+        </div>
+    </div>
+    `
+};
 
 
 function displayCorrect(parent){
@@ -51,7 +258,6 @@ function displayCorrect(parent){
     if ((choice1 && parent.querySelector(".choice1").value == "correct") || (choice2 && parent.querySelector(".choice2").value == "correct")){
         isCorrect = true;
     }
-    console.log(isCorrect);
  
     //disabled unchecked option
     if (choice1){
@@ -62,159 +268,145 @@ function displayCorrect(parent){
     }
 
     //display answers
-    parent.querySelector("#question1").querySelector("#cardDescr").style.display = "block";
-    parent.querySelector("#question2").querySelector("#cardDescr").style.display = "block";
+    parent.querySelector("#question1").querySelector("#cardDescr").style.display = "flex";
+    parent.querySelector("#question2").querySelector("#cardDescr").style.display = "flex";
 
     parent.querySelector(".cardsExplanation").style.display = 'flex';
     parent.querySelector("#answer").style.display = 'flex';
-    console.log(isCorrect)
-
+    // console.log(isCorrect)
     return isCorrect;
 }
 
 function displayQuizExplanation(cardCombo, parent){
-    console.log("weeeeeeeeeee1")
     let isCorrect = displayCorrect(parent);
+    console.log(isCorrect)
 
-    let ingredientsCollection = parent.getElementsByClassName("ingredientCard");
-
-    //get first ingredient name
-    let ingredient1 = ingredientsCollection[0].id;
-    let firstLetter = ingredient1.charAt(0).toUpperCase();
-    ingredient1 = firstLetter + ingredient1.slice(1);
-
-
-    //get second ingredient name
-    let ingredient2 = ingredientsCollection[1].id;
-
-    firstLetter = ingredient2.charAt(0).toUpperCase();
-    ingredient2 = firstLetter + ingredient2.slice(1);
-
-
-    // if there's an underscore
-    if (ingredient2.indexOf("_") !== -1){
-        let underscore = ingredient2.indexOf("_");
-        const secondLetter = ingredient2.charAt(underscore + 1).toUpperCase();
-        ingredient2 = ingredient2.slice(0,underscore+1) + secondLetter + ingredient2.slice(underscore+2);
-        ingredient2 = ingredient2.replace("_", " ");
+    if (isCorrect) {
+        return ` 
+        <div class="displayCorrect" id="correct_icon"><i class="fa-solid fa-check"></i> </div> <p class="displayQuizExplanation">${cardCombo[3]}</p>
+        `
     }
-
-    if (ingredient1.indexOf("_") !== -1){
-        let underscore = ingredient1.indexOf("_");
-        const secondLetter = ingredient1.charAt(underscore + 1).toUpperCase();
-        ingredient1 = ingredient1.slice(0,underscore+1) + secondLetter + ingredient1.slice(underscore+2);
-        ingredient1 = ingredient1.replace("_", " ");
+    else{
+        return ` 
+        <div class="displayCorrect" id="wrong_icon"><i class="fa-solid fa-xmark"></i> </div> <p class="displayQuizExplanation">${cardCombo[3]}</p>
+        `
     }
-
-
-    // display explanation
-    for (let i=0; i<cardCombo.length;i+=1){
-        let ingredientsList = cardCombo[i].ingredients;
-        if ((ingredientsList.indexOf(ingredient1) !== -1) && (ingredientsList.indexOf(ingredient2) !== -1)){
-            if (isCorrect) {
-                parent.querySelector(".cardsExplanation").innerHTML = ` 
-                <div class="displayCorrect" id="correct_icon"><i class="fa-solid fa-check"></i> </div> <p class="displayQuizExplanation">${cardCombo[i].explanation}</p>
-                `
-            }
-            else{
-                parent.querySelector(".cardsExplanation").innerHTML = ` 
-                <div class="displayCorrect" id="wrong_icon"><i class="fa-solid fa-xmark"></i> </div> <p class="displayQuizExplanation">${cardCombo[i].explanation}</p>
-                `
-            }
-
-        }
-    }
-
 
 }
 
 
 
-let cardCombo = [
-    {
-        ingredients: ["Hydrogen Peroxide", "Vinegar"],
-        outcome: "Peracetic Acid",
-        explanation: "Mixing Hydrogen Peroxide and Vinegar can create Peracetic Acid. You can use both of these ingredients to keep surfaces clean and disinfected as long as one completely dries before using the other."
-    },
 
-    {
-        ingredients: ["Bleach", "Vinegar"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Vinegar can create Chlorine Gas. Bleach is recommended to be mixed only with water. "
-    },
+// const startQuizBtn = document.querySelector("#startQuizBtn");
+window.addEventListener("DOMContentLoaded", async function(e){
+    // e.preventDefault();
+    document.querySelector(".userDisplay").innerHTML = "";
+    const comboData = await getData("combo");
 
-    {
-        ingredients: ["Bleach", "Ammonia"],
-        outcome: "Chloramine",
-        explanation: "Mixing Bleach and Ammonia can create Chloramine. Bleach is recommended to be mixed only with water."
-    },
+    const allCardsData = await allCards(comboData);
+    // console.log(allCardsData);
 
-    {
-        ingredients: ["Bleach", "Isopropyl Alcohol"],
-        outcome: "Chloroform",
-        explanation: "Mixing Bleach and Isopropyl Alcohol can create Chloroform. Bleach is recommended to be mixed only with water."
-    },
+    for (let i=0; i<allCardsData.length; i++){
+        const currentData = allCardsData[i];
+        console.log(currentData)
 
-    // {
-    //     ingredients: ["Vinegar", "Isopropyl Alcohol"],
-    //     outcome: "Glass and Mirror Cleaner",
-    //     explanation: "Mixing Vinegar and Isopopyl Alcohol create a spray for glass and mirror cleaner. They can give a nice shine for tiles and other surfaces."
-    // },
+        //create new container to display
+        createContainer(i);
+        const currentSection = document.querySelector(`#info${i}`);
+        // initialize class to style
+        currentSection .className = "displayCards";
 
-    {
-        ingredients: ["Bleach", "Toilet Bowl Cleaner"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Toilet Bowl Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
+        //display Quiz cards
+        const displayCurrentInfo = displayInfo(currentData, i);
+        currentSection .innerHTML = `${displayCurrentInfo}`;
 
-    {
-        ingredients: ["Bleach", "Mold Remover"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Mold Remover can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
+        //create new container for quiz
+        createQuizContainer(i);
 
-    {
-        ingredients: ["Bleach", "Oven Cleaner"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Oven Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
+        const displayCurrentQuiz = await displayQuizQuestion(currentData, i);
+        document.querySelector(`#quiz${i}`).innerHTML = `${displayCurrentQuiz}`;
 
-    {
-        ingredients: ["Vinegar", "Baking Soda"],
-        outcome: "Nullify",
-        explanation: "Mixing Vinegar and Baking Soda creates a nonharmful, oily mixture. It's not a good combination for cleaning because it is mostly used for volcano eruptions for science fairs."
-    },
+        createExplanationContainer(i);
 
-    {
-        ingredients: ["Bleach", "Drain Cleaner"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Drain Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
+        const quizBtn = currentSection.querySelector(`#quizBtn${i}`);
+        quizBtn.addEventListener("click", function(e){
+            e.preventDefault();
+            // console.log("weeeeeeeeeee")
+            // console.log(currentData)
+            // console.log(currentSection)
 
-    {
-        ingredients: ["Bleach", "Glass Cleaner"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Glass Cleaner can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
-
-    {
-        ingredients: ["Trichloroisocyanuric Acid", "Oxalic Acid"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Trichloroisocyanuric Acid and Oxalic Acid can create Chlorine Gas. Oxalic Acid reacts violently with oxidixing agents."
-    },
-
-    {
-        ingredients: ["Bleach", "Lemon Juice"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Bleach and Lemon Juice can create Chlorine Gas. Bleach is recommended to be mixed only with water."
-    },
-
-    {
-        ingredients: ["Drain Cleaner", "Drain Cleaner"],
-        outcome: "Chlorine Gas",
-        explanation: "Mixing Drain Cleaner with a different Glass Cleaner can create Chlorine Gas. Most Drain Cleaners have bleach and other acid that release Chlorine Gas or other hazardous gas."
-    },
+            //display explanation
+            const displayExplanation = displayQuizExplanation(currentData, currentSection)
+            document.querySelector(`#expl${i}`).innerHTML = `${displayExplanation}`
+            // displayQuizExplanation(currentSection);
+            quizBtn.style.display = "none";
+        })
 
 
-];
+    }
 
+})
+
+
+
+async function allWrongEffectNames(correctCard){
+    const cardsData = await getData("cards");
+    let wrongEffectCards = [];
+
+    for(let i =0; i<cardsData.length; i++){
+        if (((cardsData[i].type === "Effect")||(cardsData[i].type === "Nullify") )&& (cardsData[i].name !== correctCard)){
+            wrongEffectCards.push(cardsData[i].name)
+        }
+    }
+    // console.log("hi")
+    // console.log(typeof wrongEffectCards);
+    return wrongEffectCards
+
+}
+
+function getWrongChoice(arr, num){
+    const position = num % arr.length;
+    // console.log(typeof length)
+    // console.log(arr[position])
+    return arr[position]
+
+}
+
+async function displayQuizQuestion(currentData, i){
+    console.log(currentData[2].name);
+    const wrongOptions = await allWrongEffectNames(currentData[2].name);
+    console.log("hi")
+    console.log(wrongOptions)
+    const wrongAnswer = getWrongChoice(wrongOptions, currentData[2].id)
+    const correctAnswer = currentData[2].name;
+
+    //[correct/wrong, name]
+    let even = [];
+    let odd = [];
+
+    if (correctAnswer.id % 2 == 0){
+        even.push("correct", correctAnswer)
+        odd.push("wrong", wrongAnswer)
+    }
+    else{
+        odd.push("correct", correctAnswer)
+        even.push("wrong", wrongAnswer)
+    }
+    
+    return `
+    <div class="quizLabel">What happens when we mix these two together?</div>
+        <div class="quizQuestion">
+          <div class="choices">
+            <input type="radio" id ="choice${i+1}a" class="choice1" value="${odd[0]}" name="choice">
+            <label for="choice${i+1}a" id="choice1space">${odd[1]}</label>
+
+            <input type="radio" id="choice${i+1}b" class="choice2" value="${even[0]}" name="choice">
+            <label for="choice${i+1}b">${even[1]}</label>
+          </div>
+          <div class="quizBtn" id="quizBtn${i}">
+            <button>Submit</button>
+          </div>
+        </div>
+    `
+
+}
