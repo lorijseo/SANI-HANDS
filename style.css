@@ -62,6 +62,15 @@ nav {
   margin-left: 5%;
 }
 
+.nav-item:hover{
+  /* background-color: red; */
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.nav-item a:hover{
+  color:black;
+}
+
 #navbarNav {
   justify-content: flex-end;
   margin-right: 6%;
@@ -80,13 +89,14 @@ nav {
 
 /* **********MAIN********** */
 .mainMsg h1 {
-  font-size: 40px;
+  font-size: 55px;
 }
 
 .mainMsg p {
   margin-top: 2%;
-  font-size: 20px;
+  font-size: 18px;
   text-align: left;
+  max-width: 60%;
 }
 .mainMsg {
   position: absolute;
@@ -106,11 +116,24 @@ nav {
 }
 
 /* **********CAROUSEL********** */
-.carousel {
-  margin: 10%;
+.carousel-inner {
+  margin: 3% 5%;
+  max-width: 90%;
+
+
 }
 
+.carousel-inner .carousel-item{
+  max-height: 800px;
+}
 /* **********EXPLORE CARDS********** */
+#exploreTitle{
+  text-align: center;
+  font-size: 40px;
+  margin:2%;
+  margin-top: 4%;
+}
+
 .displayExplore {
   display: flex;
   justify-content: space-evenly;
@@ -125,7 +148,7 @@ nav {
   display: flex;
   width: 25%;
   flex-direction: column;
-  margin: 2% 5%;
+  margin: 2% 4%;
   /* border: 2px dotted red; */
   align-items: center;
   background-color: #ffcd46;
@@ -142,9 +165,11 @@ nav {
   font-weight: 500;
   text-align: center;
   margin: 1%;
+  font-size: 20px;
 }
 .exploreDescr {
   margin: 5%;
+  margin-top:10px;
 }
 
 .displayExplore img {
