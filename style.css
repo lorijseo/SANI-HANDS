@@ -225,28 +225,34 @@ nav {
   font-weight: 700;
 }
 
-#showInfo,
-#seeAll {
-  display: block;
+#chooseDisplay{
   text-align: center;
-  margin: 5% auto;
+}
+
+#showInfo{
+  /* display: block; */
+  /* margin: 5% auto; */
   font-size: 30px;
   font-weight: 700;
 }
 
+#seeAll{
+  font-size: 30px;
+  font-weight: 700;
+  display:none;
+} 
+
 /* **********CARD DISPLAY********** */
 .cardContent {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin: 3% 5%;
   display: flex;
   flex-direction: column;
 }
 
-.title i {
-  max-width: 21px;
-}
+/* .title i {
+  width: 2px;
+} */
+
 .cardContent img {
   height: 128.42px;
   object-fit: contain;
@@ -258,11 +264,11 @@ nav {
   text-align: center;
   overflow: hidden;
   word-break: break-all;
-  font-size: 14px;
+  font-size: 16px;
   float: right;
   min-width: 84%;
   max-width: 89%;
-  font-weight: 630;
+  font-weight: 650;
   margin: 0;
 }
 
@@ -296,7 +302,7 @@ nav {
   border: 2px solid #ffcd46;
   border-radius: 10px;
   padding: 7px 20px;
-  margin: 4%;
+  margin: 2% 4%;
 }
 
 #plus {
