@@ -185,9 +185,12 @@ searchBtn.addEventListener("click", async function(e){
 
 
     }
+    else{
+        alert(`We have no data on ${searchTxt}. Try again!`)
+    }
     document.getElementById("search").value = '';
-    alert(`We have no data on ${searchTxt}. Try again!`)
-
+    
+    console.log(localStorage.key(counter))
 })
 
 
@@ -516,4 +519,41 @@ const clearBtn = document.querySelector("#clearSupplies");
 clearBtn.addEventListener("click", function(e){
     e.preventDefault();
     localStorage.clear();
+    document.querySelector(".mySupplies").innerHTML = "";
+})
+
+window.addEventListener("DOMContentLoaded", function(){
+    let emptyStorage = true;
+    for (let i =1; i<this.localStorage.length; i++){
+        
+        if (this.localStorage.getItem(i.toString())){
+            // get the object value
+            const cardData = JSON.parse(this.localStorage.getItem(i.toString()));
+            console.log(cardData)
+            
+            // verify search card or created card
+            const determineCard = cardData.id;
+            if (typeof determineCard === "string"){
+                //created card
+            }
+            else{
+                //searched card
+                console.log(cardData.type)
+                createCard(cardData,i);
+                createDeleteBtn(i)
+            }
+            emptyStorage = false;
+            let countValue = this.localStorage.getItem("counter");
+            console.log(countValue);
+            let count = Number(countValue);
+            count +=1;
+            let updateCount = count.toString();
+            this.localStorage.setItem("counter", updateCount);
+        }
+    }
+    if (emptyStorage){
+        this.localStorage.setItem("counter", "0")
+    }
+    
+
 })
