@@ -186,6 +186,7 @@ searchBtn.addEventListener("click", async function(e){
 
     }
     document.getElementById("search").value = '';
+    alert(`We have no data on ${searchTxt}. Try again!`)
 
 })
 
@@ -331,6 +332,7 @@ function createData(num){
     const text = num.toString();
 
     let data = {
+        "id": "user" + num,
         "name": name,
         "type": type,
         "good": good,
@@ -509,3 +511,9 @@ function findSupplyContainer(currentId){
     return currentCard
 
 }
+
+const clearBtn = document.querySelector("#clearSupplies");
+clearBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    localStorage.clear();
+})
