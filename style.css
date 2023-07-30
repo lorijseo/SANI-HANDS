@@ -474,6 +474,9 @@ nav {
 }
 /* ************************COLLECTION PAGE************************** */
 
+#searchSupplies{
+  margin: 5%;
+}
 #searchSupplies h3 {
   text-align: center;
 }
@@ -521,9 +524,23 @@ nav {
 #createSupplies {
   border: 1px solid #ffcd46;
   padding: 5%;
-  border-radius: 3px;
-  max-width: 80%;
-  /* text-align: center; */
+  border-radius: 15px;
+  max-width: 600px;
+  margin:auto;
+}
+.requiredLabel{
+  color:red;
+}
+#promptGoodBad{
+  display:flex;
+  justify-content: column;
+}
+
+.displayGoodBad{
+  margin-right:5%;
+}
+.promptLabel{
+  margin: 0;
 }
 
 #deleteBtn {

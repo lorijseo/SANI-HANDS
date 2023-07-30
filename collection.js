@@ -47,9 +47,6 @@ function cardDescription(cardData, idName){
     let displayDescr = findCard.querySelector("#cardDescr")
     if (cardData.type == "Ingredient"){
         displayDescr.innerHTML = `
-
-
-
         <div class="descr">
         <i class="fa-solid fa-thumbs-up fa-lg" style="color: green;"></i>
         <span>${cardData.good} </span>
@@ -72,7 +69,10 @@ function cardDescription(cardData, idName){
 
     else if ((cardData.type == "Product")||(cardData.type=="Nullify")){
         displayDescr.innerHTML = `
-            <p><span style="padding-right:5px;"></span>${cardData.info} </p>
+        <div class="descr">
+        <i class="fa-solid fa-circle-info fa-lg"></i>
+        <span>${cardData.info}</span>
+      </div>
         `
     }
 
@@ -235,8 +235,40 @@ function updateInputForm(){
     }
 }
 
-const createBtn = document.querySelector("#createBtn");
-createBtn.addEventListener("click", function(e){
+// const createBtn = document.querySelector("#createBtn");
+// createBtn.addEventListener("click", function(e){
+//     e.preventDefault();
+//     //validate input before creating card
+//     const isValid = validateName();
+
+//     if (isValid){
+//         increaseStorageCounter();
+//         let counter = getStorageCountNum();
+//         console.log(counter);
+//         const text = counter.toString();
+//         const data = createData(counter);
+
+        
+//         localStorage.setItem(text, JSON.stringify(data));
+
+        
+//         createCard(data, counter);
+//         createEditBtn(counter);
+//         createDeleteBtn(counter);
+        
+//         deletePromptData();
+//         updateInputForm();
+//         displayClearBtn(counter);
+//     }
+//     else{
+//         alert("Invalid Name")
+//     }
+    
+// })
+
+
+const formBtn = document.querySelector("#createCard");
+formBtn.addEventListener("submit", function(e){
     e.preventDefault();
     //validate input before creating card
     const isValid = validateName();
@@ -244,6 +276,7 @@ createBtn.addEventListener("click", function(e){
     if (isValid){
         increaseStorageCounter();
         let counter = getStorageCountNum();
+        console.log(counter);
         const text = counter.toString();
         const data = createData(counter);
 
@@ -262,15 +295,18 @@ createBtn.addEventListener("click", function(e){
     else{
         alert("Invalid Name")
     }
-
-
+    
 })
 
 function validateName(){
     const name = document.querySelector("#name").value;
+    //first character must be a letter
     const isValidName = /^[a-z,A-Z]/.test(name.charAt(0))
+    console.log(isValidName)
     return isValidName
 }
+
+
 
 
 function createDeleteBtn(cardId){
