@@ -154,41 +154,37 @@ function createCard(cardData, num){
 };
 
 
-const searchBtn = document.getElementById("searchBtn");
-searchBtn.addEventListener("click", async function(e){
-    e.preventDefault();
-    const searchTxt = document.getElementById("search").value;
+// const searchBtn = document.getElementById("searchBtn");
+// searchBtn.addEventListener("click", async function(e){
+//     e.preventDefault();
+//     const searchTxt = document.getElementById("search").value;
     
-    // console.log(counter)
-    // console.log(searchTxt);
     
-    //REFORMAT INPUT to accept lower case
-    const formattedTxt = await reformatInput(searchTxt);
-    // console.log(formattedTxt);
+//     //REFORMAT INPUT to accept lower case
+//     const formattedTxt = await reformatInput(searchTxt);
 
-
-    //get card Data
-    const data = await getCardData(formattedTxt);
+//     //get card Data
+//     const data = await getCardData(formattedTxt);
     
-    //verify if data on name exists
-    if (data){        
-        increaseStorageCounter();
-        let counter = getStorageCountNum();
-        const text = counter.toString();
-        localStorage.setItem(text, JSON.stringify(data));
-        //create Card
-        createCard(data, counter);
+//     //verify if data on name exists
+//     if (data){        
+//         increaseStorageCounter();
+//         let counter = getStorageCountNum();
+//         const text = counter.toString();
+//         localStorage.setItem(text, JSON.stringify(data));
+//         //create Card
+//         createCard(data, counter);
 
-        //create Delete btn
-        createDeleteBtn(counter);
-        displayClearBtn(counter);
-    }
-    else{
-        alert(`We have no data on ${searchTxt}. Try again!`)
-    }
-    document.getElementById("search").value = '';
+//         //create Delete btn
+//         createDeleteBtn(counter);
+//         displayClearBtn(counter);
+//     }
+//     else{
+//         alert(`We have no data on ${searchTxt}. Try again!`)
+//     }
+//     document.getElementById("search").value = '';
     
-})
+// })
 
 
 function reformatInput(searchInput){
@@ -377,26 +373,6 @@ function createEditBtn(num){
     
 }
 
-
-// const editBtn = document.querySelector("#editBtn");
-
-// if (editBtn){
-//     editBtn.addEventListener("click", function(e){
-//         displayInputValues(num);
-    
-//         document.querySelector("#createBtn").style.display = "none";
-//         document.querySelector("#saveChangeBtn").style.display = "block";
-//         document.querySelector("#noChangeBtn").style.display = "block";
-//         // return num
-    
-    
-//         //save Change will overwrite previous Card
-    
-//         //nvm will empty inputs, 
-    
-//     })
-
-// }
 
 
 

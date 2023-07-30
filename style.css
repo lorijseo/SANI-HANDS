@@ -62,13 +62,13 @@ nav {
   margin-left: 5%;
 }
 
-.nav-item:hover{
+.nav-item:hover {
   /* background-color: red; */
   box-shadow: 0 8px 6px -6px #999;
 }
 
-.nav-item a:hover{
-  color:black;
+.nav-item a:hover {
+  color: black;
 }
 
 #navbarNav {
@@ -119,18 +119,16 @@ nav {
 .carousel-inner {
   margin: 3% 5%;
   max-width: 90%;
-
-
 }
 
-.carousel-inner .carousel-item{
+.carousel-inner .carousel-item {
   max-height: 800px;
 }
 /* **********EXPLORE CARDS********** */
-#exploreTitle{
+#exploreTitle {
   text-align: center;
   font-size: 40px;
-  margin:2%;
+  margin: 2%;
   margin-top: 4%;
 }
 
@@ -169,7 +167,7 @@ nav {
 }
 .exploreDescr {
   margin: 5%;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .displayExplore img {
@@ -201,17 +199,14 @@ nav {
   text-align: center;
 }
 
-
-
-.pageIntro img{
+.pageIntro img {
   /* max-width:470px;
   min-height: 360px; */
-  width:650px;
+  width: 650px;
   height: 355px;
   object-fit: cover;
   border-radius: 10px;
-  margin:3%;
-
+  margin: 3%;
 }
 
 .pageIntro div {
@@ -223,26 +218,23 @@ nav {
   padding: 15px 25px;
 }
 
-#infoIntro{
+#infoIntro {
   font-size: 17px;
   text-align: center;
   margin: 3%;
-
 }
 
-#intro{
-  display:flex;
+#intro {
+  display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
-
 }
 
-.displayIntro{
+.displayIntro {
   border-radius: 10px;
   padding: 15px 25px;
   max-width: 650px;
-
 }
 
 .displayIntro h2 {
@@ -262,7 +254,7 @@ nav {
 }
 
 #searchOption {
-  margin:auto;
+  margin: auto;
   text-align: center;
   /* margin: 4%; */
   border: 1px solid #ffcd46;
@@ -278,7 +270,7 @@ nav {
 #searchOption input {
   width: 80%;
   text-align: center;
-  
+
   border-radius: 10px;
   border: 3px solid #ffcd46;
   font-size: 20px;
@@ -294,24 +286,23 @@ nav {
   font-size: 20px;
 }
 
-
-#chooseDisplay{
+#chooseDisplay {
   text-align: center;
   margin: 3%;
 }
 
-#showInfo{
+#showInfo {
   /* display: block; */
   /* margin: 5% auto; */
   font-size: 30px;
   font-weight: 700;
 }
 
-#seeAll{
+#seeAll {
   font-size: 30px;
   font-weight: 700;
-  display:none;
-} 
+  display: none;
+}
 
 /* **********CARD DISPLAY********** */
 .cardContent {
@@ -483,12 +474,12 @@ nav {
 }
 /* ************************COLLECTION PAGE************************** */
 
-#searchSupplies h3{
-  text-align:center;
+#searchSupplies h3 {
+  text-align: center;
 }
 
-#clearSupplies{
-  display:block;
+#clearSupplies {
+  display: block;
   margin: 0 0 0 80%;
   background-color: red;
 }
@@ -527,37 +518,26 @@ nav {
     margin:4%; */
 }
 
-/* #createSupplies #promptName {
-  display: none;
-}
-
-#createSupplies #promptGoodBad {
-  display: none;
-}
-
-#createSupplies #promptInfo {
-  display: none;
-} */
-
 #createSupplies {
   border: 1px solid #ffcd46;
   padding: 5%;
   border-radius: 3px;
-  max-width: 500px;
+  max-width: 80%;
+  /* text-align: center; */
 }
 
-#deleteBtn{
+#deleteBtn {
   background-color: white;
-  padding:0 3%;
+  padding: 0 3%;
   /* margin: 0 0 0 90%; */
-  display:inline-block;
+  display: inline-block;
 }
 
-#editBtn{
+#editBtn {
   background-color: white;
-  padding:0 3%;
+  padding: 0 3%;
   margin: 0 0 0 70%;
-  display:inline-block;
+  display: inline-block;
 }
 
 #saveChangeBtn,
@@ -699,11 +679,11 @@ nav {
 .ourStory {
   width: 40%;
   margin: 3%;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .ourStory h2 {
-  font-size: 30px;
+  font-size: 60px;
   margin: 0;
   margin-bottom: 2%;
 }
@@ -733,6 +713,14 @@ nav {
 
 .displayContact a {
   font-size: 40px;
+}
+
+.displayContact i {
+  color: white;
+}
+
+.displayContact i:hover {
+  color: black;
 }
 
 .sendEmail {
