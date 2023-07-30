@@ -50,17 +50,16 @@
     </div>
   </section>
 
-  <section class="myCleaning">
+  <!-- <section class="myCleaning">
     <div id="searchOption" >
       <h2>Find cards by name:</h2>
-      <!-- <label for="search">Search for INGREDIENT cards or EFFECT cards</label> -->
       <form action="">
         <input type="text" id="search" name="search" placeholder="i.e. Bleach, Chlorine Gas, etc.." required>
         <button type="submit" id="searchBtn">Search</button>
       </form>
 
     </div>
-      
+       -->
   
     <div id="createSupplies">
       <h3>Create your own card</h3>
@@ -84,15 +83,15 @@
   
         <div id="promptGoodBad">
           <label for="good" type="text">Advantages:</label>
-          <input type="text" id="good"  maxlength="65">
+          <textarea type="text" id="good"  cols="20" rows="4" > </textarea>
     
           <label for="bad" type="text">Disadvantages:</label>
-          <input type="text" id="bad"  maxlength="65">
+          <textarea type="text" id="bad" cols="20" rows="4" ></textarea>
         </div>
         
         <div id="promptInfo">
           <label for="info" type="text">Description:</label>
-          <input type="text" id="info"  maxlength="150">
+          <textarea type="text" id="info"  cols="25" rows="5" ></textarea>
         </div>
   
         <button type="submit" id="createBtn">Create Card</button>
