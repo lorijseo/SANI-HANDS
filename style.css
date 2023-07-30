@@ -218,18 +218,27 @@ nav {
   font-size: 17px;
   text-align: center;
   margin: 3%;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 15px 25px;
+}
 
+#infoIntro{
+  font-size: 17px;
+  text-align: center;
+  margin: 3%;
 
 }
 
-.intro{
+#intro{
   display:flex;
   align-items: center;
   justify-content: center;
+  background-color: white;
+
 }
 
 .displayIntro{
-  background-color: #ffcd46;
   border-radius: 10px;
   padding: 15px 25px;
   max-width: 650px;
@@ -474,10 +483,19 @@ nav {
 }
 /* ************************COLLECTION PAGE************************** */
 
-/* .collection{
-    display:flex;
-} */
+#searchSupplies h3{
+  text-align:center;
+}
 
+#clearSupplies{
+  display:block;
+  margin: 0 0 0 80%;
+  background-color: red;
+}
+
+/* #mySuppliesTitle{
+  display:inline-block;
+} */
 .mySupplies .ingredientCard {
   /* width:100%; */
   margin: auto;
@@ -528,9 +546,18 @@ nav {
   max-width: 500px;
 }
 
-#deleteBtn,
-#editBtn {
+#deleteBtn{
   background-color: white;
+  padding:0 3%;
+  /* margin: 0 0 0 90%; */
+  display:inline-block;
+}
+
+#editBtn{
+  background-color: white;
+  padding:0 3%;
+  margin: 0 0 0 70%;
+  display:inline-block;
 }
 
 #saveChangeBtn,

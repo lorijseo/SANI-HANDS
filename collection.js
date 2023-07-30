@@ -181,6 +181,7 @@ searchBtn.addEventListener("click", async function(e){
 
         //create Delete btn
         createDeleteBtn(counter);
+        displayClearBtn(counter);
     }
     else{
         alert(`We have no data on ${searchTxt}. Try again!`)
@@ -255,10 +256,12 @@ createBtn.addEventListener("click", function(e){
 
         
         createCard(data, counter);
-        createDeleteBtn(counter);
         createEditBtn(counter);
+        createDeleteBtn(counter);
+        
         deletePromptData();
         updateInputForm();
+        displayClearBtn(counter);
     }
     else{
         alert("Invalid Name")
@@ -490,6 +493,7 @@ clearBtn.addEventListener("click", function(e){
     e.preventDefault();
     localStorage.clear();
     document.querySelector(".mySupplies").innerHTML = "";
+    this.style.display = "none";
 })
 
 let emptyStorage = true;
@@ -517,6 +521,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
                 }
                 emptyStorage = false;
+                displayClearBtn(i);
             }
         }
         //consider if cards were deleted manually by user
@@ -548,4 +553,10 @@ function getStorageCountNum(){
     let countValue = JSON.parse(localStorage.getItem("counter"));
     let num = Number(countValue)
     return num
+}
+
+function displayClearBtn(counter){
+    if (counter > 0){
+        document.querySelector("#clearSupplies").style.display = "block";
+    }
 }
