@@ -219,7 +219,8 @@ function createCard(cardData){
 const showBtn = document.querySelector("#showInfo");
 showBtn.addEventListener("click", async function(e){
     e.preventDefault();
-    document.querySelector("#seeAll").style.display = "inline-block";
+    libraryBtn.style.display = "inline-block";
+    this.style.display = "none";
     // libraryBtn.disabled = false;
     // showBtn.disabled = true;
     document.querySelector(".userDisplay").innerHTML = "";
@@ -246,6 +247,8 @@ showBtn.addEventListener("click", async function(e){
 const libraryBtn = document.querySelector("#seeAll");
 libraryBtn.addEventListener("click", async function(e){
     e.preventDefault();
+    showBtn.style.display = "inline-block";
+    this.style.display = "none";
     // libraryBtn.disabled = true;
     // showBtn.disabled = false;
     document.querySelector(".userDisplay").innerHTML = "";
@@ -275,4 +278,100 @@ window.addEventListener("load", async function(){
 
     }
 
+})
+
+function reformatInput(searchInput){
+    let lowerCase = searchInput.toLowerCase();
+    let upperFirstWord = lowerCase.charAt(0).toUpperCase() + lowerCase.slice(1,lowerCase.length);
+
+    // consider if there is at least one space in the name
+    if (upperFirstWord.indexOf(" ") !== -1){
+        let upperNextWord = upperFirstWord;
+
+        for (let i=0;i<upperFirstWord.length;i++){
+            if (upperFirstWord[i] === " "){
+                upperNextWord = upperFirstWord.slice(0,i+1) + upperFirstWord.charAt(i+1).toUpperCase() + upperFirstWord.slice(i+2);
+                upperFirstWord = upperNextWord;
+            }
+        }
+        return upperNextWord;
+    }
+    return upperFirstWord;
+}
+
+async function getCardData(findName){
+    // const searchValue = searchTxt.value;
+    const response = await fetch("data.json");
+    const data = await response.json();
+    for (let i=0; i<data.cards.length; i++){
+        try{
+            if (data.cards[i].name == findName){
+                console.log(data.cards[i])
+                return data.cards[i]
+            }
+        }
+        catch{
+            alert(`We do not have ${findName} in our library! Try again`)
+            return false
+        }
+
+    }
+}
+
+function increaseStorageCounter(){
+    let countValue = JSON.parse(localStorage.getItem("counter"));
+    let count = Number(countValue) + 1;
+    let updateCount = count.toString();
+    localStorage.setItem("counter", updateCount);
+}
+
+// function decreaseStorageCounter(){
+//     let countValue = JSON.parse(localStorage.getItem("counter"));
+//     let count = Number(countValue) - 1;
+//     let updateCount = count.toString();
+//     localStorage.setItem("counter", updateCount);
+// }
+function getStorageCountNum(){
+    let countValue = JSON.parse(localStorage.getItem("counter"));
+    let num = Number(countValue)
+    return num
+}
+
+
+const searchBtn = document.getElementById("searchBtn");
+searchBtn.addEventListener("click", async function(e){
+    e.preventDefault();
+    document.querySelector("#seeAll").style.display = "inline-block";
+    const searchTxt = document.getElementById("search").value;
+    
+    // console.log(counter)
+    // console.log(searchTxt);
+    
+    //REFORMAT INPUT to accept lower case
+    const formattedTxt = await reformatInput(searchTxt);
+    // console.log(formattedTxt);
+
+
+    //get card Data
+    const data = await getCardData(formattedTxt);
+    
+    //verify if data on name exists
+    if (data){        
+        // increaseStorageCounter();
+        // let counter = getStorageCountNum();
+        // const text = counter.toString();
+        // localStorage.setItem(text, JSON.stringify(data));
+
+        //create Card
+        const card = createCard(data);
+        document.querySelector(".userDisplay").innerHTML = `${card}`
+
+        //create Delete btn
+        // createDeleteBtn(counter);
+    }
+    else{
+        alert(`We have no data on ${searchTxt}. Try again!`)
+    }
+    document.getElementById("search").value = '';
+    
 })

@@ -155,8 +155,6 @@ function createCard(cardData, num){
 
 
 const searchBtn = document.getElementById("searchBtn");
-
-
 searchBtn.addEventListener("click", async function(e){
     e.preventDefault();
     const searchTxt = document.getElementById("search").value;
