@@ -88,24 +88,26 @@
           <div class="displayGoodBad">
             <label for="good" type="text" class="promptLabel">Advantages</label>
             <br>
-            <textarea type="text" id="good"  cols="20" rows="4" maxlength="80"> </textarea>
+            <textarea type="text" id="good"  cols="25" rows="2" maxlength="80"> </textarea>
           </div>
           <div class="displayGoodBad">
             <label for="bad" type="text" class="promptLabel">Disadvantages</label>
             <br>
-            <textarea type="text" id="bad" cols="20" rows="4" maxlength="80"></textarea>
+            <textarea type="text" id="bad" cols="25" rows="2" maxlength="80"></textarea>
           </div>
         </div>
         <br>
         <div id="promptInfo">
           <label for="info" type="text" class="promptLabel">Description</label>
           <br>
-          <textarea type="text" id="info"  cols="49" rows="5" maxlength="150"></textarea>
+          <textarea type="text" id="info"  cols="57" rows="4" maxlength="150"></textarea>
         </div>
   
-        <button type="submit" id="createBtn">Create Card</button>
-        <button id="saveChangeBtn">Save Change</button>
-        <button id="noChangeBtn">NVM</button>
+        <button type="submit" id="createBtn">Create</button>
+        <button id="saveChangeBtn">Save</button>
+        <button id="noChangeBtn">cancel</button>
+
+
   
       </form>
     </div>
@@ -117,13 +119,13 @@
   <section id="searchSupplies">
     <div id="mySuppliesTitle">
       <h3>MY CLEANING SUPPLIES:</h3>
-      <button id="clearSupplies">Clear my Supplies</button>
     </div>
 
     
   </section>
   
   <div class="mySupplies"></div>
+  <button id="clearSupplies">Clear All</button>
 
   <!-- collection of one of each type of card -->
   <!-- <section class="collection">

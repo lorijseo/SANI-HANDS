@@ -482,9 +482,14 @@ nav {
 }
 
 #clearSupplies {
-  display: block;
-  margin: 0 0 0 80%;
-  background-color: red;
+  display: none;
+  margin-top: 5%;
+  margin-left:85%;
+  text-align: right;
+  border: 2px solid red;
+  color:red;
+  background-color: white;
+  
 }
 
 /* #mySuppliesTitle{
@@ -545,21 +550,34 @@ nav {
 
 #deleteBtn {
   background-color: white;
-  padding: 0 3%;
-  /* margin: 0 0 0 90%; */
+  padding:0 3%;
   display: inline-block;
 }
 
 #editBtn {
   background-color: white;
   padding: 0 3%;
-  margin: 0 0 0 70%;
+  margin: 0 0 0 75%;
   display: inline-block;
+}
+
+#deleteBtn:hover, #editBtn:hover{
+  background-color: #f6d76d;
 }
 
 #saveChangeBtn,
 #noChangeBtn {
   display: none;
+}
+
+/* #editBtns{
+  display:inline;
+} */
+
+#noChangeBtn{
+  color:red;
+  background-color: white;
+  /* border: 1px solid red; */
 }
 
 .myCleaning {

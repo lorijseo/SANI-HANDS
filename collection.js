@@ -272,11 +272,12 @@ formBtn.addEventListener("submit", function(e){
     e.preventDefault();
     //validate input before creating card
     const isValid = validateName();
+    const isUnique = isUniqueName();
 
-    if (isValid){
+    if (isValid && isUnique){
         increaseStorageCounter();
         let counter = getStorageCountNum();
-        console.log(counter);
+        // console.log(counter);
         const text = counter.toString();
         const data = createData(counter);
 
@@ -292,22 +293,56 @@ formBtn.addEventListener("submit", function(e){
         updateInputForm();
         displayClearBtn(counter);
     }
-    else{
-        alert("Invalid Name")
-    }
-    
+
 })
 
 function validateName(){
     const name = document.querySelector("#name").value;
-    //first character must be a letter
-    const isValidName = /^[a-z,A-Z]/.test(name.charAt(0))
-    console.log(isValidName)
-    return isValidName
+    // returns true if symbols in name
+    const fullWord = /[ -/:-@[-`{-~]/.test(name)
+    if (fullWord){
+        alert("Name cannot have any special symbols or characters")
+        return false
+    }
+
+    // returns false if first character is not a letter
+    const firstLetter = /^[a-zA-Z]/.test(name.charAt(0))
+    if (!firstLetter){
+        alert("Name must begin with a letter")
+        return false
+    }
+    return true
 }
 
-
-
+//returns boolean if name exists the given number of times
+function isUniqueName(){
+    const newName = document.querySelector("#name").value;
+    console.log(newName)
+    const counterNum = getStorageCountNum();
+    console.log(counterNum)
+    if (counterNum>0){
+        let count = 0
+        for (let i =1; i<=counterNum; i++){
+        
+            if (localStorage.getItem(i.toString())){
+                // get the object value
+                const cardData = JSON.parse(localStorage.getItem(i.toString()));
+ 
+                // verify search card or created card
+                const cardName = cardData.name;
+                if (cardName == newName){
+                    count +=1;
+                }
+            }
+        }
+        console.log(count);
+        if (count > 0){
+            alert(`${newName} already exists. Try a different name`)
+            return false
+        }
+    }
+    return true;
+}
 
 function createDeleteBtn(cardId){
     const makeId = "#supply" + cardId;
@@ -321,7 +356,9 @@ function createDeleteBtn(cardId){
     btn.addEventListener("click", function(){
         findCard.remove();
         localStorage.removeItem(cardId);
-        // decreaseStorageCounter();
+        decreaseStorageCounter();
+        const counter = getStorageCountNum();
+        displayClearBtn(counter);
 
     })
 
@@ -391,10 +428,10 @@ function createEditBtn(num){
         }
     
         document.querySelector("#createBtn").style.display = "none";
-        document.querySelector("#saveChangeBtn").style.display = "block";
+        document.querySelector("#saveChangeBtn").style.display = "inline-block";
         document.querySelector("#saveChangeBtn").className = num;
 
-        document.querySelector("#noChangeBtn").style.display = "block";
+        document.querySelector("#noChangeBtn").style.display = "inline-block";
 
         //save id num to save btn
         
@@ -409,23 +446,34 @@ function createEditBtn(num){
     
 }
 
+const cancelBtn = document.querySelector("#noChangeBtn");
+cancelBtn.addEventListener("click", function(e){
+    e.preventDefault();
+    deletePromptData();
+    updateInputForm();
+    document.querySelector("#createBtn").style.display = "block";
+    document.querySelector("#saveChangeBtn").style.display = "none";
+    document.querySelector("#noChangeBtn").style.display = "none";
 
+})
 
 
 let saveChangeBtn = document.querySelector("#saveChangeBtn");
 saveChangeBtn.addEventListener("click", function(e){
     e.preventDefault();
     const isValid = validateName();
+    const isUnique = isUniqueName();
+    // const isValid = true;
     const num = saveChangeBtn.className;
     
-    if (isValid){
+    if (isValid && isUnique){
         // saves updated data into local storage
         const data = createData(num);
 
         editCard(data, num);
-
-        createDeleteBtn(num);
         createEditBtn(num);
+        createDeleteBtn(num);
+        
         deletePromptData();
         updateInputForm();
 
@@ -434,17 +482,13 @@ saveChangeBtn.addEventListener("click", function(e){
         document.querySelector("#saveChangeBtn").style.display = "none";
         document.querySelector("#noChangeBtn").style.display = "none";
     }
-    else{
-        alert("Invalid Name")
-    }
+    // else{
+    //     alert("Invalid Name")
+    // }
 
     //return back to displaying create button and hiding other buttons and clearing input
 })
 
-// const saveChangeBtn = document.querySelector("#saveChangeBtn");
-// saveChangeBtn.addEventListener("click", function(e){
-//     createData(num);
-// })
 
 
 function deletePromptData(){
@@ -523,8 +567,9 @@ window.addEventListener("DOMContentLoaded", function(){
                 if (typeof determineCard === "string"){
                     //created card
                     createCard(cardData, i);
-                    createDeleteBtn(i);
                     createEditBtn(i);
+                    createDeleteBtn(i);
+                    
                 }
                 else{
                     //searched card
@@ -533,18 +578,21 @@ window.addEventListener("DOMContentLoaded", function(){
 
                 }
                 emptyStorage = false;
-                displayClearBtn(i);
+                
+                
             }
         }
         //consider if cards were deleted manually by user
         if (emptyStorage){
             this.localStorage.setItem("counter", "0")
         }
-
+        displayClearBtn(counterNum);
     }
+
     //initialize counter to 0 if counter doesn't exist
     else{
-        this.localStorage.setItem("counter", "0")
+        this.localStorage.setItem("counter", "0");
+        displayClearBtn(counterNum);
     }
 })
 
@@ -570,5 +618,8 @@ function getStorageCountNum(){
 function displayClearBtn(counter){
     if (counter > 0){
         document.querySelector("#clearSupplies").style.display = "block";
+    }
+    else{
+        document.querySelector("#clearSupplies").style.display = "none";
     }
 }
