@@ -204,33 +204,23 @@ nav {
   text-align: center;
 }
 
-#infoMainImg{
-  width: 650px;
-  height: 355px;
+#infoMainImg {
+  width: 40%;
+  height: 600px;
   object-fit: cover;
   border-radius: 10px;
-  margin: 3%;
+  margin: 0;
 }
 
-.pageIntro img {
-  /* max-width:470px;
-  min-height: 360px; */
+/* .pageIntro img {
+  max-width:470px;
+  min-height: 360px;
   width: 90%;
   height: 500px;
-  margin:auto;
+  margin: auto;
   object-fit: cover;
   border-radius: 10px;
-
-}
-
-.pageIntro div {
-  font-size: 17px;
-  text-align: center;
-  margin: 3%;
-  background-color: #ffcd46;
-  border-radius: 10px;
-  padding: 15px 25px;
-}
+} */
 
 #infoIntro {
   font-size: 17px;
@@ -243,16 +233,45 @@ nav {
   align-items: center;
   justify-content: center;
   background-color: white;
+  margin: 3%;
+}
+
+#displayFeatures {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* align-items: center; */
+}
+
+.feature {
+  border-radius: 10px;
+  padding: 15px 25px;
+  border: 1px solid #ffcd46;
+  background-color: #ffcd46;
+  margin: 2%;
+  display: flex;
+}
+
+.featureTitle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.featureDescr {
+  padding: 0;
+  margin: 2%;
 }
 
 .displayIntro {
   border-radius: 10px;
-  padding: 15px 25px;
-  max-width: 650px;
+  padding: 0;
+  border: 1px solid #ffcd46;
+  margin: 0;
+  max-width: 50%;
 }
 
 .displayIntro h2 {
-  margin: 4%;
+  margin: 2%;
   font-size: 40px;
 }
 
@@ -271,14 +290,18 @@ nav {
   margin: auto;
   text-align: center;
   /* margin: 4%; */
-  border: 1px solid #ffcd46;
+  /* border: 1px solid #ffcd46; */
   padding: 1%;
-  border-radius: 3px;
+  border-radius: 15px;
   width: 80%;
 }
 
 #searchOption h2 {
-  margin: 2%;
+  margin: 1%;
+}
+
+#searchOption form {
+  margin: 1%;
 }
 
 #searchOption input {
@@ -487,51 +510,160 @@ nav {
   padding: 3%;
 }
 /* ************************COLLECTION PAGE************************** */
-
-#searchSupplies{
-  margin: 5%;
+.myCleaning {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3%;
 }
-#searchSupplies h3 {
+
+/* **************display card type differences************** */
+/* #explainSupplies {
+  background-color: #ffcd46;
+  padding: 3%;
+  border-radius: 10px;
+} */
+
+#explainSupplies h2 {
+  margin: auto;
   text-align: center;
+  font-size: 40px;
+  background-color: #ffcd46;
+  /* color: #ffcd46; */
+  padding: 3%;
+  border-radius: 10px;
 }
 
-#infoSampleCards img{
-  max-width: 220px;
-  margin-top:5%;
-}
-#ingredSampleCard{
-  display:flex;
-}
-
-#ingredSampleCard img{
-  max-width: 150px;
-
-}
-
-#explainCards{
+#explainCards {
   padding: 2%;
   font-size: 20px;
-  margin:auto;
+  margin: auto;
 }
 
-#explainCards p{
+#explainCards p {
   margin: 7% 0;
 }
 
+#explainCards i {
+  font-size: 14px;
+}
+
+#infoSampleCards img {
+  max-width: 220px;
+}
+#ingredSampleCard {
+  display: flex;
+}
+
+/* **************create card form************** */
+
+#createSupplies {
+  border: 1px solid #ffcd46;
+  padding: 2%;
+  border-radius: 15px;
+  max-width: 600px;
+  margin: 2%;
+}
+.requiredLabel {
+  color: red;
+}
+
+/* #promptType{
+  margin-right:10%;
+} */
+
+#promptGoodBad {
+  display: flex;
+  justify-content: column;
+}
+
+#promptFlex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.displayGoodBad {
+  margin-right: 5%;
+}
+
+.promptLabel {
+  margin: 0;
+}
+
+#deleteBtn {
+  background-color: white;
+  padding: 0 3%;
+  display: inline-block;
+}
+
+#editBtn {
+  background-color: white;
+  padding: 0 3%;
+  margin: 0 0 0 75%;
+  display: inline-block;
+}
+
+#deleteBtn:hover,
+#editBtn:hover {
+  background-color: #f6d76d;
+}
+
+#saveChangeBtn,
+#noChangeBtn {
+  display: none;
+}
+
+/* #editBtns{
+  display:inline;
+} */
+
+#noChangeBtn {
+  color: red;
+  background-color: white;
+
+  /* border: 1px solid red; */
+}
+
+/* **************display cards container************** */
+#searchSupplies {
+  margin: 5%;
+  /* background-color: #ffcd46;
+  padding: 1%;
+  border-radius: 10px; */
+}
+#searchSupplies h3 {
+  text-align: center;
+  background-color: #ffcd46;
+  padding: 1%;
+  border-radius: 10px;
+  margin: 2%;
+}
+
+/* clear button */
 #clearSupplies {
   display: none;
   margin-top: 5%;
-  margin-left:85%;
+  margin-left: 85%;
   text-align: right;
   border: 2px solid red;
-  color:red;
+  color: red;
   background-color: white;
-  
 }
 
-/* #mySuppliesTitle{
-  display:inline-block;
-} */
+/* **************card display format************** */
+.mySupplies {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  /* background-color: #ffcd46; */
+  /* border: 2px solid  #ffcd46;
+    border-radius: 10px;
+    padding: 7px 20px;
+    margin:4%; */
+}
+
 .mySupplies .ingredientCard {
   /* width:100%; */
   margin: auto;
@@ -551,95 +683,11 @@ nav {
   margin: auto;
 }
 
-.mySupplies {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  /* align-items: center; */
-  /* background-color: #ffcd46; */
-  /* border: 2px solid  #ffcd46;
-    border-radius: 10px;
-    padding: 7px 20px;
-    margin:4%; */
-}
-
 /* select #ingredient:hover{
   background-color: green;
   color:white;
 } */
 
-#createSupplies {
-  border: 1px solid #ffcd46;
-  padding: 2%;
-  border-radius: 15px;
-  max-width: 600px;
-  margin: 2%;
-}
-.requiredLabel{
-  color:red;
-}
-
-/* #promptType{
-  margin-right:10%;
-} */
-
-#promptGoodBad{
-  display:flex;
-  justify-content: column;
-}
-
-#promptFlex{
-  display:flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: flex-start;
-}
-.displayGoodBad{
-  margin-right:5%;
-}
-
-.promptLabel{
-  margin: 0;
-}
-
-#deleteBtn {
-  background-color: white;
-  padding:0 3%;
-  display: inline-block;
-}
-
-#editBtn {
-  background-color: white;
-  padding: 0 3%;
-  margin: 0 0 0 75%;
-  display: inline-block;
-}
-
-#deleteBtn:hover, #editBtn:hover{
-  background-color: #f6d76d;
-}
-
-#saveChangeBtn,
-#noChangeBtn {
-  display: none;
-}
-
-/* #editBtns{
-  display:inline;
-} */
-
-#noChangeBtn{
-  color:red;
-  background-color: white;
-  /* border: 1px solid red; */
-}
-
-.myCleaning {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 5%;
-}
 /* ************************QUIZ PAGE************************** */
 
 /* #startQuizBtn {
@@ -649,6 +697,15 @@ nav {
   font-size: 50px;
   font-weight: 700;
 } */
+
+#quizPageIntro div {
+  font-size: 17px;
+  text-align: center;
+  /* margin: 2%; */
+  border-radius: 10px;
+  padding: 15px 25px;
+  background-color: #ffcd46;
+}
 
 .questionNumber {
   font-size: 20px;

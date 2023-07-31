@@ -74,24 +74,27 @@
 
     </div> -->
     <div id="explainSupplies">
+      <h2>How to identify different card types</h2>
       <div id="ingredSampleCard">
-        <!-- <img src="images/ingredientsamplecard.jpg" alt=""> -->
         <div id="explainCards">
           <p>
-            <i class="fa-solid fa-flask fa-lg" style="color: green;"></i><b style="color:green">INGREDIENT</b> cards have 
-            <i class="fa-solid fa-thumbs-up fa-lg" style="color: green;"></i>advantages and 
-            <i class="fa-solid fa-thumbs-down fa-lg" style="color: red"></i>disadvantages. 
+            <i class="fa-solid fa-flask fa-sm" style="color: green;"></i><b style="color:green">&nbsp;INGREDIENT</b> cards have 
+            <i class="fa-solid fa-thumbs-up fa-sm" style="color: green;"></i>&nbsp;advantages and 
+            <i class="fa-solid fa-thumbs-down fa-sm" style="color: red"></i>&nbsp;disadvantages. 
           </p>
           <p>
-            <i class="fa-solid fa-spray-can-sparkles fa-lg" style="color: #2f72e4;"></i><b style="color:blue">PRODUCT</b>,
-            <i class="fa-solid fa-biohazard fa-lg" style="color: #cc350f;"></i> <b style="color:red">EFFECT</b>, 
-            <i class="fa-solid fa-poo fa-lg" style="color: #717d94;"></i><b style="color:grey">NULLIFY</b> cards have a 
-            (<i class="fa-solid fa-skull-crossbones fa-lg" style="color: orange"></i> or <i class="fa-solid fa-circle-info fa-lg" style="color: purple"></i>) description 
+            <i class="fa-solid fa-spray-can-sparkles fa-sm" style="color: #2f72e4;"></i><b style="color:blue">PRODUCT</b>,
+            <i class="fa-solid fa-biohazard fa-sm" style="color: #cc350f;"></i> <b style="color:red">EFFECT</b>, 
+            <i class="fa-solid fa-poo fa-sm" style="color: #717d94;"></i><b style="color:grey">NULLIFY</b> cards have a 
+            (<i class="fa-solid fa-skull-crossbones fa-sm" style="color: orange"></i> or <i class="fa-solid fa-circle-info fa-sm" style="color: purple"></i>) description 
           </p>
 
         </div>
       </div>
       
+      <!-- <div>
+        <h3>example cards</h3>
+      </div> -->
       <div id="infoSampleCards">
         <img src="images/ingredientsamplecard.jpg" alt="">
         <img src="images/productsamplecard.jpg" alt="">
@@ -128,14 +131,14 @@
         <div id="promptGoodBad">
           <div class="displayGoodBad">
             <label for="good" type="text" class="promptLabel">
-              <i class="fa-solid fa-thumbs-up fa-lg" style="color: green;"></i>
+              <i class="fa-solid fa-thumbs-up fa-sm" style="color: green;"></i>
               Advantages</label>
             <br>
             <textarea type="text" id="good"  cols="25" rows="2" maxlength="80"> </textarea>
           </div>
           <div class="displayGoodBad">
             <label for="bad" type="text" class="promptLabel">
-              <i class="fa-solid fa-thumbs-down fa-lg" style="color: red"></i>
+              <i class="fa-solid fa-thumbs-down fa-sm" style="color: red"></i>
               Disadvantages</label>
             <br>
             <textarea type="text" id="bad" cols="25" rows="2" maxlength="80"></textarea>
@@ -144,7 +147,7 @@
         <br>
         <div id="promptInfo">
           <label for="info" type="text" class="promptLabel">
-            (<i class="fa-solid fa-skull-crossbones fa-lg" style="color: orange"></i> or <i class="fa-solid fa-circle-info fa-lg" style="color: purple"></i>)
+            (<i class="fa-solid fa-skull-crossbones fa-sm" style="color: orange"></i> or <i class="fa-solid fa-circle-info fa-sm" style="color: purple"></i>)
             Description</label>
           <br>
           <textarea type="text" id="info"  cols="57" rows="4" maxlength="150"></textarea>
@@ -167,14 +170,16 @@
   <!-- cards display here -->
   <section id="searchSupplies">
     <div id="mySuppliesTitle">
-      <h3>MY CLEANING SUPPLIES:</h3>
+      <h3>MY CLEANING SUPPLIES</h3>
     </div>
+
+    <div class="mySupplies"></div>
+    <button id="clearSupplies">Clear All</button>
 
     
   </section>
   
-  <div class="mySupplies"></div>
-  <button id="clearSupplies">Clear All</button>
+
 
   <!-- collection of one of each type of card -->
   <!-- <section class="collection">
