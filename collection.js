@@ -70,7 +70,7 @@ function cardDescription(cardData, idName){
     else if ((cardData.type == "Product")||(cardData.type=="Nullify")){
         displayDescr.innerHTML = `
         <div class="descr">
-        <i class="fa-solid fa-circle-info fa-lg"></i>
+        <i class="fa-solid fa-circle-info fa-lg" style="color: purple"></i>
         <span>${cardData.info}</span>
       </div>
         `

@@ -108,8 +108,12 @@ function cardDescription(cardData){
 
     else if ((cardData.type == "Product")||(cardData.type=="Nullify")){
         return`
-            <p><span style="padding-right:5px;"></span>${cardData.info} </p>
+        <div class="descr">
+        <i class="fa-solid fa-circle-info fa-lg" style="color: purple"></i>
+        <span>${cardData.info}</span>
+      </div>
         `
+        
     }
 
 

@@ -495,6 +495,29 @@ nav {
   text-align: center;
 }
 
+#infoSampleCards img{
+  max-width: 220px;
+  margin-top:5%;
+}
+#ingredSampleCard{
+  display:flex;
+}
+
+#ingredSampleCard img{
+  max-width: 150px;
+
+}
+
+#explainCards{
+  padding: 2%;
+  font-size: 20px;
+  margin:auto;
+}
+
+#explainCards p{
+  margin: 7% 0;
+}
+
 #clearSupplies {
   display: none;
   margin-top: 5%;
@@ -540,12 +563,17 @@ nav {
     margin:4%; */
 }
 
+/* select #ingredient:hover{
+  background-color: green;
+  color:white;
+} */
+
 #createSupplies {
   border: 1px solid #ffcd46;
   padding: 2%;
   border-radius: 15px;
   max-width: 600px;
-  margin: 5% auto;
+  margin: 2%;
 }
 .requiredLabel{
   color:red;

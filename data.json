@@ -122,12 +122,12 @@
 
     {
       "id": 11,
-      "name": "Urine",
-      "type": "Ingredient",
+      "name": "Bar Keepers Friend",
+      "type": "Product",
       "good": "",
       "bad": "",
-      "info": "",
-      "img": "cardImages/.jpg"
+      "info": "A powder cleaner that cleans and polishes most hard sufraces. It contains Oxalic Acid.",
+      "img": "cardImages/product_icon.png"
     },
 
     {
