@@ -42,11 +42,25 @@
     </div>
   </nav>
 
-  <section class="pageIntro">
+  <!-- <section class="pageIntro">
     <h1>MY SUPPLIES</h1>
+
+    <img src="images/sprayhorizontal.jpg" alt="">
+
     <div>
       <p>View all the ingredient cards and effect cards we have in our library!</p>
       <p>You can learn about the advantages and disadvantages of each ingredient or effect.</p>
+    </div>
+  </section> -->
+
+  <section class="main">
+    
+    <img src="images/sprayhorizontal.jpg" alt="">
+
+    <div class="mainMsg">
+      <h1>MY SUPPLIES</h1>
+      <p class="subMsg">Personalize your own cleaning supplies!</p>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore, itaque quia. Iste, consectetur eligendi a illo deserunt, iure cum aspernatur nobis repellat temporibus quasi voluptatibus, cupiditate laudantium. Modi, tempore fuga.</p>
     </div>
   </section>
 
@@ -65,7 +79,7 @@
       <h3>CREATE YOUR OWN CARD</h3>
       <form action="submit" id="createCard">
         <div id="promptType">
-          <label for="type">Card Type</label>
+          <label for="type" class="promptLabel">Card Type</label>
           <span class="requiredLabel">(*Required)</span>
           <br>
           <select name="type" id="type" required>
@@ -83,6 +97,8 @@
           <br>
           <input type="text" id="name" maxlength="25" required>
         </div>
+        
+
         <br>
         <div id="promptGoodBad">
           <div class="displayGoodBad">
@@ -102,6 +118,8 @@
           <br>
           <textarea type="text" id="info"  cols="57" rows="4" maxlength="150"></textarea>
         </div>
+
+
   
         <button type="submit" id="createBtn">Create</button>
         <button id="saveChangeBtn">Save</button>
