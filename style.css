@@ -205,8 +205,8 @@ nav {
 }
 
 #infoMainImg {
-  width: 40%;
-  height: 600px;
+  width: 50%;
+  height: 300px;
   object-fit: cover;
   border-radius: 10px;
   margin: 0;
@@ -232,7 +232,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: white;
+
   margin: 3%;
 }
 
@@ -267,13 +267,18 @@ nav {
   padding: 0;
   border: 1px solid #ffcd46;
   margin: 0;
-  max-width: 50%;
+  width: 50%;
+  height: 300px;
 }
 
 .displayIntro h2 {
   margin: 2%;
   font-size: 40px;
 }
+
+/* .displayIntro p {
+  margin: auto;
+} */
 
 .infoDescr {
   font-size: 20px;
@@ -289,9 +294,10 @@ nav {
 #searchOption {
   margin: auto;
   text-align: center;
-  /* margin: 4%; */
+  margin-top: 4%;
+  margin-bottom: 4%;
   /* border: 1px solid #ffcd46; */
-  padding: 1%;
+  /* padding: 1%; */
   border-radius: 15px;
   width: 80%;
 }
@@ -328,15 +334,25 @@ nav {
   margin: 3%;
 }
 
+#seeAllTitle,
+#showInfoTitle {
+  margin: 5%;
+  text-align: center;
+  font-size: 35px;
+  background-color: #ffcd46;
+  padding: 0.5%;
+  border-radius: 10px;
+}
+
 #showInfo {
   /* display: block; */
   /* margin: 5% auto; */
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
 }
 
 #seeAll {
-  font-size: 30px;
+  font-size: 20px;
   font-weight: 700;
   display: none;
 }
@@ -512,25 +528,28 @@ nav {
 /* ************************COLLECTION PAGE************************** */
 .myCleaning {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   margin: 3%;
 }
 
 /* **************display card type differences************** */
-/* #explainSupplies {
-  background-color: #ffcd46;
+#explainSupplies {
+  /* background-color: #ffcd46;
   padding: 3%;
-  border-radius: 10px;
-} */
+  border-radius: 10px; */
+
+  border: 1px solid #ffcd46;
+  padding: 3%;
+  border-radius: 15px;
+}
 
 #explainSupplies h2 {
   margin: auto;
   text-align: center;
-  font-size: 40px;
+  font-size: 35px;
   background-color: #ffcd46;
-  /* color: #ffcd46; */
-  padding: 3%;
+  padding: 1%;
   border-radius: 10px;
 }
 
@@ -541,7 +560,7 @@ nav {
 }
 
 #explainCards p {
-  margin: 7% 0;
+  margin: 3% 0;
 }
 
 #explainCards i {
@@ -551,19 +570,31 @@ nav {
 #infoSampleCards img {
   max-width: 220px;
 }
-#ingredSampleCard {
-  display: flex;
-}
 
+/* #infoSampleCards {
+  display: flex;
+} */
 /* **************create card form************** */
 
 #createSupplies {
   border: 1px solid #ffcd46;
   padding: 2%;
   border-radius: 15px;
-  max-width: 600px;
-  margin: 2%;
+  width: 32%;
+  /* margin: 2%; */
 }
+
+#createSupplies h3 {
+  font-size: 35px;
+
+  background-color: #ffcd46;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+/* #createSupplies form {
+  margin: 2%;
+} */
 .requiredLabel {
   color: red;
 }

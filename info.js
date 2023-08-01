@@ -224,6 +224,8 @@ const showBtn = document.querySelector("#showInfo");
 showBtn.addEventListener("click", async function(e){
     e.preventDefault();
     libraryBtn.style.display = "inline-block";
+    document.querySelector("#showInfoTitle").style.display = "block";
+    document.querySelector("#seeAllTitle").style.display = "none";
     this.style.display = "none";
     // libraryBtn.disabled = false;
     // showBtn.disabled = true;
@@ -252,6 +254,8 @@ const libraryBtn = document.querySelector("#seeAll");
 libraryBtn.addEventListener("click", async function(e){
     e.preventDefault();
     showBtn.style.display = "inline-block";
+    document.querySelector("#showInfoTitle").style.display = "none";
+    document.querySelector("#seeAllTitle").style.display = "block";
     this.style.display = "none";
     // libraryBtn.disabled = true;
     // showBtn.disabled = false;
@@ -271,6 +275,8 @@ libraryBtn.addEventListener("click", async function(e){
 
 window.addEventListener("load", async function(){
     // libraryBtn.disabled = true;
+    document.querySelector("#showInfoTitle").style.display = "none";
+    document.querySelector("#seeAllTitle").style.display = "block";
     const cardsData = await getData("cards");
 
     for (let i=0; i<cardsData.length; i++){
