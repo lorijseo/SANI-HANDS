@@ -62,6 +62,22 @@ nav {
   margin-left: 5%;
 }
 
+.dropdown-menu{
+  background-color: #ffcd46;
+  font-size: 20px;
+  margin-top: 4%;
+  margin-left: 5%;
+  border-radius: 10px;
+}
+
+.dropdown-item{
+  /* background-color: #ffcd46;
+  font-size: 20px;
+  margin-top: 4%;
+  margin-left: 5%; */
+  padding: 1%;
+}
+
 .nav-item:hover {
   /* background-color: red; */
   box-shadow: 0 8px 6px -6px #999;
