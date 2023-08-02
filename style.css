@@ -153,8 +153,30 @@ nav {
 }
 
 .carousel-inner .carousel-item {
-  max-height: 800px;
+  max-height: 700px;
 }
+
+.carousel-caption{
+  font-size: 40px;
+  position:absolute;
+  color:black;
+}
+
+#caption1{
+  /* font-size: 40px; */
+  /* color:#ffcd46; */
+  
+  
+  /* bottom:40%; */
+  text-align:left;
+  left: 5%;
+}
+
+#caption2{
+  text-align:center;
+
+}
+
 /* **********EXPLORE CARDS********** */
 #exploreTitle {
   text-align: center;
