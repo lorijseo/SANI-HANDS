@@ -1,0 +1,80 @@
+/* Same as combo.css */
+
+@media screen and (max-width: 970px) {
+  .main img {
+    height: 400px;
+  }
+
+  #quizMainMsg {
+    top: 20%;
+  }
+
+  .quizLabel {
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+  }
+
+
+  .quizQuestion {
+    margin: auto;
+  }
+  .quiz {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .main img {
+    height: 300px;
+  }
+  #quizMainMsg {
+    top: 15%;
+  }
+
+  .mainMsg p {
+    font-size: 12px;
+  }
+  #subMsg {
+    font-size: 14px;
+  }
+  #cardDescr {
+    visibility: hidden;
+  }
+
+  .quizLabel {
+    font-size: 16px;
+  }
+
+
+  .displayQuizExplanation {
+    font-size: 14px;
+  }
+  .quiz {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main img {
+    height: 200px;
+  }
+  #quizMainMsg {
+    top: 10%;
+  }
+  #quizMainMsg p {
+    display: none;
+  }
+  .quizQuestion {
+    flex-wrap: wrap;
+  }
+  .quizBtn {
+    margin: 0 20%;
+  }
+
+  .displayCorrect i {
+    font-size: 30px;
+  }
+}
