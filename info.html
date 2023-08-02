@@ -51,40 +51,41 @@
       </div>
       <img src="images/okGlove.jpg" alt="" id="infoMainImg">
     </div> -->
-    <div id="intro">
+
+    <!-- <div id="intro">
       <div class="displayIntro">
         <h2>Explore our database</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa saepe earum consequuntur dignissimos hic quod reiciendis, natus, nemo odio corporis incidunt esse quos fugit atque quidem voluptatum inventore qui dolore.</p>
-        <!-- <div id="displayFeatures">
-          <div class="feature">
-            <div class="featureTitle">Search by name</div>
-            <div class="featureDescr">Find the card from our database </div>
-          </div>
-          <div class="feature">
-            <div class="featureTitle">View Collection</div>
-            <div class="featureDescr">At a glance, browse through all the cards</div>
-          </div>
-          
-          <div class="feature">
-            <div class="featureTitle">View Compatibility</div>
-            <div class="featureDescr">Learn about the different effects of mixing</div>
-          </div>
-
-        </div> -->
-
-        
-
+        <p>Browse through our card collection and learn about each card and its attributes! You can search for cards in our database by typing in the name of the ingredient, effect, product, or nullify card. </p>
+        <p>Click of "view compatibility" to learn more about the effects of different card combinations.</p>
       </div>
       <img src="images/okGlove.jpg" alt="" id="infoMainImg">
     </div>
-    
-
-      
-
+     -->
 
   </section>
 
-  <br>
+
+  <div id="seeAllDisplay">
+
+    <div id="seeAllDescr">
+      <p id="numOfCards"></p>
+      <p>
+        Four types of cards: 
+        <i class="fa-solid fa-flask fa-sm" style="color: green;"></i><b style="color:green">&nbsp;INGREDIENT</b>
+        <i class="fa-solid fa-spray-can-sparkles fa-sm" style="color: #2f72e4;"></i><b style="color:blue">PRODUCT</b>,
+        <i class="fa-solid fa-biohazard fa-sm" style="color: #cc350f;"></i> <b style="color:red">EFFECT</b>, and
+        <i class="fa-solid fa-poo fa-sm" style="color: #717d94;"></i><b style="color:grey">NULLIFY</b>
+      </p>
+      <!-- <p>Identify cards' attributes:
+        <i class="fa-solid fa-thumbs-up fa-sm" style="color: green;"></i>&nbsp;advantages, 
+        <i class="fa-solid fa-thumbs-down fa-sm" style="color: red"></i>&nbsp;disadvantages,
+        (<i class="fa-solid fa-skull-crossbones fa-sm" style="color: orange"></i> or <i class="fa-solid fa-circle-info fa-sm" style="color: purple"></i>) description 
+      </p> -->
+
+
+    </div>
+  </div>
+
   <div id="searchOption" >
     <h2>Search cards by name:</h2>
     <!-- <label for="search">Search for INGREDIENT cards or EFFECT cards</label> -->
@@ -95,13 +96,23 @@
 
   </div>
 
+  <div id="seeInfoDescr">
+    <p>Many cleaning products contain strong chemicals that when mixed can cause toxic mixtures.Browse through our card compatibility collection </p>
+    <p>
+      <button id="showInfo">Browse compatibility</button>
+      <button id="seeAll">back to Library</button>
+    </p>
+  </div>
+
   <div id="chooseDisplay">
-    <button id="showInfo">View compatibility!</button>
-    <button id="seeAll">back to Library</button>
+    <!-- <button id="showInfo">View compatibility!</button> -->
+    
   </div>
 
 
-  <h3 id="seeAllTitle">Library: Card Collection</h3>
+
+
+  <h3 id="seeAllTitle">Our Card Collection</h3>
   <h3 id="showInfoTitle">Card Compatibility Combinations</h3>
   <div class="userDisplay">
     

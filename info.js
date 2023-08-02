@@ -276,9 +276,13 @@ libraryBtn.addEventListener("click", async function(e){
 window.addEventListener("load", async function(){
     // libraryBtn.disabled = true;
     document.querySelector("#showInfoTitle").style.display = "none";
-    document.querySelector("#seeAllTitle").style.display = "block";
+    document.querySelector("#seeAllDisplay").style.display = "block";
     const cardsData = await getData("cards");
 
+    const displayCardNumber = document.querySelector("#numOfCards");
+    displayCardNumber.innerHTML = `
+    We have <b>${cardsData.length}</b> cards in our database.
+    `
     for (let i=0; i<cardsData.length; i++){
         const currentData = cardsData[i];
         createContainer(i);
