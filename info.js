@@ -220,42 +220,42 @@ function createCard(cardData){
 
 
 
-const showBtn = document.querySelector("#showInfo");
-showBtn.addEventListener("click", async function(e){
-    e.preventDefault();
-    libraryBtn.style.display = "inline-block";
-    document.querySelector("#showInfoTitle").style.display = "block";
-    document.querySelector("#seeAllTitle").style.display = "none";
-    this.style.display = "none";
-    // libraryBtn.disabled = false;
-    // showBtn.disabled = true;
-    document.querySelector(".userDisplay").innerHTML = "";
-    const comboData = await getData("combo");
+// const showBtn = document.querySelector("#showInfo");
+// showBtn.addEventListener("click", async function(e){
+//     e.preventDefault();
+//     libraryBtn.style.display = "inline-block";
+//     document.querySelector("#showInfoTitle").style.display = "block";
+//     document.querySelector("#seeAllTitle").style.display = "none";
+//     this.style.display = "none";
+//     // libraryBtn.disabled = false;
+//     // showBtn.disabled = true;
+//     document.querySelector(".userDisplay").innerHTML = "";
+//     const comboData = await getData("combo");
 
-    const allCardsData = await allCards(comboData);
-    // console.log(allCardsData);
+//     const allCardsData = await allCards(comboData);
+//     // console.log(allCardsData);
 
-    for (let i=0; i<allCardsData.length; i++){
-        const currentData = allCardsData[i];
+//     for (let i=0; i<allCardsData.length; i++){
+//         const currentData = allCardsData[i];
 
-        //create new container to display
-        createContainer(i);
-        // initialize class to style
-        document.querySelector(`#info${i}`).className = "displayCards";
+//         //create new container to display
+//         createContainer(i);
+//         // initialize class to style
+//         document.querySelector(`#info${i}`).className = "displayCards";
 
-        const displayCurrentInfo = displayInfo(currentData);
-        document.querySelector(`#info${i}`).innerHTML = `${displayCurrentInfo}`
+//         const displayCurrentInfo = displayInfo(currentData);
+//         document.querySelector(`#info${i}`).innerHTML = `${displayCurrentInfo}`
 
-    }
+//     }
 
-})
+// })
 
 const libraryBtn = document.querySelector("#seeAll");
 libraryBtn.addEventListener("click", async function(e){
     e.preventDefault();
-    showBtn.style.display = "inline-block";
-    document.querySelector("#showInfoTitle").style.display = "none";
-    document.querySelector("#seeAllTitle").style.display = "block";
+    // showBtn.style.display = "inline-block";
+    // document.querySelector("#showInfoTitle").style.display = "none";
+    // document.querySelector("#seeAllTitle").style.display = "block";
     this.style.display = "none";
     // libraryBtn.disabled = true;
     // showBtn.disabled = false;
@@ -275,8 +275,8 @@ libraryBtn.addEventListener("click", async function(e){
 
 window.addEventListener("load", async function(){
     // libraryBtn.disabled = true;
-    document.querySelector("#showInfoTitle").style.display = "none";
-    document.querySelector("#seeAllDisplay").style.display = "block";
+    // document.querySelector("#showInfoTitle").style.display = "none";
+    // document.querySelector("#seeAllDisplay").style.display = "block";
     const cardsData = await getData("cards");
 
     const displayCardNumber = document.querySelector("#numOfCards");
@@ -357,31 +357,18 @@ searchBtn.addEventListener("click", async function(e){
     e.preventDefault();
     document.querySelector("#seeAll").style.display = "inline-block";
     const searchTxt = document.getElementById("search").value;
-    
-    // console.log(counter)
-    // console.log(searchTxt);
-    
+     
     //REFORMAT INPUT to accept lower case
     const formattedTxt = await reformatInput(searchTxt);
-    // console.log(formattedTxt);
-
 
     //get card Data
     const data = await getCardData(formattedTxt);
     
     //verify if data on name exists
     if (data){        
-        // increaseStorageCounter();
-        // let counter = getStorageCountNum();
-        // const text = counter.toString();
-        // localStorage.setItem(text, JSON.stringify(data));
-
         //create Card
         const card = createCard(data);
         document.querySelector(".userDisplay").innerHTML = `${card}`
-
-        //create Delete btn
-        // createDeleteBtn(counter);
     }
     else{
         alert(`We have no data on ${searchTxt}. Try again!`)
