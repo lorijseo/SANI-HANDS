@@ -1,0 +1,117 @@
+/* large screen */
+@media screen and (max-width: 1455px) {
+  .displayCards {
+    margin: 4%;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  #plus {
+    display: none;
+  }
+  .displayCards {
+    margin: 0;
+    margin-top: 2%;
+  }
+}
+
+/* small screen */
+
+@media screen and (max-width: 1200px) {
+  /* #equal {
+    display: none;
+  } */
+
+  .ingredientCard,
+  .effectCard,
+  .productCard,
+  .nullifyCard {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  .ingredientCard,
+  .effectCard,
+  .productCard,
+  .nullifyCard {
+    width: 200px;
+    height: 200px;
+  }
+
+  #cardDescr {
+    font-size: 10px;
+    margin-top: 2%;
+  }
+
+  .cardContent img {
+    display: none;
+  }
+
+  .title #cardName {
+    font-size: 12px;
+  }
+  .cardsInfo {
+    font-size: 14px;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 750px) {
+  #equal {
+    margin: 0 50%;
+    font-size: 30px;
+  }
+  .ingredientCard,
+  .effectCard,
+  .productCard,
+  .nullifyCard {
+    width: 200px;
+    height: 50px;
+    margin: 0 20%;
+  }
+
+  #cardDescr {
+    display: none;
+  }
+  .displayIntro {
+    width: 100%;
+  }
+
+  #infoMainImg {
+    display: none;
+  }
+  /* .cardsInfo {
+    display:none;
+  } */
+
+  .title i {
+    font-size: 15px;
+  }
+
+  .infoDescr {
+    display: none;
+  }
+}
+
+/* phone */
+@media screen and (max-width: 480px) {
+  .cardsInfo {
+    display: none;
+  }
+
+  .displayIntro {
+    font-size: 14px;
+    height: 220px;
+  }
+
+  .displayIntro h2 {
+    font-size: 20px;
+  }
+
+  #infoIntro h1 {
+    font-size: 30px;
+  }
+
+
+}

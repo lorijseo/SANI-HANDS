@@ -62,7 +62,7 @@ nav {
   margin-left: 5%;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-color: #ffcd46;
   font-size: 20px;
   margin-top: 4%;
@@ -70,7 +70,7 @@ nav {
   border-radius: 10px;
 }
 
-.dropdown-item{
+.dropdown-item {
   /* background-color: #ffcd46;
   font-size: 20px;
   margin-top: 4%;
@@ -101,19 +101,27 @@ nav {
   margin-top: 3%;
 }
 
+/* @media screen and (min-width: 1500px) {
+  .navbar-expand-xl .navbar-nav{
+    flex-direction: row;
+  }
+} */
+
+/* @media (min-width: 1500px) {
+  .collapse {
+    display: none !important;
+  }
+} */
 /* ************************HOME PAGE************************** */
 
 /* **********MAIN********** */
-.main{
+.main {
   margin-bottom: 5%;
 }
-
 
 .mainMsg h1 {
   font-size: 55px;
 }
-
-
 
 .mainMsg p {
   margin-top: 2%;
@@ -122,7 +130,7 @@ nav {
   max-width: 60%;
 }
 
-#subMsg{
+#subMsg {
   font-size: 25px;
 }
 
@@ -132,9 +140,6 @@ nav {
   left: 10%;
   width: 70%;
 }
-
-
-
 
 .main img {
   display: block;
@@ -156,27 +161,60 @@ nav {
   max-height: 700px;
 }
 
-.carousel-caption{
+.carousel-caption {
   font-size: 40px;
-  position:absolute;
-  color:black;
+  position: absolute;
+  color: black;
 }
 
-#caption1{
-  /* font-size: 40px; */
+/* .carousel-item img {
+  filter: brightness(1.5);
+} */
+#caption1 {
+  /* font-size: 45px; */
   /* color:#ffcd46; */
-  
-  
+
   /* bottom:40%; */
-  text-align:left;
+  text-align: left;
   left: 5%;
+  font-weight: 650;
+  color: black;
 }
 
-#caption2{
-  text-align:center;
-
+#caption1 b {
+  font-size: 60px;
+  color: red;
 }
 
+#caption2 {
+  text-align: center;
+}
+/* style="font-size: 60px; color:#ffcd46;" */
+#caption2 b {
+  color: red;
+  background-color: #ffcd46;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+#caption2 a {
+  color: red;
+}
+
+#caption3 {
+  /* background-color: white; */
+  /* border-radius: 15px;
+  padding: 3px; */
+  top: 10%;
+  font-size: 55px;
+  font-weight: 700;
+  color: white;
+}
+
+#caption3 b {
+  /* font-size: 60px; */
+  color: red;
+}
 /* **********EXPLORE CARDS********** */
 #exploreTitle {
   text-align: center;
@@ -248,7 +286,7 @@ nav {
 
 .pageIntro h1 {
   margin-top: 2%;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
 }
 
@@ -281,7 +319,7 @@ nav {
   align-items: center;
   justify-content: center;
 
-  margin: 3%;
+  margin: 5%;
 }
 
 #displayFeatures {
@@ -312,7 +350,7 @@ nav {
 
 .displayIntro {
   border-radius: 10px;
-  padding: 0;
+  padding: 1%;
   border: 1px solid #ffcd46;
   margin: 0;
   width: 50%;
@@ -321,12 +359,12 @@ nav {
 
 .displayIntro h2 {
   margin: 2%;
-  font-size: 40px;
+  font-size: 35px;
 }
 
 .displayIntro p {
   margin: auto;
-  padding: 4%;
+  padding: 3%;
 }
 
 .infoDescr {
@@ -344,7 +382,7 @@ nav {
   margin: auto;
   text-align: center;
   margin-top: 3%;
-  margin-bottom: 8%;
+  margin-bottom: 5%;
   /* border: 1px solid #ffcd46; */
   /* padding: 1%; */
   border-radius: 15px;
@@ -387,7 +425,7 @@ nav {
   margin: 3%;
 }
 
-#seeAllDisplay{
+#seeAllDisplay {
   /* background-color: #ffcd46; */
   /* border: 3px solid #ffcd46; */
   padding: 0.5%;
@@ -405,25 +443,24 @@ nav {
   margin: 2% auto;
   text-align: center;
   font-size: 30px;
-  /* width:50%; */
+  width: 80%;
 }
 
-#seeAllDescr{
+#seeAllDescr {
   text-align: center;
-
 }
 
-#seeInfoDescr{
+#seeInfoDescr {
   border: 3px solid #ffcd46;
   padding: 0.5%;
   border-radius: 10px;
   margin: 3% auto;
   font-size: 18px;
-  text-align:center;
+  text-align: center;
   width: 40%;
 }
 
-#seeInfoDescr p{
+#seeInfoDescr p {
   margin: 0;
 }
 
@@ -433,8 +470,6 @@ nav {
   font-size: 20px;
   font-weight: 700;
 }
-
-
 
 /* **********CARD DISPLAY********** */
 .cardContent {
@@ -451,14 +486,15 @@ nav {
   height: 128.42px;
   object-fit: contain;
   margin: 4% 0;
-  /* margin-top: 4%; */
+
+  /* display:none; */
 }
 
 .title #cardName {
   text-align: center;
   overflow: hidden;
   word-break: break-all;
-  font-size: 16px;
+  font-size: 14px;
   float: right;
   min-width: 84%;
   max-width: 89%;
@@ -479,6 +515,7 @@ nav {
   flex-direction: column;
   justify-content: space-evenly;
   padding: 2%;
+  /* display: none; */
 }
 
 /* **********CARD FORMAT DISPLAY********** */
@@ -619,23 +656,24 @@ nav {
   border-radius: 10px; */
 
   border: 1px solid #ffcd46;
-  padding: 3%;
+  padding: 2%;
   border-radius: 15px;
 }
 
 #explainSupplies h2 {
   margin: auto;
   text-align: center;
-  font-size: 35px;
+  font-size: 30px;
   background-color: #ffcd46;
   padding: 1%;
   border-radius: 10px;
 }
 
 #explainCards {
-  padding: 2%;
+  /* padding: 2%; */
   font-size: 20px;
   margin: auto;
+  text-align: center;
 }
 
 #explainCards p {
@@ -659,12 +697,13 @@ nav {
   border: 1px solid #ffcd46;
   padding: 2%;
   border-radius: 15px;
-  width: 32%;
+  /* min-width: 32%; */
   /* margin: 2%; */
 }
 
 #createSupplies h3 {
-  font-size: 35px;
+  font-size: 30px;
+  text-align: center;
 
   background-color: #ffcd46;
   padding: 2%;
@@ -823,12 +862,12 @@ nav {
   font-size: 18px;
 } */
 
-#quizMainMsg{
+#quizMainMsg {
   position: absolute;
   top: 40%;
   left: 50%;
   width: 50%;
-  color:#cfdbd5
+  color: #cfdbd5;
 }
 
 /* #quizMainMsg h1{
@@ -853,7 +892,7 @@ nav {
 .quizQuestion {
   display: flex;
   justify-content: center;
-  margin-left: 10% 0;
+  margin-left: 10%;
 }
 
 .quizLabel {
@@ -934,7 +973,7 @@ nav {
 /* ************************ABOUT PAGE************************** */
 
 .about h1 {
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
   margin: 3%;
 }
@@ -1027,4 +1066,47 @@ nav {
   border: none;
   font-weight: 600;
   font-size: 15px;
+}
+
+@media screen and (max-width: 750px) {
+  .navbar-brand {
+    /* display:none; */
+    font-size: 30px;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 30px;
+  }
+
+  .navbar-toggler {
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    vertical-align: middle;
+  }
+
+  .nav-item {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-brand {
+    font-size: 15px;
+  }
+
+  .navbar-toggler-icon {
+    font-size: 15px;
+  }
+
+  .navbar-toggler {
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    vertical-align: middle;
+  }
+
+  .nav-item {
+    font-size: 12px;
+  }
 }

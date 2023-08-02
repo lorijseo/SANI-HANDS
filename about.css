@@ -1,0 +1,12 @@
+@media screen and (max-width: 970px) {
+    .aboutDisplay img{
+        height:400px
+    }
+
+    .ourStory h2{
+        font-size: 30px;
+    }
+    .ourStory p{
+        font-size: 14px;
+    }
+  }

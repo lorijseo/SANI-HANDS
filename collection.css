@@ -1,0 +1,136 @@
+/* Same as combo.css */
+@media screen and (max-width: 1500px) {
+  #infoSampleCards img {
+    max-width: 170px;
+  }
+
+  /* #explainSupplies{
+        padding:0;
+    } */
+}
+
+@media screen and (max-width: 1300px) {
+  .main img {
+    height: 500px;
+  }
+
+  .mainMsg {
+    top: 30%;
+  }
+
+  #infoSampleCards img {
+    max-width: 155px;
+  }
+
+  /* #explainSupplies{
+    border:none;
+} */
+}
+
+@media screen and (max-width: 1200px) {
+  .myCleaning {
+    flex-wrap: wrap;
+  }
+
+  #explainSupplies {
+    width: 90%;
+    margin: 5% 0;
+  }
+
+  #infoSampleCards {
+    margin: auto;
+    text-align: center;
+  }
+
+  #createSupplies {
+    width: 90%;
+  }
+
+  #createCard {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 25%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .displaySupplies{
+    margin: 2%;
+  }
+  /* #createBtn{
+        padding: 0;
+    } */
+}
+
+@media screen and (max-width: 970px) {
+  #infoSampleCards {
+    display: none;
+  }
+  #createCard {
+    margin: 0 15%;
+  }
+  #editBtn {
+    margin: 0 0 0 70%;
+  }
+
+  #clearSupplies {
+    margin-left: 80%;
+  }
+
+
+}
+
+@media screen and (max-width: 750px) {
+  .main img {
+    height: 300px;
+  }
+
+  .mainMsg {
+    top: 15%;
+  }
+  .mainMsg p {
+    font-size: 12px;
+  }
+  #subMsg {
+    font-size: 14px;
+  }
+
+  .mySupplies{
+    margin: 10% 0;
+  }
+
+  #createCard {
+    margin: 0 5%;
+  }
+
+  #clearSupplies {
+    margin: 2% auto;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main img {
+    height: 200px;
+  }
+  .mainMsg {
+    top: 10%;
+  }
+  .mainMsg p {
+    display: none;
+  }
+  #explainSupplies h2,
+  #createSupplies h3, #mySuppliesTitle h3 {
+    font-size: 20px;
+    padding: 2%;
+  }
+
+  #explainCards p,
+  #createSupplies form {
+    font-size: 12px;
+  }
+
+  #clearSupplies {
+    font-size: 12px;
+  }
+
+}

@@ -1,0 +1,37 @@
+/* @media screen and (max-width: 750px) {
+    .userDisplay{
+        justify-content: space-around;
+
+    }
+
+    .ingredientCard,
+    .effectCard,
+    .productCard,
+    .nullifyCard {
+
+      margin: 5%;
+    }
+  
+  } */
+
+@media screen and (max-width: 480px) {
+    #infoIntro h1{
+        font-size:30px;
+    }
+
+    #searchOption{
+        width:100%;
+    }
+
+    #searchOption h2{
+        font-size:20px
+    }
+
+    #searchOption button{
+        font-size:14px;
+        padding: 5px 10px;
+    }
+    #searchOption input{
+        font-size:15px;
+    }
+  }
