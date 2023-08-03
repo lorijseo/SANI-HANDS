@@ -299,14 +299,14 @@ formBtn.addEventListener("submit", function(e){
 function validateName(){
     const name = document.querySelector("#name").value;
     // returns true if symbols in name
-    const fullWord = /[ -/:-@[-`{-~]/.test(name)
+    const fullWord = /[-/:-@[-`{-~]/.test(name)
     if (fullWord){
         alert("Name cannot have any special symbols or characters")
         return false
     }
 
     // returns false if first character is not a letter
-    const firstLetter = /^[a-zA-Z]/.test(name.charAt(0))
+    const firstLetter = /^[a-zA-Z\s]/.test(name.charAt(0))
     if (!firstLetter){
         alert("Name must begin with a letter")
         return false
@@ -315,11 +315,12 @@ function validateName(){
 }
 
 //returns boolean if name exists the given number of times
+//when creating, the name should not exist
+//when editing, the name should exists once
 function isUniqueName(){
     const newName = document.querySelector("#name").value;
-    console.log(newName)
     const counterNum = getStorageCountNum();
-    console.log(counterNum)
+
     if (counterNum>0){
         let count = 0
         for (let i =1; i<=counterNum; i++){
@@ -335,13 +336,50 @@ function isUniqueName(){
                 }
             }
         }
-        console.log(count);
-        if (count > 0){
+
+
+        if (count >0){
             alert(`${newName} already exists. Try a different name`)
             return false
         }
     }
     return true;
+}
+
+function isUniqueEditName(){
+    const newName = document.querySelector("#name").value;
+    const counterNum = getStorageCountNum();
+
+    if (counterNum >0){
+        //name isn't edited
+        let count = 0;
+        for (let i =1; i<=counterNum; i++){
+    
+            if (localStorage.getItem(i.toString())){
+                // get the object value
+                const cardData = JSON.parse(localStorage.getItem(i.toString()));
+ 
+                // verify search card or created card
+                const cardName = cardData.name;
+                if (cardName == newName){
+                    count +=1;
+                }
+            }
+        }
+        // console.log(count);
+        // console.log(localStorage.getItem("edit_name"));
+        if ((count == 1) && (localStorage.getItem("edit_name") == newName)){
+            return true
+        }
+        else if (count >0){
+            alert(`${newName} already exists. Try a different name`)
+            return false
+        }
+
+    }
+
+    
+
 }
 
 function createDeleteBtn(cardId){
@@ -433,14 +471,9 @@ function createEditBtn(num){
 
         document.querySelector("#noChangeBtn").style.display = "inline-block";
 
-        //save id num to save btn
-        
-        // return num
-    
-    
-        //save Change will overwrite previous Card
-    
-        //nvm will empty inputs, 
+        //save name value so it's not duplicated again
+        const nameOfEdit = document.querySelector("#name").value; 
+        localStorage.setItem("edit_name", nameOfEdit);
     
     })
     
@@ -462,7 +495,7 @@ let saveChangeBtn = document.querySelector("#saveChangeBtn");
 saveChangeBtn.addEventListener("click", function(e){
     e.preventDefault();
     const isValid = validateName();
-    const isUnique = isUniqueName();
+    const isUnique = isUniqueEditName();
     // const isValid = true;
     const num = saveChangeBtn.className;
     

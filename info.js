@@ -355,7 +355,7 @@ function getStorageCountNum(){
 const searchBtn = document.getElementById("searchBtn");
 searchBtn.addEventListener("click", async function(e){
     e.preventDefault();
-    document.querySelector("#seeAll").style.display = "inline-block";
+    
     const searchTxt = document.getElementById("search").value;
      
     //REFORMAT INPUT to accept lower case
@@ -365,7 +365,8 @@ searchBtn.addEventListener("click", async function(e){
     const data = await getCardData(formattedTxt);
     
     //verify if data on name exists
-    if (data){        
+    if (data){       
+        document.querySelector("#seeAll").style.display = "inline-block"; 
         //create Card
         const card = createCard(data);
         document.querySelector(".userDisplay").innerHTML = `${card}`

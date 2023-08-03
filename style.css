@@ -123,13 +123,6 @@ nav {
   font-size: 55px;
 }
 
-.mainMsg p {
-  margin-top: 2%;
-  font-size: 18px;
-  text-align: left;
-  max-width: 60%;
-}
-
 #subMsg {
   font-size: 25px;
 }
@@ -175,45 +168,33 @@ nav {
   /* color:#ffcd46; */
 
   /* bottom:40%; */
-  text-align: left;
+  text-align: center;
   left: 5%;
-  font-weight: 650;
-  color: black;
-}
 
-#caption1 b {
-  font-size: 60px;
-  color: red;
 }
 
 #caption2 {
   text-align: center;
-}
-/* style="font-size: 60px; color:#ffcd46;" */
-#caption2 b {
-  color: red;
-  background-color: #ffcd46;
-  border-radius: 15px;
-  padding: 5px;
-}
-
-#caption2 a {
-  color: red;
+  bottom: 10%;
 }
 
 #caption3 {
-  /* background-color: white; */
-  /* border-radius: 15px;
-  padding: 3px; */
-  top: 10%;
-  font-size: 55px;
-  font-weight: 700;
-  color: white;
+  position: absolute;
+  top: 40%;
+  left: 7%;
+  max-width: 60%;
+  text-align: left;
 }
 
-#caption3 b {
-  /* font-size: 60px; */
-  color: red;
+#caption3 h1, #caption2 h1{
+  font-size: 55px;
+}
+
+
+#caption3 p {
+  margin-top: 2%;
+  font-size: 18px;
+
 }
 /* **********EXPLORE CARDS********** */
 #exploreTitle {
