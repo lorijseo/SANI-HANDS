@@ -1,18 +1,42 @@
-/* @media screen and (max-width: 750px) {
-    .userDisplay{
-        justify-content: space-around;
+@media screen and (max-width: 1200px) {
+    #searchOption input{
+        font-size:18px;
+    }
+    #searchOption button{
+        font-size:18px;
+        /* padding: 5px 15px; */
+    }
+}
 
+@media screen and (max-width: 970px) {
+    #searchOption h2{
+        font-size:22px
+    }
+    #searchOption input{
+        font-size:16px;
+    }
+    #searchOption button{
+        font-size:16px;
+        /* padding: 5px 16px; */
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #infoIntro h1{
+        font-size:35px;
+    }
+    #searchOption h2{
+        font-size:20px
     }
 
-    .ingredientCard,
-    .effectCard,
-    .productCard,
-    .nullifyCard {
-
-      margin: 5%;
+    #searchOption input{
+        font-size:14px;
     }
-  
-  } */
+    #searchOption button{
+        font-size:14px;
+        /* padding: 5px 16px; */
+    }
+}
 
 @media screen and (max-width: 480px) {
     #infoIntro h1{
@@ -24,14 +48,14 @@
     }
 
     #searchOption h2{
-        font-size:20px
+        font-size:16px
     }
 
     #searchOption button{
-        font-size:14px;
-        padding: 5px 10px;
+        font-size:12px;
+        /* padding: 5px 10px; */
     }
     #searchOption input{
-        font-size:15px;
+        font-size:12px;
     }
   }
