@@ -428,7 +428,12 @@ nav {
 }
 
 #seeAllDescr {
-  text-align: center;
+  display:flex;
+  justify-content: center;
+}
+
+#moreInfoModal:hover{
+  cursor: pointer;
 }
 
 #seeInfoDescr {

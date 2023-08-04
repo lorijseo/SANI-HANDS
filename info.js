@@ -281,7 +281,7 @@ window.addEventListener("load", async function(){
 
     const displayCardNumber = document.querySelector("#numOfCards");
     displayCardNumber.innerHTML = `
-    There are <b>${cardsData.length}</b> cards in our database
+    There are <b>${cardsData.length}</b> chemical cards in our database
     `
     for (let i=0; i<cardsData.length; i++){
         const currentData = cardsData[i];
