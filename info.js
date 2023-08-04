@@ -377,3 +377,4 @@ searchBtn.addEventListener("click", async function(e){
     document.getElementById("search").value = '';
     
 })
+
