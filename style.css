@@ -44,7 +44,7 @@ nav {
 }
 
 .navbar {
-  padding-bottom: 10px;
+  padding: 1%;
 }
 
 .navbar-brand {
@@ -58,8 +58,7 @@ nav {
 .nav-item {
   background-color: #ffcd46;
   font-size: 20px;
-  margin-top: 4%;
-  margin-left: 5%;
+  margin: 1%;
 }
 
 .dropdown-menu {
@@ -89,7 +88,7 @@ nav {
 
 #navbarNav {
   justify-content: flex-end;
-  margin-right: 6%;
+  margin-right: 3%;
 }
 
 /* navbar collapse toggler icon */
@@ -120,27 +119,35 @@ nav {
 }
 
 .mainMsg h1 {
+  margin-top: 2%;
   font-size: 55px;
+  text-align: center;
 }
 
-#subMsg {
+/* #subMsg {
   font-size: 25px;
-}
+} */
 
 .mainMsg {
   position: absolute;
-  top: 40%;
-  left: 10%;
-  width: 70%;
+  top: 50%;
+  /* left: 10%;
+  width: 70%; */
 }
 
 .main img {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
+  margin: 3% auto;
   width: 90%;
-  height: 700px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.pageIntro img {
+  display: block;
+  margin: 3% auto;
+  width: 90%;
+  height: 600px;
   object-fit: cover;
 }
 
@@ -170,7 +177,6 @@ nav {
   /* bottom:40%; */
   text-align: center;
   left: 5%;
-
 }
 
 #caption2 {
@@ -186,15 +192,14 @@ nav {
   text-align: left;
 }
 
-#caption3 h1, #caption2 h1{
+#caption3 h1,
+#caption2 h1 {
   font-size: 55px;
 }
-
 
 #caption3 p {
   margin-top: 2%;
   font-size: 18px;
-
 }
 /* **********EXPLORE CARDS********** */
 #exploreTitle {
@@ -350,11 +355,11 @@ nav {
 
 .infoDescr {
   font-size: 20px;
-  margin: 1% 5%;
+  /* margin: 1% 5%; */
   background-color: #ffcd46;
   border-radius: 10px;
   padding: 7px 20px;
-  width: 90%;
+  width: 100%;
   text-align: center;
   font-weight: 700;
 }
@@ -428,27 +433,26 @@ nav {
 }
 
 #seeAllDescr {
-  display:flex;
+  display: flex;
   justify-content: center;
 }
 
-#moreInfoModal:hover{
+#moreInfoModal:hover {
   cursor: pointer;
 }
 
-#name_btn{
-  padding:0;
-  margin:0;
-
+#name_btn {
+  padding: 0;
+  margin: 0;
 }
 
-#name_btn:hover{
+#name_btn:hover {
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 0 15px 3px green;
 }
 
-#cardName:hover{
+#cardName:hover {
   /* padding:0;
   margin:0; */
 
@@ -465,8 +469,6 @@ nav {
   cursor: pointer;
   box-shadow: 0 0 15px 3px green;
 }
-
-
 
 #seeInfoDescr {
   border: 3px solid #ffcd46;
@@ -551,15 +553,15 @@ nav {
   border: 2px solid #ffcd46;
   border-radius: 10px;
   padding: 7px 20px;
-  margin: 2% 7%;
+  margin: 2% 5%;
 }
 
 #plus {
-  font-size: 100px;
+  font-size: 70px;
 }
 
 #equal {
-  font-size: 100px;
+  font-size: 70px;
 }
 
 .cardsInfo {
@@ -660,11 +662,19 @@ nav {
   padding: 3%;
 }
 /* ************************COLLECTION PAGE************************** */
+#mySuppliesIntro img {
+  object-position: 50% 60%;
+}
+#mySuppliesMainMsg {
+  width: 25%;
+  text-align: center;
+  left: 38%;
+}
 .myCleaning {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 3%;
+  justify-content: space-between;
+  /* align-items: center; */
+  margin: 5%;
 }
 
 /* **************display card type differences************** */
@@ -799,30 +809,37 @@ nav {
   padding: 1%;
   border-radius: 10px; */
 }
-#searchSupplies h3 {
+
+#mySuppliesTitle {
   text-align: center;
   background-color: #ffcd46;
   padding: 1%;
   border-radius: 10px;
-  margin: 2%;
+  margin: 2% 0;
+  display: none;
 }
-
 /* clear button */
 #clearSupplies {
   display: none;
-  margin-top: 5%;
-  margin-left: 85%;
-  text-align: right;
+  /* margin-top: 5% auto; */
+
   border: 2px solid red;
   color: red;
   background-color: white;
+  /* position: absolute;
+  left:48% */
 }
-
+#clearBtnContainer {
+  text-align: center;
+  margin: auto;
+  margin: 5%;
+}
 /* **************card display format************** */
 .mySupplies {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
+
   /* align-items: center; */
   /* background-color: #ffcd46; */
   /* border: 2px solid  #ffcd46;
@@ -855,42 +872,36 @@ nav {
   color:white;
 } */
 
+.displaySupplies {
+  margin: 3%;
+}
+
+.displaySupplies .descr {
+  word-wrap: break-word;
+
+}
 /* ************************QUIZ PAGE************************** */
 
-/* #startQuizBtn {
-  display: block;
-  text-align: center;
-  margin: 5% auto;
+#quizIntro h1 {
+  margin-top: 2%;
   font-size: 50px;
-  font-weight: 700;
-} */
-
-/* #quizPageIntro div {
-  font-size: 17px;
   text-align: center;
-  border-radius: 10px;
-  padding: 15px 25px;
-  background-color: #ffcd46;
-} */
-
-/* #quizMainMsg p{
-
-  color:#cfdbd5;
-  width: 60%;
-  font-size: 18px;
-} */
+}
+#quizIntro img {
+  object-position: 50% 10%;
+}
 
 #quizMainMsg {
   position: absolute;
-  top: 40%;
-  left: 50%;
-  width: 50%;
-  color: #cfdbd5;
+  top: 55%;
+  left: 30%;
+  width: 35%;
 }
 
-/* #quizMainMsg h1{
-  text-align:right;
-} */
+#quizMainMsg h2 {
+  font-size: 40px;
+  margin: 0 0 2%;
+}
 
 .questionNumber {
   font-size: 20px;
@@ -964,10 +975,12 @@ nav {
 }
 
 .displayCorrect {
-  font-size: 100px;
+  font-size: 90px;
   /* margin-right: 5%; */
   align-items: center;
   display: flex;
+  margin: 0 2%;
+  justify-content: center;
 }
 
 #correct_icon {
@@ -999,12 +1012,14 @@ nav {
   margin: 5%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .aboutDisplay img {
-  width: 50%;
-  height: 600px;
+  width: 54%;
+  height: 500px;
   object-fit: cover;
+  object-position: 50% 40%;
 }
 
 .ourStory {
@@ -1014,7 +1029,7 @@ nav {
 }
 
 .ourStory h2 {
-  font-size: 60px;
+  font-size: 35px;
   margin: 0;
   margin-bottom: 2%;
 }
@@ -1023,7 +1038,7 @@ nav {
 .contactUs h3 {
   font-size: 30px;
   text-align: center;
-  margin: 3%;
+  margin: 2%;
 }
 .displayContact {
   display: flex;
@@ -1033,7 +1048,7 @@ nav {
   background-color: #ffcd46;
   border-radius: 10px;
   padding: 7px 20px;
-  margin: 0 10%;
+  margin: 0 5%;
 }
 
 .displayContact p {

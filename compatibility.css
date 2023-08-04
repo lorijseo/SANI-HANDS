@@ -1,0 +1,163 @@
+/* large screen */
+@media screen and (max-width: 1470px) {
+  .displayCards {
+    margin: 2% 4%;
+  }
+}
+
+@media screen and (max-width: 1360px) {
+  /* #plus {
+    display: none;
+  } */
+  .displayCards {
+    margin: 2%;
+    /* margin-top: 2%; */
+  }
+
+  .ingredientCard,
+  .effectCard,
+  .productCard,
+  .nullifyCard {
+    margin: 3% 2%;
+  }
+}
+
+/* small screen */
+
+@media screen and (max-width: 1200px) {
+  /* #equal {
+    display: none;
+  } */
+
+  .ingredientCard,
+  .effectCard,
+  .productCard,
+  .nullifyCard {
+    margin: 3% 0;
+  }
+
+  #equal, #plus{
+    margin: 0 1%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #equal {
+    margin: 0 50%;
+  }
+  .ingredientCard,
+  .effectCard,
+  .productCard,
+  .nullifyCard {
+    margin: 2%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  /* quiz */
+  .main img {
+    height: 400px;
+  }
+
+  #quizMainMsg {
+    top: 20%;
+  }
+
+  .quizLabel {
+    font-size: 20px;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+  }
+
+
+  .quizQuestion {
+    margin: auto;
+  }
+  .quiz {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 3%;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 780px) {
+  /* compatibility */
+  .displayIntro {
+    width: 100%;
+  }
+
+  #infoMainImg {
+    display: none;
+  }
+
+  #plus {
+    margin: 0 50%;
+  }
+
+  #equal {
+    font-size: 70px;
+  }
+  .cardsInfo {
+    margin: 1%;
+  }
+
+
+  /* quiz */
+  .quizLabel {
+    font-size: 18px;
+    margin:auto;
+  }
+
+
+  .displayQuizExplanation {
+    font-size: 14px;
+  }
+  .quiz {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+/* phone */
+@media screen and (max-width: 480px) {
+  /* compatibility */
+
+  .displayIntro {
+    font-size: 14px;
+    height: 220px;
+  }
+
+  .displayIntro h2 {
+    font-size: 20px;
+  }
+
+  #infoIntro h1 {
+    font-size: 30px;
+  }
+
+  /* quiz */
+  #quizMainMsg {
+    top: 10%;
+  }
+  #quizMainMsg p {
+    display: none;
+  }
+  .quizQuestion {
+    flex-wrap: wrap;
+  }
+  .quizBtn{
+    margin: 0 50%;
+  }
+
+  .displayCorrect i {
+    font-size: 60px;
+    
+  }
+
+  .displayCorrect{
+    margin-right: 3%;
+  }
+}

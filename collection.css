@@ -30,6 +30,9 @@
 @media screen and (max-width: 1200px) {
   .myCleaning {
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 2% 0
+
   }
 
   #explainSupplies {

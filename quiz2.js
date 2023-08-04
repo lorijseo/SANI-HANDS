@@ -196,7 +196,8 @@ function displayInfo(data,num){
     // document.querySelector(".test").innerHTML = `${show}`
 
     return `
-    ${title} ${card1} <p id="plus">+</p> ${card2} <p id="equal">=</p> ${card3} `
+    ${title} ${card1} <p id="plus"><i class="fa-solid fa-plus"></i></p> ${card2} 
+    <p id="equal"><i class="fa-solid fa-equals"></i></p> ${card3} `
 
 }
 

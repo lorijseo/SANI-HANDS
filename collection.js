@@ -277,6 +277,9 @@ formBtn.addEventListener("submit", function(e){
     if (isValid && isUnique){
         increaseStorageCounter();
         let counter = getStorageCountNum();
+        if (counter == 1){
+            document.querySelector("#mySuppliesTitle").style.display="block";
+        }
         // console.log(counter);
         const text = counter.toString();
         const data = createData(counter);
@@ -597,6 +600,7 @@ window.addEventListener("DOMContentLoaded", function(){
  
                 // verify search card or created card
                 const determineCard = cardData.id;
+
                 if (typeof determineCard === "string"){
                     //created card
                     createCard(cardData, i);
@@ -611,6 +615,7 @@ window.addEventListener("DOMContentLoaded", function(){
 
                 }
                 emptyStorage = false;
+                this.document.querySelector("#mySuppliesTitle").style.display="block";
                 
                 
             }
@@ -650,7 +655,7 @@ function getStorageCountNum(){
 
 function displayClearBtn(counter){
     if (counter > 0){
-        document.querySelector("#clearSupplies").style.display = "block";
+        document.querySelector("#clearSupplies").style.display = "inline-block";
     }
     else{
         document.querySelector("#clearSupplies").style.display = "none";

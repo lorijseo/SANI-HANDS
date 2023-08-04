@@ -1,4 +1,4 @@
-/* Same as combo.css */
+/* delete soon */
 
 @media screen and (max-width: 970px) {
   .main img {
@@ -12,6 +12,7 @@
   .quizLabel {
     font-size: 20px;
     width: 90%;
+    margin:auto;
     text-align: center;
   }
 
@@ -25,7 +26,7 @@
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 780px) {
   .main img {
     height: 300px;
   }
@@ -43,18 +44,7 @@
     visibility: hidden;
   }
 
-  .quizLabel {
-    font-size: 16px;
-  }
 
-
-  .displayQuizExplanation {
-    font-size: 14px;
-  }
-  .quiz {
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -75,6 +65,11 @@
   }
 
   .displayCorrect i {
-    font-size: 30px;
+    font-size: 60px;
+    
+  }
+
+  .displayCorrect{
+    margin-right: 3%;
   }
 }
