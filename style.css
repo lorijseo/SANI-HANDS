@@ -4,6 +4,7 @@
 
 body {
   margin: 0% 2% 2% 2%;
+  font-family: "Open Sans", sans-serif;
 }
 
 button {
@@ -878,7 +879,6 @@ nav {
 
 .displaySupplies .descr {
   word-wrap: break-word;
-
 }
 /* ************************QUIZ PAGE************************** */
 
