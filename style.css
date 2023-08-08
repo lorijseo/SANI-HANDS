@@ -57,9 +57,10 @@ nav {
 }
 
 .nav-item {
-  background-color: #ffcd46;
+  /* background-color: #fedb71; */
   font-size: 20px;
   margin: 1%;
+  border: 2px solid #fedb71;
 }
 
 .dropdown-menu {
@@ -453,23 +454,21 @@ nav {
   box-shadow: 0 0 15px 3px green;
 }
 
-#cardName:hover {
-  /* padding:0;
-  margin:0; */
-
-  /* display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 180px;
-  padding: 1.5rem;
-  margin-top: 25px; */
-  /* background: yellow; */
-  /* color: #48abe0; */
-  /* text-align: center; */
+/* #cardName:hover {
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 0 15px 3px yellow;
+} */
+
+/* .ingredientCard {
+  border-radius: 5px;
   box-shadow: 0 0 15px 3px green;
 }
+
+.effectCard{
+  border-radius: 5px;
+  box-shadow: 0 0 15px 3px red;
+} */
 
 #seeInfoDescr {
   border: 3px solid #ffcd46;
