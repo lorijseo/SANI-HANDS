@@ -56,11 +56,16 @@ nav {
   color: black;
 }
 
+/* .nav-link:hover{
+  color: #fedb71;
+} */
+
 .nav-item {
   /* background-color: #fedb71; */
   font-size: 20px;
   margin: 1%;
-  border: 2px solid #fedb71;
+  /* border: 2px solid #fedb71; */
+  
 }
 
 .dropdown-menu {
@@ -1030,6 +1035,10 @@ nav {
 .ourStory h2 {
   font-size: 35px;
   margin: 0;
+  margin-bottom: 2.5%;
+}
+
+.ourStory p {
   margin-bottom: 2%;
 }
 
