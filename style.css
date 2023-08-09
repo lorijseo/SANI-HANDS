@@ -65,7 +65,6 @@ nav {
   font-size: 20px;
   margin: 1%;
   /* border: 2px solid #fedb71; */
-  
 }
 
 .dropdown-menu {
@@ -158,12 +157,12 @@ nav {
   object-fit: cover;
 }
 
-#learnMoreBtn{
+#learnMoreBtn {
   font-size: 18px;
 }
 
-#learnMore{
-  margin:0;
+#learnMore {
+  margin: 0;
 }
 /* **********CAROUSEL********** */
 .carousel-inner {
@@ -217,7 +216,7 @@ nav {
 }
 /* **********EXPLORE CARDS********** */
 
-#explore{
+#explore {
   /* background-color: #ffcd46; */
   margin: 5%;
 }
@@ -299,7 +298,6 @@ nav {
   font-size: 50px;
   text-align: center;
 }
-
 
 #infoMainImg {
   width: 50%;
@@ -390,7 +388,7 @@ nav {
 }
 
 #searchOption {
-  margin: 7% auto;
+  margin: 3% auto;
   text-align: center;
   /* border: 1px solid #ffcd46; */
   /* padding: 1%; */
@@ -425,6 +423,11 @@ nav {
   font-size: 20px;
 }
 
+#searchDisplay {
+  display: flex;
+  justify-content: center;
+}
+
 #seeAll {
   display: none;
 }
@@ -434,29 +437,79 @@ nav {
   margin: 3%;
 }
 
-#libraryCarousel{
+#libraryCarousel {
   /* margin: 10%; */
-  width:70%;
+  width: 60%;
   margin: auto;
+  /* border: 3px solid #ffcd46; */
+  border-radius: 15px;
+  /* background-color: #ffcd46; */
 }
 
-#libraryCarousel img{
+#libraryCarousel img {
   height: 300px;
+  object-fit: cover;
 }
 
-
-
-#wapa{
-  display:flex;
-  justify-content: space-between;
+.sampleInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  width: 50%;
+  background-color: #ffcd46;
+  /* border: 3px solid yellow; */
+  border-radius: 15px;
 }
 
-#wapa p{
-  margin:2%;
+.sampleTitle {
+  font-size: 20px;
+  text-align: center;
+  margin: 5%;
 }
 
-#sampleCard img{
-  width:100px;
+.sampleDescr {
+  text-align: center;
+  margin: 5%;
+}
+
+#wapa {
+  display: flex;
+  justify-content: space-evenly;
+  /* background-color: #999; */
+}
+#carouselIntroItem {
+  position: static;
+  padding: 112px 35px;
+  background-color: #ffcd46;
+  border-radius: 15px;
+  /* margin: 20px 0; */
+}
+
+#carouselDisplay {
+  margin: 10% 0;
+}
+.carousel-control-prev {
+  left: -5%;
+}
+
+.carousel-control-next {
+  right: -5%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+/* #wapa p {
+  margin: 2%;
+} */
+
+#sampleCard img {
+  width: 100px;
   height: auto;
 }
 
@@ -483,9 +536,7 @@ nav {
 
 #seeAllDescr {
   text-align: center;
-  margin:2% auto;
-
-
+  margin: 2% auto;
 }
 
 #moreInfoModal:hover {
@@ -711,22 +762,15 @@ nav {
   font-weight: 700;
 } */
 
-
-
-/* #libraryCollection{
-
-  margin-left: 5%;
-  margin-right: 4%;
-} */
-
+#libraryCollection {
+  margin: 10% 0;
+}
 
 .userDisplay {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-
-
 
 .myLibrary {
   padding: 3%;
