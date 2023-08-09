@@ -361,7 +361,7 @@ function isUniqueEditName(){
             if (localStorage.getItem(i.toString())){
                 // get the object value
                 const cardData = JSON.parse(localStorage.getItem(i.toString()));
- 
+ deletebtn
                 // verify search card or created card
                 const cardName = cardData.name;
                 if (cardName == newName){
@@ -400,6 +400,10 @@ function createDeleteBtn(cardId){
         decreaseStorageCounter();
         const counter = getStorageCountNum();
         displayClearBtn(counter);
+        if (counter == 0){
+            document.querySelector("#mySuppliesTitle").style.display="none";
+        }
+
 
     })
 
@@ -585,7 +589,9 @@ clearBtn.addEventListener("click", function(e){
     e.preventDefault();
     localStorage.clear();
     document.querySelector(".mySupplies").innerHTML = "";
+    document.querySelector("#mySuppliesTitle").style.display="none";
     this.style.display = "none";
+
 })
 
 let emptyStorage = true;

@@ -158,6 +158,13 @@ nav {
   object-fit: cover;
 }
 
+#learnMoreBtn{
+  font-size: 18px;
+}
+
+#learnMore{
+  margin:0;
+}
 /* **********CAROUSEL********** */
 .carousel-inner {
   margin: 3% 5%;
@@ -209,17 +216,24 @@ nav {
   font-size: 18px;
 }
 /* **********EXPLORE CARDS********** */
-#exploreTitle {
+
+#explore{
+  /* background-color: #ffcd46; */
+  margin: 5%;
+}
+
+#exploreHeader {
   text-align: center;
   font-size: 40px;
-  margin: 2%;
-  margin-top: 4%;
+  /* margin: 4%; */
+  /* margin-top: 4%; */
+  /* font-weight: ; */
 }
 
 .displayExplore {
   display: flex;
   justify-content: space-evenly;
-  margin: 2% 9%;
+  margin: 5% 9%;
   /* margin-left: 9%;
     margin-right: 9%; */
   /* border: 2px dotted red; */
@@ -236,6 +250,7 @@ nav {
   background-color: #ffcd46;
   /* background-color: #f9f0b5; */
   border-radius: 3%;
+  /* justify-content: space-between; */
 }
 
 .exploreCard:hover {
@@ -244,14 +259,15 @@ nav {
 }
 
 .exploreTitle {
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
-  margin: 1%;
-  font-size: 20px;
+  margin: 5% 1%;
+  font-size: 17px;
 }
 .exploreDescr {
-  margin: 5%;
-  margin-top: 10px;
+  margin: 7%;
+  margin-top: 2%;
+  /* margin-top: 15px; */
 }
 
 .displayExplore img {
@@ -262,7 +278,8 @@ nav {
   object-position: 50%;
 
   /* margin-top:10%; */
-  border-radius: 3%;
+  border-top-left-radius: 3%;
+  border-top-right-radius: 3%;
 }
 
 /* .imgDisplay{
@@ -661,6 +678,11 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  border: 3px solid #ffcd46;
+  border-radius: 15px;
+  margin: 5%;
+  /* width:90%;
+  text-align: center; */
 }
 
 .myLibrary {
