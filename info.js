@@ -186,7 +186,7 @@ function displayInfo(data){
 
 //param: num
 function createCard(cardData){
-    console.log(cardData)
+    // console.log(cardData)
     let cardType = cardData.type;
     let formatType = cardType.charAt(0).toLowerCase() + cardType.slice(1);
 
@@ -281,7 +281,7 @@ window.addEventListener("load", async function(){
 
     const displayCardNumber = document.querySelector("#numOfCards");
     displayCardNumber.innerHTML = `
-    There are <b>${cardsData.length}</b> chemical cards in our database
+    We currently have <b>${cardsData.length}</b> chemical cards in our database
     `
     for (let i=0; i<cardsData.length; i++){
         const currentData = cardsData[i];

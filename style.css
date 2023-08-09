@@ -300,6 +300,7 @@ nav {
   text-align: center;
 }
 
+
 #infoMainImg {
   width: 50%;
   height: 300px;
@@ -389,10 +390,8 @@ nav {
 }
 
 #searchOption {
-  margin: auto;
+  margin: 7% auto;
   text-align: center;
-  margin-top: 3%;
-  margin-bottom: 5%;
   /* border: 1px solid #ffcd46; */
   /* padding: 1%; */
   border-radius: 15px;
@@ -435,6 +434,32 @@ nav {
   margin: 3%;
 }
 
+#libraryCarousel{
+  /* margin: 10%; */
+  width:70%;
+  margin: auto;
+}
+
+#libraryCarousel img{
+  height: 300px;
+}
+
+
+
+#wapa{
+  display:flex;
+  justify-content: space-between;
+}
+
+#wapa p{
+  margin:2%;
+}
+
+#sampleCard img{
+  width:100px;
+  height: auto;
+}
+
 #seeAllDisplay {
   /* background-color: #ffcd46; */
   /* border: 3px solid #ffcd46; */
@@ -457,8 +482,10 @@ nav {
 }
 
 #seeAllDescr {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin:2% auto;
+
+
 }
 
 #moreInfoModal:hover {
@@ -674,16 +701,32 @@ nav {
   font-size: 14px;
 }
 
+/* #libraryCollection h2{
+  font-size: 20px;
+  background-color: #ffcd46;
+  border-radius: 10px;
+  padding: 15px 35px;
+  margin: 1% 5%;
+  text-align: center;
+  font-weight: 700;
+} */
+
+
+
+/* #libraryCollection{
+
+  margin-left: 5%;
+  margin-right: 4%;
+} */
+
+
 .userDisplay {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 3px solid #ffcd46;
-  border-radius: 15px;
-  margin: 5%;
-  /* width:90%;
-  text-align: center; */
 }
+
+
 
 .myLibrary {
   padding: 3%;
