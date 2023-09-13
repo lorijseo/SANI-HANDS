@@ -259,17 +259,18 @@ libraryBtn.addEventListener("click", async function(e){
     this.style.display = "none";
     // libraryBtn.disabled = true;
     // showBtn.disabled = false;
-    document.querySelector(".userDisplay").innerHTML = "";
-    const cardsData = await getData("cards");
+    // document.querySelector(".userDisplay").innerHTML = "";
+    document.querySelector("#searchDisplay").innerHTML = "";
+    // const cardsData = await getData("cards");
 
-    for (let i=0; i<cardsData.length; i++){
-        const currentData = cardsData[i];
-        createContainer(i);
-        document.querySelector(`#info${i}`).className = "myLibrary";
-        const displayCurrentCard = createCard(currentData);
-        document.querySelector(`#info${i}`).innerHTML = `${displayCurrentCard}`
+    // for (let i=0; i<cardsData.length; i++){
+    //     const currentData = cardsData[i];
+    //     createContainer(i);
+    //     document.querySelector(`#info${i}`).className = "myLibrary";
+    //     const displayCurrentCard = createCard(currentData);
+    //     document.querySelector(`#info${i}`).innerHTML = `${displayCurrentCard}`
 
-    }
+    // }
 
 })
 
@@ -369,7 +370,8 @@ searchBtn.addEventListener("click", async function(e){
         document.querySelector("#seeAll").style.display = "inline-block"; 
         //create Card
         const card = createCard(data);
-        document.querySelector(".userDisplay").innerHTML = `${card}`
+        // document.querySelector(".userDisplay").innerHTML = `${card}`
+        document.querySelector("#searchDisplay").innerHTML = `${card}`
     }
     else{
         alert(`We have no data on ${searchTxt}. Try again!`)

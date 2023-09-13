@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- cors error -->
+    <!-- <meta http-equiv="Permissions-Policy" content="interest-cohort=()"> -->
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/db024aa634.js" crossorigin="anonymous"></script>
+
+    <!-- OwlCarousel2 styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- OwlCarousel2 theme styling -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- boostrap -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <!-- jquery  -->
+
+    <title>TopMovies</title>
+    <link id="styleSheet" href="style.css" rel="stylesheet" type="text/css">
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+
+    <section class="header">
+        <div class="navbar-container">
+            <a class="logo" href="movie.html"><i class="fa-solid fa-ticket">&nbsp;Home</i></a>
+            <ul class="menu">
+                <li class="menu-item">
+                    <a class="menu-title" href="#">About</a>
+                </li>
+                <li class="menu-item" id="menu-title-genre">
+                    <a class="menu-title" href="#">Genre&nbsp;<i class="fas fa-angle-down"></i></a>
+                    <ul class="sub-menu" id="sub-menu-genre">
+                        <li class="sub-item"><a href="#" id="action">action</a></li>
+                        <li class="sub-item"><a href="#" id="adventure">adventure</a></li>
+                        <li class="sub-item"><a href="#" id="animation">animation</a></li>
+                        <li class="sub-item"><a href="#" id="comedy">comedy</a></li>
+                        <li class="sub-item"><a href="#" id="documentary">documentary</a></li>
+                        <li class="sub-item"><a href="#" id="drama">drama</a></li>
+                        <li class="sub-item"><a href="#" id="family">family</a></li>
+                        <li class="sub-item"><a href="#" id="fantasy">fantasy</a></li>
+                        <li class="sub-item"><a href="#" id="history">history</a></li>
+                        <li class="sub-item"><a href="#" id="horror">horror</a></li>
+                        <li class="sub-item"><a href="#" id="music">music</a></li>
+                        <li class="sub-item"><a href="#" id="mystery">mystery</a></li>
+                        <li class="sub-item"><a href="#" id="romance">romance</a></li>
+                        <li class="sub-item"><a href="#" id="thriller">thriller</a></li>
+                        <li class="sub-item"><a href="#" id="war">war</a></li>
+                    </ul>
+                </li>
+                <!-- <li class="menu-item" >
+                    <a href="profile.html">Profile</a>
+                </li> -->
+                <li class="menu-item" >
+                    <a href="#" id="menu-title-subscription" class="menu-title">Subscription&nbsp;<i class="fas fa-angle-down"></i></a>
+                    <div id="filter">
+                        <div id="sub2"></div>
+                        <div id="subscription-container">
+                            <button id="subscription-submit">GO</button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="menu-item" id="menu-region">
+                    <a id="menu-title-region" class="menu-title" href="#">Region</a>
+                    <div id="display-region">
+                        <form action="#">
+                            <select id="region"><option value="">Select</option></select>
+                            <div ><button action="submit "id="regionBtn">GO</button></div>
+                        </form>
+
+
+                    </div>                  
+                </li>
+                <li class="menu-item">
+                    <form action="submit" id="search-form">
+                        <input id="search_input" type="text">
+                        <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+    
+
+
+    <section id="main">
+        <img id="main_img" src="https://image.tmdb.org/t/p/original/fm6KqXpk3M2HVveHwCrBSSBaO0V.jpg" alt="">
+        <div id="main_descr">
+            <h1>
+                Mr Toast is toasting
+            </h1>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi, vel asperiores. Doloremque qui accusantium culpa ab et exercitationem laborum repellendus, error quam enim odio molestias nisi officia. Praesentium, culpa doloremque!
+            </p>
+        </div>
+    </section>
+
+
+    <section id="sub1">
+        <h2>Trending Today</h2>
+        <div class="owl-carousel owl-theme" id="trendTodayOwl"></div>
+    
+        <h2>Trending This Week</h2>
+        <div class="owl-carousel owl-theme" id="trendWeekOwl"></div>
+    
+    </section>
+
+
+
+<!-- 
+    <div id="dialog-subscription"> </div> -->
+
+    <section id="displayMovies">   
+        <!-- <div class="displayList" id="display1"> </div>
+        <p>SEPARATION!</p>
+        <div class="displayList" id="display2"> </div>
+        <div class="displayList" id="display3"> </div>
+        <div class="displayList" id="display4"> </div>
+        <div class="displayList" id="display5"> </div> -->
+    </section>
+    <!-- <div><button id="nextBtn">NEXT</button></div> -->
+
+
+    <div id="dialog-message"> </div>
+    <div class="go-to-top">
+        <button id="topBtn">top</button>
+    </div>
+    <!-- <div class="displayList" id="display2">  </div>
+    <div class="displayList" id="display3">  </div>
+    <div class="displayList" id="display4">  </div>
+    <div class="displayList" id="display5">  </div> -->
+
+
+       
+
+
+
+
+
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- jquery ui -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- OwlCarousel2 default -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    <script src="./movie.js"></script>
+    <script src="./microservice.js"></script>
+
+    <!-- <script>jQuery.noConflict();</script> -->
+
+</body>
+</html>
