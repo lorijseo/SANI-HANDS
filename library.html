@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/db024aa634.js" crossorigin="anonymous"></script>
+    <!-- boostrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="combo.css"> -->
+    <link rel="stylesheet" href="library.css">
+    <title>Library</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-xl sticky-top">
+    <a href="index.html" class="navbar-brand">
+      <i class="fa-solid fa-flask" style="color: #ffcd46"></i>Poison
+    </a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"><i class="fa-solid fa-bars fa-xl mt-3" style="color: #ffcd46"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarNav">
+      <ul class="navbar-nav ">
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="about.html">About</a>
+        </li>
+
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="info.html">Library</a>
+        </li>
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="combo.html">Combination</a>
+        </li>
+
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="quiz.html">Quiz</a>
+        </li>
+        <li class="nav-item badge badge-pill">
+          <a class="nav-link" href="collection.html">My Supplies</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="pageIntro" id="infoIntro">
+    <h1>LIBRARY</h1>
+  </section>
+
+  <div id="libraryCarousel" class="carousel slide m-10" data-interval="false" data-ride="carousel" data-pause="hover">
+    <div class="carousel-inner">
+
+      <div class="carousel-item active">
+        <div class="libraryCarouselDisplay">
+          <img class="d-block w-90" src="images/productsamplecard.jpg" alt="First slide">
+          <div class="libraryCarouselDescr">
+            <h3><i class="fa-solid fa-spray-can-sparkles fa-sm" style="color: #2f72e4;"></i><b style="color:blue">&nbsp;PRODUCT</b> card</h3>
+            <p>A <i class="fa-solid fa-spray-can-sparkles fa-sm" style="color: #2f72e4;"></i>&nbsp;product card refers to a store bought cleaning product or brand </p> 
+            <p>
+              Every <i class="fa-solid fa-spray-can-sparkles fa-sm" style="color: #2f72e4;"></i>&nbsp;product card will contain an informative
+              <i class="fa-solid fa-circle-info fa-sm" style="color: purple">&nbsp;description</i> that contains the best use of the product and some potentially hazardous ingredients. 
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <div class="libraryCarouselDisplay">
+          <img class="d-block w-90" src="images/nullifysamplecard.jpg" alt="First slide">
+          <div class="libraryCarouselDescr">
+            <h3><i class="fa-solid fa-poo fa-sm" style="color: #717d94;"></i><b style="color:grey">&nbsp;NULLIFY</b> card</h3>
+            <p>A <i class="fa-solid fa-poo fa-sm" style="color: #717d94;"></i>&nbsp;nullify card refers to an effect of mixing cleaning products that are non-hazardous and ineffective for cleaning </p> 
+            <p>
+              Every <i class="fa-solid fa-poo fa-sm" style="color: #717d94;"></i>&nbsp;nullify card will contain a generic
+              <i class="fa-solid fa-circle-info fa-sm" style="color: purple">&nbsp;description</i> that mentions that the mixture was not hazardous.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="carousel-item ">
+        <div class="libraryCarouselDisplay">
+          <img class="d-block w-90" src="images/effectsamplecard.jpg" alt="Third slide">
+          <div class="libraryCarouselDescr">
+            <h3><i class="fa-solid fa-biohazard fa-sm" style="color: #cc350f;"></i> <b style="color:red">&nbsp;EFFECT</b> card</h3>
+            <p>An <i class="fa-solid fa-biohazard fa-sm" style="color: #cc350f;"></i>&nbsp;effect card refers to a potential dangerous hazard caused by mixing cleaning ingredients or products </p> 
+            <p>
+              Every <i class="fa-solid fa-biohazard fa-sm" style="color: #cc350f;"></i>&nbsp;effect card will contain a warning
+              <i class="fa-solid fa-skull-crossbones fa-sm" style="color: orange">&nbsp;description</i> that highlights the identification and symptoms of exposure. 
+            </p>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="carousel-item">
+        <div class="libraryCarouselDisplay">
+          <img class="d-block w-90" src="images/ingredientsamplecard.jpg" alt="Second slide">
+          <div class="libraryCarouselDescr">
+            <h3><i class="fa-solid fa-flask fa-sm" style="color: green;"></i><b style="color:green">&nbsp;INGREDIENT</b> card</h3>
+            <p>An <i class="fa-solid fa-flask fa-sm" style="color: green;"></i>&nbsp;ingredient card refers to a common cleaning ingredient or a general product used for cleaning. </p> 
+            <p>
+              Every <i class="fa-solid fa-flask fa-sm" style="color: green;"></i>&nbsp;ingredient card will contain 
+              <i class="fa-solid fa-thumbs-up fa-sm" style="color: green;">&nbsp;advantages</i> and
+              <i class="fa-solid fa-thumbs-down fa-sm" style="color: red">&nbsp;disadvantages</i> 
+              for cleaning. 
+            </p>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+
+    <a class="carousel-control-prev" href="#libraryCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#libraryCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+
+
+  <div id="searchOption" >
+    <h2>Search cards by name</h2>
+    <form action="">
+      <input type="text" id="search" name="search" placeholder="i.e. Bleach, Chlorine Gas, etc.." required>
+
+      <button type="submit" id="searchBtn">Search</button>
+      <button id="seeAll"><i class="fa-solid fa-xmark"></i></button>
+
+    </form>
+
+  </div>
+
+
+  <div id="libraryCollection">
+    <h3 id="seeAllTitle">Card Database</h3>
+    <div id="seeAllDescr">
+      <p id="numOfCards"></p>
+    </div>
+    <div class="userDisplay"> </div>
+  </div>
+
+
+
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="library.js"></script>
+  <!-- <script src="quiz2.js"></script> -->
+</body>
+</html>

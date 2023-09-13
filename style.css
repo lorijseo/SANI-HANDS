@@ -61,7 +61,7 @@ nav {
 } */
 
 .nav-item {
-  /* background-color: #fedb71; */
+  background-color: #fedb71;
   font-size: 20px;
   margin: 1%;
   /* border: 2px solid #fedb71; */
@@ -86,7 +86,9 @@ nav {
 
 .nav-item:hover {
   /* background-color: red; */
-  box-shadow: 0 8px 6px -6px #999;
+  /* box-shadow: 0 8px 6px -6px #999; */
+  transform: translateY(-5px);
+  /* background-color: #fedb71; */
 }
 
 .nav-item a:hover {
@@ -438,23 +440,40 @@ nav {
   /* margin: 10%; */
   width:70%;
   margin: auto;
+  /* background-color: #ffcd46; */
+  border-radius: 15px;
+  border: 3px solid #ffcd46
 }
 
 #libraryCarousel img{
   height: 300px;
+  margin: 20px;
 }
 
 
+.carousel-control-next,
+.carousel-control-prev{
+    filter: invert(100%);
+}
 
-#wapa{
+.libraryCarouselDisplay{
   display:flex;
   justify-content: space-between;
+  margin: 0 10%;
 }
 
-#wapa p{
-  margin:2%;
+.libraryCarouselDisplay p{
+  margin:20px;
 }
 
+.libraryCarouselDisplay h3{
+  margin:20px; 
+}
+
+
+.libraryCarouselDescr{
+  margin: auto;
+}
 #sampleCard img{
   width:100px;
   height: auto;
@@ -478,7 +497,7 @@ nav {
   margin: 2% auto;
   text-align: center;
   font-size: 30px;
-  width: 80%;
+  width: 70%;
 }
 
 #seeAllDescr {
@@ -1152,7 +1171,7 @@ nav {
   font-weight: 700;
 }
 
-#promptUser {
+.promptUser {
   margin: 5%;
 }
 

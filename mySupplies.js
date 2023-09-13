@@ -361,7 +361,7 @@ function isUniqueEditName(){
             if (localStorage.getItem(i.toString())){
                 // get the object value
                 const cardData = JSON.parse(localStorage.getItem(i.toString()));
- deletebtn
+//  deletebtn
                 // verify search card or created card
                 const cardName = cardData.name;
                 if (cardName == newName){
