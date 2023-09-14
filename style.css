@@ -452,6 +452,11 @@ body {
     font-weight: 600;
     font-size: 20px;
   }
+
+  #searchDisplay{
+    display:flex;
+    justify-content: center;
+  }
   
   #seeAll {
     display: none;
@@ -798,7 +803,7 @@ body {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
-    margin: 5%;
+    margin: 3%;
   }
   
   /* **************display card type differences************** */
@@ -1145,6 +1150,10 @@ body {
     height: 500px;
     object-fit: cover;
     object-position: 50% 40%;
+  }
+
+  #logoName{
+    font-family: 'Concert One', cursive;
   }
   
   .ourStory {

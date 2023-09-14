@@ -295,6 +295,8 @@ formBtn.addEventListener("submit", function(e){
         deletePromptData();
         updateInputForm();
         displayClearBtn(counter);
+
+        window.scrollTo(0,document.body.scrollHeight);
     }
 
 })
@@ -403,6 +405,7 @@ function createDeleteBtn(cardId){
         if (counter == 0){
             document.querySelector("#mySuppliesTitle").style.display="none";
         }
+        deletePromptData();
 
 
     })
@@ -460,6 +463,8 @@ function createEditBtn(num){
 
     btn.addEventListener("click", function(e){
         displayInputValues(num);
+        const createCardForm = document.querySelector('#createSupplies');
+        createCardForm.scrollIntoView();
         // let cardType = document.querySelector("#type");
         if (document.querySelector("#type").value == "Ingredient"){
             document.querySelector("#good").disabled = false;
