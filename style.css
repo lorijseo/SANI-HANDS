@@ -50,6 +50,7 @@ body {
   
   .navbar-brand {
     font-size: 40px;
+    font-family: 'Concert One', cursive;
   }
   
   .navbar-brand:hover {
@@ -104,9 +105,19 @@ body {
   .navbar-toggler-icon {
     font-size: 30px;
   }
+
   
   .navbar-toggler {
     margin-top: 3%;
+    outline: none;
+    border: none;
+  }
+
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+      outline: none;
+      box-shadow: none;
   }
   
   /* @media screen and (min-width: 1500px) {
