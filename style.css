@@ -176,7 +176,15 @@ body {
   .carousel-inner .carousel-item {
     max-height: 700px;
   }
-  
+
+  .carousel-inner img{
+    object-position: 10% 10%;
+  }
+
+  #carouselImg2{
+    object-position: 90% 90%;
+  }
+
   .carousel-caption {
     font-size: 40px;
     position: absolute;
@@ -187,29 +195,36 @@ body {
     filter: brightness(1.5);
   } */
   #caption1 {
-    /* font-size: 45px; */
-    /* color:#ffcd46; */
-  
-    /* bottom:40%; */
+    top:10%;
     text-align: center;
-    left: 5%;
+    margin: auto;
+    width:50%;
   }
   
-  #caption2 {
+  #caption1 h1{
+    margin: 3%; 
+    font-weight: 750;
+  }
+
+  /* #caption2 {
     text-align: center;
     bottom: 10%;
-  }
+  } */
   
+  #caption2{
+    top:40%;
+  }
+
   #caption3 {
     position: absolute;
     top: 40%;
-    left: 7%;
-    max-width: 60%;
+    left: 4%;
+    width: 55%;
     text-align: left;
   }
   
   #caption3 h1,
-  #caption2 h1 {
+  #caption2 h1,#caption1 h1 {
     font-size: 55px;
   }
   
@@ -751,14 +766,23 @@ body {
     padding: 3%;
   }
   /* ************************COLLECTION PAGE************************** */
-  #mySuppliesIntro img {
+  /* #mySuppliesIntro img {
     object-position: 50% 60%;
+  } */
+
+  #mySuppliesIntro img {
+    object-position: 50% 20%;
   }
+
   #mySuppliesMainMsg {
-    width: 25%;
-    text-align: center;
-    left: 38%;
+    position: relative;
+    top: -500px;
+    text-align:center;
+    width: 30%;
+    margin:auto;
   }
+
+
   .myCleaning {
     display: flex;
     justify-content: space-between;

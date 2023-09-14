@@ -1,3 +1,5 @@
+
+
 @media screen and (max-width: 970px) {
     .aboutDisplay img{
         height:400px
@@ -9,4 +11,41 @@
     .ourStory p{
         font-size: 14px;
     }
-  }
+}
+
+@media screen and (max-width: 750px) {
+
+    .aboutDisplay{
+        justify-content: center;
+    }
+
+    .aboutDisplay img{
+        height:300px;
+        width:100%;
+        object-position: 50% 60%;
+    }
+
+    .ourStory{
+        width: 100%;
+    }
+
+    .ourStory h2{
+        font-size: 30px;
+        text-align:center;
+    }
+    .ourStory p{
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .about h1{
+        font-size: 35px;
+    }
+
+    .aboutDisplay img{
+        height:200px;
+    }
+
+}

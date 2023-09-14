@@ -10,13 +10,13 @@
 }
 
 @media screen and (max-width: 1300px) {
-  .main img {
+  /* .main img {
     height: 500px;
   }
 
   .mainMsg {
     top: 30%;
-  }
+  } */
 
   #infoSampleCards img {
     max-width: 155px;
@@ -28,6 +28,14 @@
 }
 
 @media screen and (max-width: 1200px) {
+
+  #mySuppliesMainMsg {
+    top: -600px;
+    width: 40%
+  }
+
+
+
   .myCleaning {
     flex-wrap: wrap;
     justify-content: center;
@@ -68,6 +76,21 @@
 }
 
 @media screen and (max-width: 970px) {
+
+  #mySuppliesIntro img {
+    height: 400px;
+  }
+
+  #mySuppliesMainMsg {
+    top: -400px;
+    width:50%;
+  }
+
+  #mySuppliesMainMsg p{
+    width: 50%;
+    margin: auto;
+  }
+
   #infoSampleCards {
     display: none;
   }
@@ -90,16 +113,22 @@
 }
 
 @media screen and (max-width: 750px) {
-  .main img {
+  #mySuppliesIntro img {
     height: 300px;
   }
 
-  .mainMsg {
-    top: 30%;
+  #mySuppliesMainMsg{
+    top: -250px;
   }
+
+  #mySuppliesMainMsg h2{
+    font-size: 25px;
+  }
+
   .mainMsg p {
-    font-size: 12px;
+    display:none;
   }
+
   #subMsg {
     font-size: 14px;
   }
@@ -119,15 +148,25 @@
 }
 
 @media screen and (max-width: 480px) {
-  .main img {
-    height: 200px;
+
+  .pageIntro h1{
+    font-size:30px;
   }
-  .mainMsg {
-    top: 30%;
+
+  #mySuppliesIntro img {
+    height: 300px;
   }
-  .mainMsg p {
-    display: none;
+
+  #mySuppliesMainMsg{
+    top: -250px;
+    
   }
+
+  #mySuppliesMainMsg h2{
+    font-size: 20px;
+  }
+  
+
   #explainSupplies h2,
   #createSupplies h3, #mySuppliesTitle h3 {
     font-size: 20px;
@@ -141,6 +180,10 @@
 
   #clearSupplies {
     font-size: 12px;
+  }
+
+  #createCard {
+    margin: 0;
   }
 
 }
