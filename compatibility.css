@@ -39,6 +39,8 @@
   #equal, #plus{
     margin: 0 1%;
   }
+
+
 }
 
 @media screen and (max-width: 1100px) {
@@ -59,8 +61,12 @@
     height: 400px;
   }
 
+  .main{
+    margin: 0
+  }
+
   #quizMainMsg {
-    top: 20%;
+    top: -300px;
   }
 
   .quizLabel {
@@ -74,6 +80,7 @@
   .quizQuestion {
     margin: auto;
   }
+
   .quiz {
     display: flex;
     flex-wrap: wrap;
@@ -119,6 +126,14 @@
     flex-wrap: wrap;
   }
 
+  #quizMainMsg h2{
+    font-size:30px;
+  }
+
+  #quizMainMsg p{
+    font-size: 14px;
+  }
+
 }
 
 /* phone */
@@ -139,12 +154,16 @@
   }
 
   /* quiz */
-  #quizMainMsg {
-    top: 10%;
+
+
+  #quizMainMsg h2{
+    font-size:25px;
   }
-  #quizMainMsg p {
-    display: none;
+
+  #quizMainMsg p{
+    font-size: 12px;
   }
+
   .quizQuestion {
     flex-wrap: wrap;
   }

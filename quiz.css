@@ -6,7 +6,10 @@
   }
 
   #quizMainMsg {
-    top: 20%;
+    position: relative;
+    top: -400px;
+    left:300px;
+    width: 40%;
   }
 
   .quizLabel {

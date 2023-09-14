@@ -979,13 +979,15 @@ body {
     object-position: 50% 10%;
   }
   
+
   #quizMainMsg {
-    position: absolute;
-    top: 55%;
-    left: 30%;
-    width: 35%;
+    position: relative;
+    top: -400px;
+    text-align:center;
+    width: 40%;
+    margin:auto;
   }
-  
+
   #quizMainMsg h2 {
     font-size: 40px;
     margin: 0 0 2%;

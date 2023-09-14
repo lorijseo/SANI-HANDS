@@ -11,6 +11,6 @@ quizPage.addEventListener("click", function(e){
 })
 
 let libraryPage = document.querySelector("#library_page");
-quizPage.addEventListener("click", function(e){
+libraryPage.addEventListener("click", function(e){
     window.location.href = "library.html";
 })
