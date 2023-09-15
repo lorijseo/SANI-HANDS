@@ -8,5 +8,5 @@ Image by <a href="https://www.freepik.com/free-photo/top-view-cleaning-supplies-
 ### Take a quiz
 ![Main](/gif/quiz.gif)
 
-### Save your cleaning supplies by creating a card
+### Create your own cleaning product card
 ![Main](/gif/createCard.gif)
