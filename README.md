@@ -25,12 +25,6 @@ Image by <a href="https://www.freepik.com/free-photo/top-view-cleaning-supplies-
 <br>
 <br>
 
-### View cleaning ingredients/products compatibility
-![Main](/gif/compatibility.gif)
-
-<br>
-<br>
-<br>
 
 ### Take a quiz
 ![Main](/gif/quiz.gif)
@@ -39,9 +33,9 @@ Image by <a href="https://www.freepik.com/free-photo/top-view-cleaning-supplies-
 <br>
 <br>
 
----
-## Personalize your own card collection of cleaning supplies
 
+## Personalize your own card collection of cleaning supplies
+---
 ### 1. Create, edit, or delete your own cleaning product card
 ![Main](/gif/CRUDcard.gif)
 
