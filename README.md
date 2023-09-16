@@ -42,11 +42,7 @@ Image by <a href="https://www.freepik.com/free-photo/top-view-cleaning-supplies-
 ---
 ## Personalize your own card collection of cleaning supplies
 
-### 1. Create your own cleaning product card
-![Main](/gif/createCard.gif)
+### 1. Create, edit, or delete your own cleaning product card
+![Main](/gif/CRUDcard.gif)
 
-### 2. Edit your cleaning product card
-![Main](/gif/editCard.gif)
 
-### 3. Delete your own cleaning product card
-![Main](/gif/deleteCard.gif)
