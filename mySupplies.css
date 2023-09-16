@@ -1,5 +1,5 @@
 /* Same as combo.css */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1570px) {
   #infoSampleCards img {
     max-width: 170px;
   }
@@ -9,7 +9,7 @@
     } */
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1340px) {
   /* .main img {
     height: 500px;
   }
@@ -27,7 +27,7 @@
 } */
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1250px) {
 
   #mySuppliesMainMsg {
     top: -600px;
