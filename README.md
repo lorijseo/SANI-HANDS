@@ -3,7 +3,7 @@
 
 ## Learn about different cleaning supplies and their compatibility
 
-### Dynamically created cards from JSON database 
+### Four different types of cards with their features
 ![Main](/gif/cardTutorial.gif)
 
 <br>
