@@ -7,17 +7,37 @@ Image by <a href="https://www.freepik.com/free-photo/top-view-cleaning-supplies-
 ### Card Introduction 
 ![Main](/gif/cardTutorial.gif)
 
+<br>
+<br>
+<br>
+
 ### Explore our database 
 ![Main](/gif/library.gif)
+
+<br>
+<br>
+<br>
 
 ### Search our database using card name 
 ![Main](/gif/search.gif)
 
+<br>
+<br>
+<br>
+
 ### View cleaning ingredients/products compatibility
 ![Main](/gif/compatibility.gif)
 
+<br>
+<br>
+<br>
+
 ### Take a quiz
 ![Main](/gif/quiz.gif)
+
+<br>
+<br>
+<br>
 
 ---
 ## Personalize your own card collection of cleaning supplies
