@@ -1,5 +1,5 @@
 # SANI-HANDS
-
+A web application that address the dangers of mixing cleaning products and allow users to customize their own collection of cleaning supplies
 
 ## Learn about different cleaning supplies and their compatibility
 
